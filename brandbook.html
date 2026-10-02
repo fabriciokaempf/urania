@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brandbook Urânia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#1D1F26; --ocre:#C58A2B; --cinza:#444444; --branco:#F7F6F3; --neutro:#D9D9D6; --bege:#E8E2D6;
+  --bg:var(--branco); --fg:var(--azul); --muted:var(--cinza); --line:var(--neutro);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#15161B; --fg:#F7F6F3; --muted:#B9B7B0; --line:#33353D; }
+}
+:root[data-theme="dark"]{ --bg:#15161B; --fg:#F7F6F3; --muted:#B9B7B0; --line:#33353D; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Manrope,sans-serif;font-weight:400;line-height:1.6;font-size:16px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.num{font-family:Manrope,sans-serif;font-weight:500;font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.p1 .num,.story .num{color:var(--ocre)}
+h2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(36px,6vw,56px);line-height:1.05;margin:16px 0 40px}
+h3{font-weight:600;font-size:15px;letter-spacing:.04em;margin:40px 0 16px;text-transform:uppercase}
+p{max-width:640px;margin-bottom:16px;color:var(--fg)}
+.muted{color:var(--muted)}
+.quote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(26px,4vw,36px);line-height:1.25;max-width:760px;margin:24px 0}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{border:1px solid var(--line);padding:24px}
+.card .num{display:block;margin-bottom:8px}
+ul.clean{list-style:none}
+ul.clean li{padding:8px 0;border-bottom:1px solid var(--line)}
+.star{width:16px;height:16px;fill:var(--ocre);vertical-align:-2px;margin-right:8px}
+/* capa */
+.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:var(--bege);color:#1D1F26;border:0}
+.logo{font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(64px,14vw,148px);letter-spacing:.01em;line-height:1;border-bottom:3px solid currentColor;padding-bottom:12px}
+.tag{font-family:Manrope;font-size:clamp(16px,2.4vw,22px);margin-top:20px}
+.cover .meta{font-family:Manrope,sans-serif;font-weight:500;font-size:11px;margin-top:64px;letter-spacing:.16em}
+/* cores */
+.sw{height:140px;margin-bottom:12px;border:1px solid var(--line)}
+.sw-l{font-size:13px}
+.sw-l b{display:block;font-weight:600}
+code,.mono{font-family:Manrope,sans-serif;font-weight:500;font-size:12px}
+/* tipo */
+.type-sample{border-top:1px solid var(--line);padding:32px 0}
+/* tabela */
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+td.p{font-family:"Cormorant Garamond",serif;font-size:22px;white-space:nowrap}
+.tbl{overflow-x:auto}
+/* do e dont */
+.yes{border-left:3px solid var(--ocre);padding-left:16px}
+.no{border-left:3px solid var(--line);padding-left:16px;color:var(--muted);text-decoration:line-through}
+/* mockups */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.post{aspect-ratio:4/5;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.post .t{font-family:"Cormorant Garamond",serif;font-size:28px;line-height:1.1}
+.post .s{font-size:12px}
+.p1{background:#1D1F26;color:#F7F6F3}
+.p2{background:#E8E2D6;color:#1D1F26}
+.p3{background:#F7F6F3;color:#1D1F26;border:1px solid var(--line)}
+.story{aspect-ratio:9/16;max-width:240px;background:#1D1F26;color:#F7F6F3;padding:32px 24px;display:flex;flex-direction:column;justify-content:space-between}
+.method{display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-family:"Cormorant Garamond",serif;font-size:clamp(28px,4vw,40px)}
+.method span.arr{color:var(--ocre);font-family:Manrope;font-size:20px}
+.note{background:var(--bege);color:#1D1F26;padding:20px 24px;font-size:14px;max-width:760px}
+@page{size:A4;margin:0}
+@media print{
+  :root{--bg:#F7F6F3;--fg:#1D1F26;--muted:#444444;--line:#D9D9D6}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:13px}
+  .wrap{max-width:none;padding:0 48px}
+  section{padding:48px 0;border-top:0;break-before:page}
+  .cover{height:297mm;min-height:0;break-before:auto}
+  h2{margin:12px 0 24px}
+  h3{margin:24px 0 10px;break-after:avoid}
+  .card,.post,.story,.sw,.yes,.no,.note,tr,.type-sample,ul.clean li,.quote{break-inside:avoid}
+  .posts,.g3,.g2{break-inside:avoid}
+  footer{break-before:avoid}
+  .tbl{overflow:visible}
+}
+footer{padding:64px 0;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- glyph irregular: pontas de comprimentos e larguras diferentes, de propósito -->
+    <symbol id="glyph" viewBox="0 0 100 100">
+      <path d="M52 1 Q54.5 44 93 48.5 Q55 53.5 48.5 99 Q46 55 9 51.5 Q47 46.5 52 1Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- CAPA -->
+<section class="cover">
+  <div class="logo">URANIA</div>
+  <div class="tag">onde marcas encontram significado</div>
+  <div class="meta">BRANDBOOK · VOL. 01 · OUTUBRO 2026</div>
+</section>
+
+<div class="wrap">
+
+<!-- 01 -->
+<section>
+  <span class="num">Capítulo 01 · Essência</span>
+  <h2>A comunicação começa muito antes da primeira palavra.</h2>
+  <p>A Urânia é um estúdio de <b>direção e comunicação de marcas</b>, criado por Estéfany Reis. Não parte da ideia de produzir conteúdo. Parte da ideia de entender, observar, organizar e direcionar antes de comunicar.</p>
+  <p>Antes de comunicar existe percepção, intenção, identidade, repertório, contexto e escolha. A Urânia trabalha nesse espaço anterior à publicação.</p>
+  <p class="quote">A Urânia não entrega respostas prontas. Ela oferece novas formas de olhar.</p>
+  <h3>Por que Urânia</h3>
+  <p>Urânia é a musa grega da astronomia: a que observa o céu para orientar quem está no chão. Astronomia, não astrologia. O nome carrega a postura da marca: <b>olhar antes de concluir</b>.</p>
+  <h3>Propósito</h3>
+  <p>Ajudar marcas a comunicar quem realmente são, transformando estratégia, identidade e sensibilidade em conteúdos que criam conexão.</p>
+  <h3>Pergunta de abertura</h3>
+  <p class="quote" style="font-size:26px">Quando foi a última vez que um pequeno detalhe mudou completamente a forma como você enxergava alguma coisa?</p>
+</section>
+
+<!-- 02 -->
+<section>
+  <span class="num">Capítulo 02 · Posicionamento</span>
+  <h2>Direção estratégica e comunicação com identidade.</h2>
+  <p>A Urânia ajuda marcas e profissionais a saírem do automático e construírem uma comunicação estratégica, coerente, autêntica, humana, visualmente consistente e conectada à própria essência.</p>
+  <div class="grid g2" style="margin-top:32px">
+    <div class="card"><span class="num">Narrativa da marca</span><p><b>Orientação.</b> A Urânia mostra onde a marca está, para onde ela pode ir e qual caminho faz sentido. É o método Observação, Direção e Presença contado como uma história.</p></div>
+    <div class="card"><span class="num">Frase de oferta</span><p><b>Direção de comunicação para marcas que cresceram e não se reconhecem mais no que comunicam.</b></p></div>
+  </div>
+  <h3>Território que a Urânia ocupa</h3>
+  <p>Entre as ferramentas de IA, que produzem rápido e sem identidade, e os grandes estúdios de branding, caros e distantes. Nenhuma referência mapeada no benchmarking combina, ao mesmo tempo, um <b>método próprio nomeado</b>, <b>linguagem editorial</b> e <b>vagas limitadas</b> de direção contínua. Esse é o espaço.</p>
+  <div class="grid g2">
+    <div><h3>A Urânia é</h3><ul class="clean"><li>Estúdio de direção</li><li>Olhar autoral com método</li><li>Estratégia com sensibilidade</li><li>Poucos clientes, muita atenção</li></ul></div>
+    <div><h3>A Urânia não é</h3><ul class="clean muted"><li>Agência tradicional</li><li>Perfil de "dicas de marketing"</li><li>Fábrica de posts</li><li>Estética bonita sem estratégia</li><li>Comunicação feita para agradar algoritmo</li></ul></div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section>
+  <span class="num">Capítulo 03 · Personalidade</span>
+  <h2>Presença, movimento e respiro.</h2>
+  <p>Sofisticada sem parecer inalcançável. Não é agressiva para demonstrar autoridade, nem tão contemplativa que pareça distante. A tensão central é <b>forte × calma</b>.</p>
+  <h3>Arquétipos</h3>
+  <div class="grid g3">
+    <div class="card"><span class="num">Principal</span><p><b>Sábio</b><br><span class="muted">Observação, clareza, profundidade. É quem orienta.</span></p></div>
+    <div class="card"><span class="num">Expressão</span><p><b>Criador</b><br><span class="muted">Repertório, originalidade, construção autoral.</span></p></div>
+    <div class="card"><span class="num">Relação</span><p><b>Cuidador</b><br><span class="muted">Escuta, empatia, atenção ao que o cliente ainda não disse.</span></p></div>
+  </div>
+  <p style="margin-top:24px">A combinação evita os dois extremos do mercado: <b>criatividade sem estratégia</b> e <b>estratégia sem humanidade</b>.</p>
+  <h3>Percebida como</h3>
+  <p class="muted">inteligente · criativa · observadora · sensível · estratégica · refinada · humana · curiosa · autoral · presente</p>
+</section>
+
+<!-- 04 -->
+<section>
+  <span class="num">Capítulo 04 · Princípios</span>
+  <h2>O que permanece importa.</h2>
+  <div class="grid g3">
+    <div class="card"><span class="num">01</span><b>Observar antes de comunicar</b><p class="muted">Nem tudo precisa ser publicado. Antes da comunicação existe a percepção.</p></div>
+    <div class="card"><span class="num">02</span><b>Estratégia não precisa ser fria</b><p class="muted">Dados, objetivos e resultado, sem abandonar a sensibilidade.</p></div>
+    <div class="card"><span class="num">03</span><b>Identidade antes de tendência</b><p class="muted">Tendências são ferramentas. Não substituem identidade.</p></div>
+    <div class="card"><span class="num">04</span><b>Tudo comunica</b><p class="muted">Palavras, silêncio, ritmo, fotografia, atendimento, presença e ausência.</p></div>
+    <div class="card"><span class="num">05</span><b>Clareza não é simplificação</b><p class="muted">Tornar claro não significa tornar raso.</p></div>
+    <div class="card"><span class="num">06</span><b>Comunicação precisa de intenção</b><p class="muted">Criar por criar não é estratégia.</p></div>
+    <div class="card"><span class="num">07</span><b>O que permanece importa</b><p class="muted">Marcas que não dependam apenas do momento.</p></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section>
+  <span class="num">Capítulo 05 · Método</span>
+  <h2>Observação entende. Direção escolhe. Presença materializa.</h2>
+  <div class="method"><span>Observação</span><span class="arr">→</span><span>Direção</span><span class="arr">→</span><span>Presença</span></div>
+  <div class="grid g3" style="margin-top:40px">
+    <div class="card"><span class="num">01 · Observação</span><p>Entender antes de agir. Investigar contexto, essência, público, percepção, repertório, problemas e oportunidades.</p></div>
+    <div class="card"><span class="num">02 · Direção</span><p>Transformar observações em escolhas: posicionamento, mensagem, identidade, linguagem, caminhos visuais e prioridades.</p></div>
+    <div class="card"><span class="num">03 · Presença</span><p>Levar as escolhas para o mundo: conteúdo, comunicação, experiências, presença digital e relacionamento.</p></div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section>
+  <span class="num">Capítulo 06 · Sistema verbal</span>
+  <h2>Inteligente sem ser pedante.</h2>
+  <div class="grid g2">
+    <ul class="clean">
+      <li>Inteligente sem ser pedante</li>
+      <li>Sensível sem ser excessivamente poética</li>
+      <li>Estratégica sem ser corporativa</li>
+      <li>Leve sem ser superficial</li>
+      <li>Autoral sem ser confusa</li>
+      <li>Humana sem perder autoridade</li>
+    </ul>
+    <div>
+      <p>Pode existir humor. Pode existir informalidade. Pode existir opinião. <b>Mas sempre existe intenção.</b></p>
+      <p class="muted">Prefere: frases claras, observações, perguntas, argumentos, exemplos, pequenas provocações, referências culturais.</p>
+      <p class="muted">Evita: "segredo do algoritmo", "hack", "faça isso e viralize", fórmulas milagrosas, excesso de jargão, frases motivacionais genéricas, linguagem de vendedor de curso.</p>
+    </div>
+  </div>
+  <h3>Fala assim / não fala assim</h3>
+  <div class="grid g2">
+    <div class="yes">Sua marca cresceu. Sua comunicação ficou para trás. Vamos olhar com calma para o que mudou.</div>
+    <div class="no">3 erros que estão destruindo o seu Instagram (o último vai te chocar!)</div>
+    <div class="yes">Antes de postar mais, vale perguntar: o que você quer que fique depois que a mensagem passa?</div>
+    <div class="no">Poste todo dia e o algoritmo vai te amar. Bora?</div>
+    <div class="yes">Uma cereja não precisa representar cereja. Pode representar atenção, detalhe, escolha.</div>
+    <div class="no">Branding é tudo! Invista na sua marca e transforme sua vida 🚀</div>
+    <div class="yes">Restam 2 vagas para a Presença neste trimestre. Trabalho com no máximo 3 marcas ao mesmo tempo.</div>
+    <div class="no">ÚLTIMAS VAGAS!!! Corre que vai acabar!!!</div>
+  </div>
+  <h3>Vocabulário da marca</h3>
+  <p class="muted">observar · direção · percepção · repertório · intenção · escolha · presença · permanência · detalhe · olhar · caminho · orientação</p>
+</section>
+
+<!-- 07 -->
+<section>
+  <span class="num">Capítulo 07 · Logo</span>
+  <h2>A assinatura.</h2>
+  <div class="grid g2">
+    <div class="card" style="background:#E8E2D6;color:#1D1F26;text-align:center;padding:56px 24px"><div class="logo" style="font-size:72px;display:inline-block">URANIA</div><div class="tag" style="font-size:14px">onde marcas encontram significado</div></div>
+    <div class="card" style="background:#1D1F26;color:#F7F6F3;text-align:center;padding:56px 24px"><div class="logo" style="font-size:72px;display:inline-block">URANIA</div><div class="tag" style="font-size:14px">onde marcas encontram significado</div></div>
+  </div>
+  <p style="margin-top:24px">Logotipo tipográfico em serifada de alto contraste (referência: Playfair Display, peso Regular), com linha editorial de base. A tagline acompanha em Manrope.</p>
+  <ul class="clean">
+    <li><b>Área de proteção:</b> a altura da letra U ao redor de todo o logo.</li>
+    <li><b>Tamanho mínimo:</b> 96 px de largura no digital (sem tagline abaixo de 160 px).</li>
+    <li><b>Cores permitidas:</b> azul profundo sobre claros; branco quente sobre azul. Ocre nunca no logo.</li>
+    <li><b>Não fazer:</b> distorcer, aplicar sombra, contorno, degradê, girar ou trocar a fonte.</li>
+  </ul>
+  <div class="note" style="margin-top:24px"><b>Nota sobre o acento.</b> O logo mantém o desenho original "URANIA". Em todo texto corrido, legenda, bio e documento, a grafia é sempre <b>Urânia</b>, com acento.</div>
+</section>
+
+<!-- 08 -->
+<section>
+  <span class="num">Capítulo 08 · Glyph</span>
+  <h2>Quanto mais raro, mais forte.</h2>
+  <div class="grid g2">
+    <div class="card" style="text-align:center">
+      <svg viewBox="0 0 100 100" width="160" height="160" style="fill:var(--fg)"><use href="#glyph"/></svg>
+      <p style="margin:16px auto 0"><b>Glyph Urânia</b> <span class="muted">· marcador editorial</span></p>
+      <p class="muted" style="margin:8px auto 0;font-size:14px">Estrela de 4 pontas redesenhada com pontas de comprimentos e espessuras diferentes. A irregularidade é intencional: tira a estrela do clichê (e do ícone de IA) e a aproxima de algo desenhado à mão, observado.</p>
+    </div>
+    <div class="card" style="text-align:center;background:#1D1F26;color:#F7F6F3">
+      <div style="display:flex;justify-content:center;gap:32px;align-items:center;height:160px">
+        <svg viewBox="0 0 100 100" width="96" height="96" style="fill:#F7F6F3"><use href="#glyph"/></svg>
+        <svg viewBox="0 0 100 100" width="56" height="56" style="fill:#C58A2B"><use href="#glyph"/></svg>
+      </div>
+      <p style="margin:16px auto 0;color:#F7F6F3"><b>Variações de cor</b> · sobre azul</p>
+      <p style="margin:8px auto 0;font-size:14px;color:#D9D9D6">Branco quente como padrão sobre fundos escuros. Ocre reservado para encerramentos e destaques pontuais.</p>
+    </div>
+  </div>
+  <h3>Regras</h3>
+  <ul class="clean">
+    <li>O glyph <b>não é o logo</b>. Tem só duas posições: <b>encerramento</b> (fecha a matéria, sozinho na própria linha) e <b>protagonista</b> (centralizado numa lâmina de pausa).</li>
+    <li>Nunca em canto, na mesma linha de uma palavra, sobre foto ou na mesma lâmina do logo.</li>
+    <li>No máximo <b>um glyph por peça</b>.</li>
+    <li>Glyph em azul, branco quente ou ocre. Nunca com contorno, sombra ou rotação.</li>
+  </ul>
+</section>
+
+<!-- 09 -->
+<section>
+  <span class="num">Capítulo 09 · Cor</span>
+  <h2>Azul para a base, ocre para o detalhe.</h2>
+  <div class="grid g3">
+    <div><div class="sw" style="background:#1D1F26"></div><div class="sw-l"><b>Azul profundo</b><code>#1D1F26</code> · base, texto, fundos fortes</div></div>
+    <div><div class="sw" style="background:#C58A2B"></div><div class="sw-l"><b>Amarelo queimado</b><code>#C58A2B</code> · acento, no máximo 10% da peça</div></div>
+    <div><div class="sw" style="background:#444444"></div><div class="sw-l"><b>Cinza</b><code>#444444</code> · texto secundário</div></div>
+    <div><div class="sw" style="background:#F7F6F3"></div><div class="sw-l"><b>Branco quente</b><code>#F7F6F3</code> · fundo principal</div></div>
+    <div><div class="sw" style="background:#D9D9D6"></div><div class="sw-l"><b>Neutro</b><code>#D9D9D6</code> · linhas, divisões</div></div>
+    <div><div class="sw" style="background:#E8E2D6"></div><div class="sw-l"><b>Neutro quente</b><code>#E8E2D6</code> · fundo editorial, papel</div></div>
+  </div>
+  <h3>Proporção</h3>
+  <div style="display:flex;height:40px;overflow:hidden;border:1px solid var(--line)">
+    <div style="flex:45;background:#F7F6F3"></div><div style="flex:20;background:#E8E2D6"></div><div style="flex:25;background:#1D1F26"></div><div style="flex:5;background:#444444"></div><div style="flex:5;background:#C58A2B"></div>
+  </div>
+  <p class="muted" style="margin-top:12px;font-size:14px">Claros 65% · azul 25% · cinza 5% · ocre 5%. O azul quase grafite e o ocre usado com parcimônia afastam a marca do clichê "azul e dourado" comum no nicho.</p>
+  <h3>Contrastes principais</h3>
+  <p>Azul + branco quente · Branco quente + azul. Ocre como texto só sobre azul. Sobre fundos claros, o ocre aparece apenas em elementos gráficos (glyph, fios).</p>
+</section>
+
+<!-- 10 -->
+<section>
+  <span class="num">Capítulo 10 · Tipografia</span>
+  <h2>Sistema e expressão.</h2>
+  <div class="type-sample">
+    <span class="num">Logo · Playfair Display</span>
+    <div style="font-family:'Playfair Display',serif;font-size:56px;line-height:1.1">URANIA</div>
+    <p class="muted">Exclusiva da assinatura. Não usar em títulos ou textos.</p>
+  </div>
+  <div class="type-sample">
+    <span class="num">Expressiva · Cormorant Garamond</span>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1.1">Antes da primeira palavra, existe uma escolha.</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:28px;margin-top:8px">Itálico para citações e frases de respiro.</div>
+    <p class="muted">Títulos editoriais, citações, nomes de séries. Peso Regular ou Medium.</p>
+  </div>
+  <div class="type-sample">
+    <span class="num">Sistema · Manrope</span>
+    <div style="font-weight:600;font-size:24px">Títulos funcionais em SemiBold</div>
+    <p style="font-weight:400">Textos, informações, legendas e elementos de sistema em Regular ou Medium. Evitar excesso de Bold.</p>
+  </div>
+  <div class="type-sample">
+    <span class="num">Microinformação · Manrope Medium</span>
+    <div class="mono" style="font-size:13px;letter-spacing:.16em">ARQUIVO 03 · CAPÍTULO 01 · VOL. 01 · OBSERVAÇÃO · NOTA</div>
+    <p class="muted">Numeração e marcações editoriais, em caixa alta com espaçamento largo. Sobre fundos claros, em cinza ou azul.</p>
+  </div>
+  <div class="note"><b>Decisão fechada.</b> Marope e Choase ficam descartadas. A combinação definitiva é Playfair (só logo) + Cormorant Garamond (expressão) + Manrope (sistema). Todas gratuitas no Google Fonts e no Canva.</div>
+</section>
+
+<!-- 11 -->
+<section>
+  <span class="num">Capítulo 11 · Grid, elementos e ícones</span>
+  <h2>Consistência invisível.</h2>
+  <p>Grid de 8 px. Referências: <code>16</code> proximidade · <code>24</code> espaçamento padrão · <code>40</code> separação de blocos · <code>64</code> grande respiro · <code>96</code> abertura e destaque.</p>
+  <p class="muted">Princípios visuais: respiro, hierarquia, assimetria, contraste, ritmo, espaço negativo, detalhe.</p>
+  <h3>Elementos gráficos</h3>
+  <ul class="clean">
+    <li><b>Linha editorial:</b> fina (1 px), separa informações, cria ritmo e moldura.</li>
+    <li><b>Numeração:</b> 01 · 02 · 03 ou Arquivo 03 · Capítulo 01 · Vol. 01.</li>
+    <li><b>Microinformações:</b> Observação · Nota · Arquivo · Referência · Processo · Capítulo.</li>
+  </ul>
+  <h3>Iconografia</h3>
+  <p><b>Biblioteca: Lucide</b> (lucide.dev), traço 1,5 a 2 px, sempre em linha. Conjunto essencial, e só ele:</p>
+  <p class="mono muted">eye · compass · telescope · search · bookmark · pen-line · layers · message-circle · calendar · arrow-right · plus · check</p>
+  <p class="muted">Função antes de decoração. Ícone nunca substitui palavra.</p>
+</section>
+
+<!-- 12 -->
+<section>
+  <span class="num">Capítulo 12 · Fotografia</span>
+  <h2>Objetos de Observação.</h2>
+  <p>A fotografia não ilustra o texto. Cria um <b>segundo sentido</b> junto a ele. Uma cereja não precisa representar cereja: pode representar atenção, detalhe, escolha, prioridade.</p>
+  <div class="grid g3">
+    <div class="card"><span class="num">café</span>pausa · processo · presença</div>
+    <div class="card"><span class="num">espelho</span>percepção · identidade</div>
+    <div class="card"><span class="num">livro</span>repertório · permanência</div>
+    <div class="card"><span class="num">cadeira vazia</span>perspectiva · espera</div>
+    <div class="card"><span class="num">museu</span>memória · autoridade</div>
+    <div class="card"><span class="num">cereja</span>detalhe · atenção</div>
+  </div>
+  <h3>Direção</h3>
+  <ul class="clean">
+    <li>Luz natural, sombras presentes, cor levemente dessaturada e quente.</li>
+    <li>Preto e branco para retratos da Estéfany (como a foto de perfil atual).</li>
+    <li>Enquadramento com espaço negativo: o detalhe ocupa pouco da imagem.</li>
+    <li>Evitar: flash direto, selfie de espelho, saturação alta, banco de imagem genérico.</li>
+  </ul>
+  <p class="muted">O feed atual já tem bons exemplos: o café com livro, o globo à noite, o visor da catraca com o nome dela, a foto analógica de flores.</p>
+</section>
+
+<!-- 13 -->
+<section>
+  <span class="num">Capítulo 13 · Conteúdo</span>
+  <h2>Como a comunicação molda a percepção.</h2>
+  <p>A Urânia fala sobre comunicação, mas chega até ela por caminhos diferentes: comportamento, cultura, cinema, música, fotografia, design, cotidiano, marcas e observações pessoais. Isso dá ao conteúdo repertório e vida.</p>
+  <h3>Pilares</h3>
+  <p class="muted">01 Percepção · 02 Clareza · 03 Identidade · 04 Observação · 05 Processo · 06 Permanência</p>
+  <h3>Séries editoriais</h3>
+  <div class="tbl"><table>
+    <tr><th>Série</th><th>O que é</th><th>Pilar</th><th>Formato</th></tr>
+    <tr><td>Entrelinhas</td><td>O que uma comunicação diz sem perceber</td><td>Percepção</td><td>Carrossel</td></tr>
+    <tr><td>Ponto de Vista</td><td>Reflexões e posicionamentos</td><td>Identidade</td><td>Post estático / Reels falado</td></tr>
+    <tr><td>Em Construção</td><td>Bastidores e processos</td><td>Processo</td><td>Stories / carrossel</td></tr>
+    <tr><td>Lentes</td><td>Cinema, música, arquitetura, livros, fotografia</td><td>Observação</td><td>Carrossel</td></tr>
+    <tr><td>Princípios</td><td>Conteúdo estratégico e educativo</td><td>Clareza</td><td>Carrossel</td></tr>
+    <tr><td>Permanências</td><td>Ideias atemporais</td><td>Permanência</td><td>Post estático</td></tr>
+    <tr><td>Observações</td><td>Pequenas percepções do cotidiano</td><td>Observação</td><td>Stories</td></tr>
+    <tr><td>Arquivo de Percepções</td><td>Visuais livres, autorais, contemplativos</td><td>Observação</td><td>Foto</td></tr>
+  </table></div>
+  <p class="quote" style="font-size:24px;margin-top:40px">A Urânia não precisa transformar sua vida em conteúdo. Pode transformar seu olhar sobre a vida em repertório.</p>
+</section>
+
+<!-- 14 -->
+<section>
+  <span class="num">Capítulo 14 · Aplicações no @steffreis</span>
+  <h2>O perfil pessoal como palco da marca.</h2>
+  <p>A Urânia não terá perfil próprio por ora. Comunica pelo @steffreis. O passado não é apagado: o perfil faz a virada.</p>
+  <h3>Bio</h3>
+  <div class="card" style="max-width:420px"><b>Estéfany Reis</b><br>Direção de comunicação · Urânia<br>Observo antes de comunicar.<br>Para marcas que cresceram e não se reconhecem mais no que dizem ↓</div>
+  <p class="muted" style="margin-top:12px;font-size:14px">Destaques: Urânia · Método · Jornadas · Arquivo. Capas em azul profundo com numerais de 01 a 04 em branco quente.</p>
+  <h3>Feed</h3>
+  <div class="posts">
+    <div class="post p1"><span class="num">Entrelinhas · 01</span><div class="t">O que a sua marca diz quando ninguém está explicando?</div><span class="s">Urânia</span></div>
+    <div class="post p2"><span class="num" style="color:#1D1F26">Lentes · 03</span><div class="t"><i>Uma cereja não precisa representar cereja.</i></div><span class="s">Arquivo de Percepções</span></div>
+    <div class="post p3"><span class="num">Princípios · 05</span><div class="t">Clareza não é simplificação excessiva.</div><span class="s">Urânia</span></div>
+  </div>
+  <h3>Stories</h3>
+  <div class="grid g3">
+    <div class="story"><span class="num">Observação</span><div style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.15">Quando foi a última vez que um detalhe mudou como você enxerga algo?</div><span style="font-size:12px">responda aqui ↓</span></div>
+    <div class="story" style="background:#E8E2D6;color:#1D1F26"><span class="num" style="color:#1D1F26">Em Construção</span><svg viewBox="0 0 100 100" width="96" height="96" style="fill:#1D1F26;margin:0 auto"><use href="#glyph"/></svg><span style="font-size:13px">Bastidores de uma Direção.</span></div>
+  </div>
+  <h3>Primeiros 6 posts (a virada)</h3>
+  <ul class="clean">
+    <li><span class="num">01</span> Quem é a Estéfany e por que ela observa antes de falar.</li>
+    <li><span class="num">02</span> O que é a Urânia (e o que ela não é).</li>
+    <li><span class="num">03</span> O método: Observação, Direção, Presença.</li>
+    <li><span class="num">04</span> Primeira Entrelinhas publicada.</li>
+    <li><span class="num">05</span> Um Objeto de Observação (foto autoral + reflexão).</li>
+    <li><span class="num">06</span> As jornadas e as vagas de abertura.</li>
+  </ul>
+  <p class="muted">Ritmo inicial: 2 a 3 posts por semana nas primeiras 8 semanas, stories quase diários.</p>
+</section>
+
+<!-- 15 -->
+<section>
+  <span class="num">Capítulo 15 · Jornadas e investimento</span>
+  <h2>Presença contínua com direção.</h2>
+  <p>A proposta nunca é apresentada como "X posts + X Reels". A lógica é: <b>Observação</b> (entendimento) → <b>Direção</b> (clareza) → <b>Presença</b> (consistência) → <b>Projetos Especiais</b> (quando necessário).</p>
+  <div class="tbl"><table>
+    <tr><th>Jornada</th><th>O que é</th><th>Prazo</th><th>Investimento</th></tr>
+    <tr><td><b>Observação</b><br><span class="muted">porta de entrada</span></td><td>Questionário, sessão de 90 min, diagnóstico, prioridades e material estratégico personalizado.</td><td>até 7 dias úteis</td><td class="p">R$ 297</td></tr>
+    <tr><td><b>Direção</b><br><span class="muted">serviço principal</span></td><td>Imersão, pesquisa, posicionamento, essência, arquétipos, tom de voz, linha editorial, pilares, direção visual. Não inclui logo.</td><td>até 15 dias úteis</td><td class="p">R$ 1.497</td></tr>
+    <tr><td><b>Presença</b><br><span class="muted">direção contínua</span></td><td>Planejamento, estratégia editorial, direção criativa, produção, análise e ajustes. Contrato inicial de 3 meses. Máximo de 3 clientes.</td><td>mensal</td><td class="p">R$ 2.000/mês</td></tr>
+    <tr><td><b>Projetos Especiais</b></td><td>Identidade visual, naming, brandbook, campanhas, direção criativa, apresentações.</td><td>sob projeto</td><td class="p">sob orçamento</td></tr>
+  </table></div>
+</section>
+
+</div>
+
+<footer>
+  <svg viewBox="0 0 100 100" width="18" height="18" style="fill:var(--ocre)"><use href="#glyph"/></svg>
+  <p style="margin:12px auto 0">Urânia · Brandbook Vol. 01 · Outubro de 2026</p>
+  <p style="margin:4px auto 0">Fabricio Kaempf | Estrategista Digital · @fabriciokaempf</p>
+</footer>
+</body>
+</html>

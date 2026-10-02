@@ -1,0 +1,1765 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de marca Urânia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&family=Playfair+Display:wght@400&display=block" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+:root{
+  --azul:#1D1F26; --ocre:#C58A2B; --cinza:#444444; --branco:#F7F6F3; --neutro:#D9D9D6; --bege:#E8E2D6;
+  --cclaro:#B9B7B0; --lesc:#33353D;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:297mm 210mm;margin:0}
+html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#9a9a96;font-family:Manrope,Arial,sans-serif;color:var(--azul);font-size:10.5px;line-height:1.55}
+@media print{body{background:none}}
+
+/* PÁGINA */
+.page{width:297mm;height:210mm;margin:12px auto;background:var(--branco);position:relative;overflow:hidden;break-after:page;padding:72px 56px 64px}
+@media print{.page{margin:0}}
+.page.azul{background:var(--azul);color:var(--branco)}
+.page.bege{background:var(--bege)}
+.rh,.fo{position:absolute;left:56px;right:56px;display:flex;justify-content:space-between;font-weight:500;font-size:7px;letter-spacing:.16em;text-transform:uppercase;color:var(--cinza)}
+.rh{top:30px}
+.fo{bottom:26px;border-top:.75pt solid var(--neutro);padding-top:8px}
+.azul .rh,.azul .fo{color:var(--cclaro)}
+.azul .fo{border-color:var(--lesc)}
+.bege .fo{border-color:#c9c2b3}
+
+/* GRADE 12 COLUNAS */
+.g{display:grid;grid-template-columns:repeat(12,1fr);column-gap:20px;height:100%}
+.s4{grid-column:1/span 4}.s3{grid-column:1/span 3}.s5{grid-column:1/span 5}
+.m7{grid-column:6/span 7}.m8{grid-column:5/span 8}.m9{grid-column:4/span 9}
+.full{grid-column:1/-1}
+
+/* TIPOGRAFIA */
+.t{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:34px;line-height:1.06;letter-spacing:-.005em;margin-bottom:18px}
+.t2{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:21px;line-height:1.15;margin:0 0 8px}
+p{margin:0 0 8px;max-width:62ch}
+.lead{font-size:12px;line-height:1.55}
+.sm{font-size:9px;line-height:1.5}
+.mut{color:var(--cinza)}
+.azul .mut{color:var(--cclaro)}
+.mi{font-weight:500;font-size:7px;letter-spacing:.16em;text-transform:uppercase}
+.h3{font-weight:600;font-size:10px;margin:14px 0 6px}
+b,strong{font-weight:600}
+ul.r{list-style:none}
+ul.r li{padding:5px 0;border-bottom:.75pt solid var(--neutro)}
+ul.r li:first-child{border-top:.75pt solid var(--azul)}
+ol.n{list-style:none;counter-reset:n}
+ol.n li{counter-increment:n;display:grid;grid-template-columns:22px 1fr;padding:5px 0;border-bottom:.75pt solid var(--neutro)}
+ol.n li::before{content:counter(n,decimal-leading-zero);font-family:"Cormorant Garamond",serif;font-size:14px;line-height:1.1}
+table.sp{width:100%;border-collapse:collapse;font-size:9px;line-height:1.4}
+table.sp th{text-align:left;font-weight:500;font-size:6.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza);padding:0 6px 5px 0;border-bottom:.75pt solid var(--azul)}
+table.sp td{padding:5px 6px 5px 0;border-bottom:.75pt solid var(--neutro);vertical-align:top}
+table.sp td.k{font-weight:600}
+.azul table.sp th{color:var(--cclaro);border-color:var(--branco)}
+.azul table.sp td{border-color:var(--lesc)}
+
+/* ABERTURA DE CAPÍTULO */
+.op .num{position:absolute;left:52px;top:44px;font-family:"Cormorant Garamond",serif;font-size:260px;line-height:1;color:var(--ocre);letter-spacing:-.02em}
+.op .ot{position:absolute;left:56px;bottom:110px;font-family:"Cormorant Garamond",serif;font-size:64px;line-height:1;width:560px}
+.op .oi{position:absolute;left:calc(56px + (100% - 112px) * 7 / 12 + 8px);right:56px;bottom:110px;font-size:12px;line-height:1.6;color:var(--cclaro)}
+
+/* LOGO E GLYPH */
+.logo{display:block}
+.gl{display:block}
+svg.gl{fill:currentColor}
+
+/* MAQUETES (canvas real escalado) */
+.sc{position:relative;overflow:hidden;flex:none}
+.sc>.cv{position:absolute;left:0;top:0}
+.cv{width:1080px;height:1350px;font-family:Manrope}
+.cv.story{height:1920px}
+.cv.sq{height:1080px}
+.cv.a4{width:794px;height:1123px}
+.cv .ab{position:absolute}
+.cv .mx{font-weight:500;font-size:24px;letter-spacing:.16em;text-transform:uppercase;line-height:1.33}
+.cv .cg{font-family:"Cormorant Garamond",serif;font-weight:400}
+.bgA{background:var(--azul);color:var(--branco)}
+.bgB{background:var(--branco);color:var(--azul)}
+.bgN{background:var(--bege);color:var(--azul)}
+.foto{background:repeating-linear-gradient(135deg,#ddd6c8 0 2px,#e4ded2 2px 14px);display:flex;align-items:flex-end;padding:24px;color:var(--cinza)}
+
+/* ANOTAÇÕES TÉCNICAS: traço ocre, rótulo azul */
+.dim{position:absolute;border-color:var(--ocre);border-style:solid;border-width:0}
+.dl{position:absolute;font-weight:500;font-size:8px;line-height:1.2;color:var(--azul);white-space:nowrap}
+.azul .dl{color:var(--branco)}
+.dash{position:absolute;border:1px dashed var(--ocre)}
+
+/* DIVERSOS */
+.sw{height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:12px}
+.cap{font-size:8.5px;line-height:1.4;margin-top:6px}
+.tile{background:var(--bege);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.box{border:.75pt solid var(--neutro);padding:12px}
+.nota{background:var(--bege);padding:10px 12px;font-size:9px;line-height:1.5}
+.chk li{display:grid;grid-template-columns:16px 1fr;gap:6px}
+.chk li::before{content:"";width:9px;height:9px;border:.75pt solid var(--azul);margin-top:2px}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><symbol id="g" viewBox="0 0 100 100"><path d="M52 1 Q54.5 44 93 48.5 Q55 53.5 48.5 99 Q46 55 9 51.5 Q47 46.5 52 1Z"/></symbol></defs>
+</svg>
+
+<!-- ============ CAPA ============ -->
+<section class="page bege" style="padding:0">
+  <img class="logo" src="logo/urania_v1_azul.svg" alt="Urânia" style="position:absolute;width:420px;left:calc(50% - 210px);top:178px">
+  <div class="mi" style="position:absolute;left:0;right:0;top:420px;text-align:center;color:var(--cinza)">Manual de marca · Versão 1.0 · Outubro de 2026</div>
+  <div style="position:absolute;left:0;right:0;bottom:44px;text-align:center;font-size:9.5px;line-height:1.5">
+    <b>Estéfany Reis</b><br><span class="mut">Direção de comunicação · Urânia</span>
+  </div>
+</section>
+
+<!-- ============ COMO USAR ============ -->
+<section class="page">
+  <div class="rh"><span>Antes de começar</span><span>Manual de marca</span></div>
+  <div class="g">
+    <div class="s5">
+      <h1 class="t" style="font-size:40px">O brandbook diz por quê. Este manual diz como.</h1>
+      <p class="lead">O brandbook da Urânia guarda a essência, o método, a personalidade e a voz. Este manual transforma tudo isso em regras de aplicação: medidas, cores, tamanhos, grades e textos prontos.</p>
+      <p>Foi escrito para três leitores: a Estéfany produzindo no Canva, um designer montando arquivos e uma gráfica imprimindo. Toda regra aqui pode ser medida. Se não pode ser medida, não está aqui.</p>
+      <p class="mut">Na dúvida, vale a pergunta da marca: isso ajuda alguém a olhar melhor, ou só ocupa espaço?</p>
+      <div class="nota" style="margin-top:18px"><b>Duas grafias, uma regra.</b> O logotipo é desenhado como URANIA, sem acento, por decisão da fundadora. Em todo texto (legenda, bio, documento, rodapé) a grafia é sempre Urânia, com acento.</div>
+    </div>
+    <div class="m7" style="grid-column:7/span 6">
+      <div class="mi mut" style="margin-bottom:8px">Sumário</div>
+      <ol class="n" style="font-size:11px">
+        <li><span style="display:flex;justify-content:space-between">Logotipo<span class="mut" data-ref="c1"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Glyph<span class="mut" data-ref="c2"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Cor<span class="mut" data-ref="c3"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Tipografia<span class="mut" data-ref="c4"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Grade e formatos<span class="mut" data-ref="c5"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Imagem<span class="mut" data-ref="c6"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Voz aplicada<span class="mut" data-ref="c7"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Aplicações<span class="mut" data-ref="c8"></span></span></li>
+        <li><span style="display:flex;justify-content:space-between">Produção e arquivos<span class="mut" data-ref="c9"></span></span></li>
+      </ol>
+      <div class="h3" style="margin-top:22px">Como ler as medidas</div>
+      <table class="sp">
+        <tr><td class="k" style="width:70px">x</td><td>Altura do U no logotipo. Todas as medidas do logo são proporções de x e valem em qualquer tamanho.</td></tr>
+        <tr><td class="k">W</td><td>Largura do nome URANIA. W = 5,04x.</td></tr>
+        <tr><td class="k">Canvas</td><td>Medidas em px do Canva: feed 1080 × 1350, stories 1080 × 1920, A4 794 × 1123.</td></tr>
+        <tr><td class="k">Lâmina</td><td>Cada slide de carrossel, cada story, cada página de PDF.</td></tr>
+        <tr><td class="k">Peça</td><td>O conjunto publicado: um carrossel inteiro, uma sequência de stories, um PDF.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span>02</span></div>
+</section>
+
+<!-- ============ 01 LOGOTIPO ============ -->
+<section class="page azul op" id="c1">
+  <div class="num">01</div>
+  <div class="ot">Logotipo</div>
+  <div class="oi">Três versões, uma construção. O logotipo é desenho convertido em curvas: ninguém redigita URANIA, em nenhum programa. Todo uso parte dos arquivos-mestre do kit.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Arquitetura</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">Três versões cobrem todos os usos reais da marca.</h2></div>
+    <div class="m7" style="grid-column:7/span 6"><p class="mut" style="padding-top:6px">Não existem versão horizontal, versão com o glyph, versão com o nome da Estéfany travado no logo nem versão em contorno. Cada versão a mais é um ponto de erro a mais.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:5fr 4fr 3fr;gap:20px;align-self:end">
+      <div>
+        <div class="tile" style="height:250px;background:var(--bege)"><img src="logo/urania_v1_azul.svg" alt="" style="width:300px"></div>
+        <div class="h3">V1 · Assinatura completa</div>
+        <p class="sm"><b>Usar em:</b> capa de PDF (proposta, apresentação de serviços, diagnóstico, entregas), capa do brandbook e do manual, abertura de apresentação ao vivo.</p>
+        <p class="sm mut"><b>Não usar:</b> em conteúdo editorial, abaixo do mínimo, sobre fotografia.</p>
+      </div>
+      <div>
+        <div class="tile" style="height:250px;background:var(--azul)"><img src="logo/urania_v2_branco-quente.svg" alt="" style="width:250px"></div>
+        <div class="h3">V2 · Assinatura compacta</div>
+        <p class="sm"><b>Usar em:</b> fechamento de carrossel institucional, story institucional, cartela final de Reels, assinatura de e-mail, cabeçalho de documento de uma página.</p>
+        <p class="sm mut"><b>Não usar:</b> como marca d'água, abaixo do mínimo.</p>
+      </div>
+      <div>
+        <div class="tile" style="height:250px;background:var(--branco);border:.75pt solid var(--neutro)"><img src="logo/urania_v3_monograma_azul_512.png" alt="" style="width:150px"></div>
+        <div class="h3">V3 · Monograma</div>
+        <p class="sm"><b>Usar em:</b> favicon, avatar de ferramentas (Canva, Drive, Notion, Calendly), futuro perfil próprio da Urânia.</p>
+        <p class="sm mut"><b>Não usar:</b> como foto do @steffreis ou do WhatsApp (ficam com o retrato), em posts, ao lado de V1 ou V2.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Construção V1 e V2</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Medidas tiradas do desenho original.</h2>
+      <p>A unidade é <b>x</b>, a altura do U. As proporções foram medidas no logo criado pela Estéfany e reproduzidas nos arquivos-mestre.</p>
+      <table class="sp" style="margin-top:12px">
+        <tr><th>Elemento</th><th>Medida</th></tr>
+        <tr><td class="k">Nome</td><td>Playfair Display Regular, caixa alta, espaçamento +14</td></tr>
+        <tr><td class="k">Largura W</td><td>5,04x</td></tr>
+        <tr><td class="k">Linha</td><td>Comprimento W, espessura 0,038x, a 0,21x da base das letras</td></tr>
+        <tr><td class="k">Tagline</td><td>Manrope Regular, caixa baixa, corpo 0,384x, a 0,41x da linha</td></tr>
+        <tr><td class="k">Largura da tagline</td><td>1,246W (6,28x). É mais larga que o nome, de propósito</td></tr>
+        <tr><td class="k">Caixa V1</td><td>6,28x × 2,03x</td></tr>
+        <tr><td class="k">Caixa V2</td><td>5,04x × 1,25x</td></tr>
+      </table>
+    </div>
+    <div class="m7" style="grid-column:6/span 7;position:relative">
+      <div style="position:absolute;left:0;top:70px;width:640px;height:300px;transform:scale(1.22);transform-origin:0 0">
+        <img src="logo/urania_v1_azul.svg" alt="" style="position:absolute;left:0;top:0;width:496.8px">
+        <!-- W -->
+        <div class="dim" style="left:98.7px;top:36px;width:301.8px;border-top-width:1px"></div>
+        <div class="dim" style="left:98.7px;top:32px;height:9px;border-left-width:1px"></div>
+        <div class="dim" style="left:400px;top:32px;height:9px;border-left-width:1px"></div>
+        <div class="dl" style="left:228px;top:20px">W = 5,04x</div>
+        <!-- x -->
+        <div class="dim" style="left:84px;top:60px;height:60px;border-left-width:1px"></div>
+        <div class="dim" style="left:80px;top:60px;width:9px;border-top-width:1px"></div>
+        <div class="dim" style="left:80px;top:120px;width:9px;border-top-width:1px"></div>
+        <div class="dl" style="left:70px;top:84px">x</div>
+        <!-- 0,21x -->
+        <div class="dim" style="left:410px;top:120px;height:12.6px;border-left-width:1px"></div>
+        <div class="dim" style="left:404px;top:120px;width:12px;border-top-width:1px"></div>
+        <div class="dl" style="left:420px;top:114px">0,21x</div>
+        <div class="dl" style="left:420px;top:128px">espessura 0,038x</div>
+        <!-- 0,41x -->
+        <div class="dim" style="left:448px;top:134.9px;height:24.6px;border-left-width:1px"></div>
+        <div class="dim" style="left:442px;top:159.5px;width:12px;border-top-width:1px"></div>
+        <div class="dl" style="left:456px;top:143px">0,41x</div>
+        <!-- tagline -->
+        <div class="dim" style="left:60px;top:204px;width:376.8px;border-top-width:1px"></div>
+        <div class="dim" style="left:60px;top:200px;height:9px;border-left-width:1px"></div>
+        <div class="dim" style="left:436.3px;top:200px;height:9px;border-left-width:1px"></div>
+        <div class="dl" style="left:168px;top:212px">tagline: 1,246W · corpo 0,384x</div>
+      </div>
+      <div style="position:absolute;left:10px;bottom:0;right:0">
+        <div class="h3">Regras de construção</div>
+        <ol class="n sm">
+          <li><span>A distância entre a linha e a tagline (0,41x) é quase o dobro da distância entre o nome e a linha (0,21x). É isso que faz a linha pertencer ao nome.</span></li>
+          <li><span>Nunca reduzir a tagline para caber na linha, nem esticar a linha até a tagline.</span></li>
+          <li><span>Teste de integridade: na V1 a altura é cerca de um terço da largura (0,32); na V2, cerca de um quarto (0,25). Arquivo que não bate foi alterado.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Monograma e assinatura pessoal</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">O U com a linha resolve onde não cabe um nome.</h2>
+      <p>Favicon e avatares vivem entre 16 e 110 px. Nesse tamanho o glyph perde a irregularidade e vira a estrela genérica das ferramentas de IA. O monograma é uma redução do próprio logo: leva a linha editorial, o traço mais reconhecível da assinatura.</p>
+      <p class="mut">Um U serifado sozinho é forma comum. A distinção vem do conjunto. Nunca usar o U sem a linha.</p>
+      <table class="sp" style="margin-top:12px">
+        <tr><th>Elemento</th><th>Medida (S = lado do quadrado)</th></tr>
+        <tr><td class="k">U</td><td>Altura 0,40S. Medium abaixo de 48 px</td></tr>
+        <tr><td class="k">Linha</td><td>Largura do U, espessura 1/12 da altura do U (0,033S)</td></tr>
+        <tr><td class="k">Distância</td><td>0,21 da altura do U, a mesma relação do logo</td></tr>
+        <tr><td class="k">Posição</td><td>Centro do conjunto a 0,48S do topo (centro óptico)</td></tr>
+        <tr><td class="k">Círculo</td><td>Tudo cabe num círculo central de 0,70S</td></tr>
+        <tr><td class="k">Favicon</td><td>16 e 32 px: U com 0,50S e linha de 1 px inteiro</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:6/span 3;position:relative">
+      <div style="position:relative;width:200px;height:200px;margin-top:40px">
+        <img src="logo/urania_v3_monograma_azul.svg" alt="" style="width:200px;display:block">
+        <div class="dash" style="left:30px;top:30px;width:140px;height:140px;border-radius:50%"></div>
+        <div class="dim" style="left:212px;top:47.3px;height:80px;border-left-width:1px"></div>
+        <div class="dl" style="left:220px;top:80px">0,40S</div>
+        <div class="dl" style="left:0;top:206px;color:var(--cinza)">Círculo tracejado: recorte de 0,70S</div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:flex-end;margin-top:48px">
+        <img src="logo/urania_v3_monograma_azul_180.png" alt="" style="width:64px">
+        <img src="logo/urania_v3_monograma_azul_180.png" alt="" style="width:32px">
+        <img src="logo/urania_v3_monograma_branco-quente_180.png" alt="" style="width:32px;outline:.75pt solid var(--neutro)">
+        <img src="logo/urania_v3_monograma_azul_180.png" alt="" style="width:16px">
+      </div>
+      <p class="sm mut" style="margin-top:8px">Fundo azul é o padrão. Cantos retos: a plataforma arredonda ou recorta sozinha.</p>
+    </div>
+    <div style="grid-column:9/span 4">
+      <div class="h3" style="margin-top:0">Bloco de assinatura pessoal</div>
+      <p class="sm">Composição tipográfica com o nome dela. Não é logo e não tem arquivo-mestre fixo.</p>
+      <div class="box" style="margin:10px 0;padding:18px">
+        <div style="font-weight:600;font-size:13.8px">Estéfany Reis</div>
+        <div style="font-size:12px;color:var(--cinza)">Direção de comunicação · Urânia</div>
+        <div style="font-size:12px;color:var(--cinza)">@steffreis</div>
+      </div>
+      <table class="sp">
+        <tr><td class="k" style="width:74px">Tamanhos</td><td>Linha 1 maior que as demais: e-mail 14 e 12 px; PDF 10 pt e 8 pt.</td></tr>
+        <tr><td class="k">Cor</td><td>Sobre claros: azul e cinza. Sobre azul: branco quente e cinza claro #B9B7B0.</td></tr>
+        <tr><td class="k">Usos</td><td>Capa e última página de PDF, e-mail, WhatsApp.</td></tr>
+        <tr><td class="k">Proibido</td><td>Nome dela em Playfair Display. Bloco a menos de 2x de qualquer versão do logo (exceção: na assinatura de e-mail, a V2 fica 16 px abaixo do bloco).</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Área de proteção e tamanhos mínimos</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Uma altura de U livre em volta, sempre.</h2>
+      <p>Dentro da área de proteção não entra nada: texto, ícone, fio, borda de foto, figurinha ou interface do Instagram.</p>
+      <p class="mut">A área de proteção não substitui a margem da peça. Vale a maior das duas: num post de 1080 px, o logo respeita a margem de 96 px mesmo que 1x seja menor.</p>
+      <table class="sp" style="margin-top:14px">
+        <tr><th>Versão</th><th>Área livre</th></tr>
+        <tr><td class="k">V1 e V2</td><td>1x em todos os lados, a partir das pontas da tagline, do topo das serifas e do descendente do g</td></tr>
+        <tr><td class="k">V3</td><td>O próprio quadrado; fora dele, 0,25S</td></tr>
+        <tr><td class="k">Glyph</td><td>0,5h em todos os lados</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div style="display:flex;gap:28px;align-items:flex-start">
+        <div style="position:relative;width:331.2px;height:161.3px;outline:1px dashed var(--ocre);background:var(--bege)">
+          <img src="logo/urania_v1_azul.svg" alt="" style="width:331.2px;display:block">
+          <div class="dash" style="left:40px;top:40px;width:251.2px;height:81.3px;border-color:var(--neutro)"></div>
+          <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-right:1px solid var(--ocre);border-bottom:1px solid var(--ocre)"></div>
+          <div class="dl" style="left:16px;top:14px">x</div>
+        </div>
+        <div style="position:relative;width:281.6px;height:130px;outline:1px dashed var(--ocre);background:var(--bege)">
+          <img src="logo/urania_v2_azul.svg" alt="" style="width:281.6px;display:block">
+          <div style="position:absolute;left:0;top:0;width:40px;height:40px;border-right:1px solid var(--ocre);border-bottom:1px solid var(--ocre)"></div>
+          <div class="dl" style="left:16px;top:14px">x</div>
+        </div>
+      </div>
+      <div class="h3" style="margin-top:34px">Tamanhos mínimos (largura do nome, W)</div>
+      <table class="sp">
+        <tr><th>Versão</th><th>Tela</th><th>Instagram (canvas)</th><th>Impresso</th><th>Impresso em negativo</th><th>Abaixo disso</th></tr>
+        <tr><td class="k">V1</td><td>160 px</td><td>368 px</td><td>28 mm</td><td>42 mm</td><td>Usar V2</td></tr>
+        <tr><td class="k">V2</td><td>96 px</td><td>272 px</td><td>15 mm</td><td>24 mm</td><td>Usar V3 ou nenhum logo</td></tr>
+        <tr><td class="k">V3 (lado S)</td><td>16 px</td><td>110 px</td><td>6 mm</td><td>8 mm</td><td>Não usar</td></tr>
+        <tr><td class="k">Glyph (altura h)</td><td>24 px</td><td>48 px</td><td>6 mm</td><td>8 mm</td><td>Omitir o glyph</td></tr>
+      </table>
+      <div style="display:flex;gap:24px;align-items:flex-end;margin-top:20px">
+        <div><img src="logo/urania_v1_azul.svg" alt="" style="width:263px;display:block;margin:-26px -26px 0"><div class="cap mut" style="margin-top:-18px">V1 no mínimo de tela (W 160 px)</div></div>
+        <div><img src="logo/urania_v2_azul.svg" alt="" style="width:134px;display:block;margin:-19px -19px 0"><div class="cap mut" style="margin-top:-12px">V2 no mínimo de tela (W 96 px)</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Cores do logo</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Uma cor só, e nunca ocre.</h2>
+      <p>O logo é sempre de uma cor: nome, linha e tagline iguais. Na tela, o branco do logo é o branco quente #F7F6F3. Branco puro só existe em produção física (gravação, serigrafia, vinil).</p>
+      <p class="mut"><b>Fundos proibidos:</b> ocre, cinza #444444, neutro #D9D9D6 (é cor de fio, não de fundo), qualquer cor fora da paleta, degradê, textura ou padrão.</p>
+      <div class="h3">Impressão</div>
+      <p class="sm">Azul em quatro cores (C100 M65 Y0 K90) só com V1 a partir de 65 mm e V2 a partir de 40 mm. Abaixo disso, K100: as hastes finas desalinham quando as tintas se sobrepõem.</p>
+      <div class="h3">Sobre fotografia</div>
+      <p class="sm">Só na cartela final de Reels e no story institucional, e só com a V2. Toda a área de proteção cai sobre zona lisa da imagem, com contraste mínimo de 4,5:1 no ponto mais desfavorável. Sem contraste: sobreposição de azul a 40% ou 60% e nova medição. Nunca caixa, tarja, sombra ou contorno. Capa de PDF nunca leva logo sobre foto.</p>
+    </div>
+    <div style="grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:100%">
+      <div><div class="tile" style="height:168px;background:var(--branco);border:.75pt solid var(--neutro)"><img src="logo/urania_v1_azul.svg" alt="" style="width:230px"></div><div class="cap"><b>Positiva</b> · azul sobre branco quente · 15,23:1</div></div>
+      <div><div class="tile" style="height:168px;background:var(--bege)"><img src="logo/urania_v1_azul.svg" alt="" style="width:230px"></div><div class="cap"><b>Positiva</b> · azul sobre neutro quente · 12,76:1</div></div>
+      <div><div class="tile" style="height:168px;background:var(--azul)"><img src="logo/urania_v1_branco-quente.svg" alt="" style="width:230px"></div><div class="cap"><b>Negativa</b> · branco quente sobre azul · 15,23:1</div></div>
+      <div><div class="tile" style="height:168px;background:#fff;border:.75pt solid var(--neutro)"><img src="logo/urania_v1_preto.svg" alt="" style="width:230px"></div><div class="cap"><b>Monocromática</b> · K100, impressão a uma cor</div></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Usos incorretos</span></div>
+  <style>
+    .lw{font-family:"Playfair Display",serif;font-size:30px;line-height:1;letter-spacing:.014em;text-align:center}
+    .ll{height:1.15px;background:currentColor;margin:6px auto 0}
+    .lt{font-family:Manrope;font-size:7.2px;margin-top:7px;text-align:center;white-space:nowrap}
+    .bad{display:flex;flex-direction:column;align-items:center;color:var(--azul)}
+  </style>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">Os dez erros mais prováveis.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut" style="padding-top:6px">Na ordem em que costumam acontecer. Todos têm a mesma correção: inserir o arquivo-mestre do Brand Kit, sem ajustes.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px 14px;align-self:end">
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw">URÂNIA</div><div class="ll" style="width:118px"></div></div></div><div class="cap"><b>01</b> Acentuar o desenho. No logo é URANIA; no texto, Urânia.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw" style="font-family:'Cormorant Garamond';letter-spacing:.06em">URANIA</div><div class="ll" style="width:90px;height:2px"></div></div></div><div class="cap"><b>02</b> Redigitar o logo no Canva e desenhar uma linha embaixo.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw">URANIA</div><div class="ll" style="width:150px;height:3.5px"></div><div class="lt">onde marcas encontram significado</div></div></div><div class="cap"><b>03</b> Alterar a linha: mais longa, mais curta, mais grossa ou tracejada.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw">URANIA</div><div class="ll" style="width:116px"></div><div class="lt" style="font-size:5.7px">onde marcas encontram significado</div></div></div><div class="cap"><b>04</b> Encolher a tagline para caber na largura da linha.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw">URANIA</div><div class="ll" style="width:116px"></div><div class="lt" style="font-family:'Cormorant Garamond';font-style:italic;font-size:9.5px;margin-top:3px">onde marcas encontram significado</div></div></div><div class="cap"><b>05</b> Trocar a fonte da tagline ou aproximá-la da linha.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad" style="flex-direction:row;align-items:flex-start;gap:6px"><div><div class="lw">URANIA</div><div class="ll" style="width:116px"></div></div><svg class="gl" viewBox="0 0 100 100" width="18" height="18" style="color:var(--azul)"><use href="#g"/></svg></div></div><div class="cap"><b>06</b> Colocar o glyph dentro, ao lado ou acima do logo.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw" style="color:var(--azul)">URANIA</div><div class="ll" style="width:116px;background:var(--ocre)"></div><div class="lt" style="color:var(--ocre)">onde marcas encontram significado</div></div></div><div class="cap"><b>07</b> Logo em ocre ou em duas cores.</div></div>
+      <div><div class="tile" style="height:120px"><div class="bad"><div class="lw" style="letter-spacing:.32em;font-size:22px;padding-left:.32em">URANIA</div><div class="ll" style="width:150px"></div></div></div><div class="cap"><b>08</b> Abrir o espaçamento, apertar as letras ou trocar a caixa.</div></div>
+      <div><div class="tile" style="height:120px;background:var(--branco);border:.75pt solid var(--neutro)"><div style="width:84px;height:105px;background:var(--bege);position:relative;padding:10px 8px"><div style="font-family:'Cormorant Garamond';font-size:10px;line-height:1.1">Constância não é frequência.</div><img src="logo/urania_v2_azul.svg" alt="" style="position:absolute;right:4px;bottom:4px;width:30px;opacity:.35"></div></div><div class="cap"><b>09</b> Usar como marca d'água no canto das lâminas.</div></div>
+      <div><div class="tile" style="height:120px"><img src="logo/urania_v2_azul.svg" alt="" style="width:120px;transform:scaleX(1.45) rotate(-6deg)"></div><div class="cap"><b>10</b> Esticar, comprimir, girar, aplicar sombra ou contorno.</div></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>01 Logotipo</span><span>Presença e posição</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">O logo assina o institucional. O conteúdo é assinado pelo olhar.</h2>
+      <ol class="n" style="margin-top:6px">
+        <li><span>No Instagram, o logo aparece só em peças institucionais: o que é a Urânia, método, jornadas, vagas, agenda. O conteúdo editorial é assinado pelo rodapé URÂNIA e pela autoria dela.</span></li>
+        <li><span>Em PDFs, o logo aparece só na capa e no cabeçalho de documentos de uma página. As páginas internas levam o rodapé URÂNIA.</span></li>
+        <li><span>Logo e glyph nunca dividem a mesma lâmina.</span></li>
+      </ol>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div class="h3" style="margin-top:0">Tamanho e posição recomendados</div>
+      <table class="sp">
+        <tr><th>Aplicação</th><th>Versão</th><th>Tamanho (W)</th><th>Posição</th></tr>
+        <tr><td class="k">Capa de PDF A4</td><td>V1</td><td>288 a 320 px no Canva (76 a 85 mm)</td><td>Centralizado; centro do bloco a 42% da altura (y 472)</td></tr>
+        <tr><td class="k">Fechamento de carrossel institucional</td><td>V2</td><td>400 a 480 px</td><td>Centralizado; centro óptico em y 620</td></tr>
+        <tr><td class="k">Story institucional</td><td>V2</td><td>400 a 480 px</td><td>Centralizado; centro em y 640</td></tr>
+        <tr><td class="k">Cartela final de Reels</td><td>V2</td><td>480 px</td><td>Centralizado; centro em y 904</td></tr>
+        <tr><td class="k">Assinatura de e-mail</td><td>V2</td><td>128 px exibidos (arquivo em dobro)</td><td>Alinhado à esquerda com o texto</td></tr>
+        <tr><td class="k">Documento de uma página</td><td>V2</td><td>160 a 200 px no Canva</td><td>U na margem esquerda (x 64), topo em y 96</td></tr>
+      </table>
+      <div class="nota" style="margin-top:18px">Abaixo do mínimo de cada versão, a troca é sempre para a versão menor, nunca para um logo espremido: V1 vira V2, V2 vira V3 ou nenhum logo.</div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 02 GLYPH ============ -->
+<section class="page azul op" id="c2">
+  <div class="num">02</div>
+  <div class="ot">Glyph</div>
+  <div class="oi">A estrela irregular é pontuação, não assinatura. Fecha uma matéria ou ocupa sozinha uma lâmina de pausa. Quanto mais raro, mais forte.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>02 Glyph</span><span>Desenho e tamanho</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">A irregularidade é o desenho.</h2>
+      <p>As pontas têm comprimentos e espessuras diferentes. É isso que separa o glyph da estrela genérica de quatro pontas, que virou o símbolo das ferramentas de inteligência artificial.</p>
+      <table class="sp" style="margin-top:12px">
+        <tr><th>Ponta</th><th>A partir do centro (caixa de 100)</th></tr>
+        <tr><td class="k">Superior</td><td>49 unidades, deslocada para a direita (x 52)</td></tr>
+        <tr><td class="k">Inferior</td><td>49 unidades, deslocada para a esquerda (x 48,5)</td></tr>
+        <tr><td class="k">Direita</td><td>43 unidades, um pouco acima do centro</td></tr>
+        <tr><td class="k">Esquerda</td><td>41 unidades, a mais curta, um pouco abaixo</td></tr>
+        <tr><td class="k">Proporção</td><td>Largura igual a 0,86 da altura (h)</td></tr>
+      </table>
+      <p class="sm mut" style="margin-top:12px">Orientação única: pontas longas na vertical. Sem rotação, sem espelhamento. Nunca substituir pelo caractere ✦ nem por estrelas da biblioteca do Canva.</p>
+    </div>
+    <div style="grid-column:6/span 3;position:relative">
+      <div style="position:relative;width:240px;height:240px;margin-top:60px">
+        <svg class="gl" viewBox="0 0 100 100" width="240" height="240" style="color:var(--azul)"><use href="#g"/></svg>
+        <div class="dim" style="left:252px;top:2.4px;height:235.2px;border-left-width:1px"></div>
+        <div class="dim" style="left:247px;top:2.4px;width:10px;border-top-width:1px"></div>
+        <div class="dim" style="left:247px;top:237.6px;width:10px;border-top-width:1px"></div>
+        <div class="dl" style="left:260px;top:112px">h</div>
+        <div class="dim" style="left:21.6px;top:256px;width:201.6px;border-top-width:1px"></div>
+        <div class="dim" style="left:21.6px;top:251px;height:10px;border-left-width:1px"></div>
+        <div class="dim" style="left:223.2px;top:251px;height:10px;border-left-width:1px"></div>
+        <div class="dl" style="left:104px;top:264px">0,86h</div>
+      </div>
+    </div>
+    <div style="grid-column:9/span 4">
+      <div class="h3" style="margin-top:0">Tamanho (altura h)</div>
+      <table class="sp">
+        <tr><th>Uso</th><th>Feed e stories</th><th>PDF (Canva)</th><th>Impresso</th></tr>
+        <tr><td class="k">Encerramento</td><td>48 a 64 px</td><td>24 a 32 px</td><td>6 a 8 mm</td></tr>
+        <tr><td class="k">Protagonista</td><td>160 px no feed; 240 px no story</td><td>120 a 175 px</td><td>15% a 22% da largura</td></tr>
+        <tr><td class="k">Mínimo</td><td>48 px</td><td>24 px</td><td>6 mm</td></tr>
+        <tr><td class="k">Máximo</td><td colspan="3">25% do lado menor da lâmina. Acima disso deixa de ser marcador e vira ilustração.</td></tr>
+      </table>
+      <div class="h3">Área de proteção</div>
+      <p class="sm">0,5h livre em todos os lados, a partir das pontas.</p>
+      <div class="h3">Arquivo</div>
+      <p class="sm">SVG do kit (azul, branco quente e ocre). Nenhuma outra cor.</p>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>02 Glyph</span><span>Posições</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">São só duas posições.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut" style="padding-top:6px">Fora delas, o glyph lembra a assinatura de imagens geradas por IA, vira marca d'água ou se reduz a pontuação comum.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(12,1fr);column-gap:20px;align-self:end">
+      <div style="grid-column:1/span 3">
+        <div class="sc" style="width:216px;height:270px;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.2">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Ponto de Vista · 03</div>
+          <div class="ab" style="left:248px;top:480px;width:128px;height:2px;background:var(--azul)"></div>
+          <div class="ab cg" style="left:248px;top:522px;width:736px;font-style:italic;font-size:64px;line-height:1.25">Tendências mudam a cada estação. O jeito como uma marca olha para o mundo, não.</div>
+          <div class="ab mx" style="left:248px;top:880px;color:var(--cinza)">Nota · Estéfany Reis</div>
+          <svg class="ab gl" viewBox="0 0 100 100" style="left:248px;top:952px;width:56px;height:56px;color:var(--azul)"><use href="#g"/></svg>
+          <div class="ab mx" style="left:96px;top:1222px">Urânia</div>
+        </div></div>
+        <div class="h3">P1 · Encerramento</div>
+        <p class="sm">Sinal que fecha a matéria, como em revista. Sozinho na própria linha, alinhado à coluna do texto: 40 px abaixo do último texto, ou de 24 a 40 px acima da frase de encerramento. Última página de PDF, post de citação, último story de texto.</p>
+      </div>
+      <div style="grid-column:4/span 3">
+        <div class="sc" style="width:216px;height:270px"><div class="cv bgA" style="zoom:.2">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Entrelinhas · 04</div>
+          <div class="ab mx" style="right:96px;top:96px;color:var(--cclaro)">08 / 08</div>
+          <svg class="ab gl" viewBox="0 0 100 100" style="left:460px;top:540px;width:160px;height:160px;color:var(--branco)"><use href="#g"/></svg>
+          <div class="ab cg" style="left:172px;top:764px;width:736px;text-align:center;font-size:56px;line-height:1.2">Toda comunicação é escolha, inclusive o que fica de fora.</div>
+          <div class="ab" style="left:172px;top:944px;width:736px;text-align:center;font-size:32px;color:var(--cclaro)">Envie para alguém que está repensando a própria marca.</div>
+        </div></div>
+        <div class="h3">P2 · Protagonista</div>
+        <p class="sm">A lâmina de pausa. Centralizado: 160 px no feed (centro em x 540, y 620), 240 px no story. Texto opcional 64 px abaixo, até 20 palavras. Fora esse texto, nada a menos de 1h dele.</p>
+      </div>
+      <div style="grid-column:8/span 5">
+        <div class="mi mut" style="margin-bottom:8px">Posições proibidas</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+          <div><div class="sc" style="width:94px;height:117.5px;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.087">
+            <div class="ab cg" style="left:96px;top:700px;width:736px;font-size:112px;line-height:1.07">O que fica de fora também comunica.</div>
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:920px;top:1190px;width:64px;height:64px;color:var(--azul)"><use href="#g"/></svg></div></div>
+            <div class="cap">No canto, como marcador fixo</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px"><div class="cv bgA" style="zoom:.087">
+            <div class="ab" style="left:96px;top:520px;display:flex;align-items:center;gap:24px"><svg class="gl" viewBox="0 0 100 100" style="width:72px;height:72px;color:var(--ocre)"><use href="#g"/></svg><span style="font-size:72px">Observação</span></div></div></div>
+            <div class="cap">Na mesma linha de uma palavra</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px"><div class="cv foto" style="zoom:.087">
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:440px;top:540px;width:200px;height:200px;color:var(--branco)"><use href="#g"/></svg></div></div>
+            <div class="cap">Sobre fotografia</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.087">
+            <div class="ab" style="left:96px;top:360px;display:grid;gap:56px;font-size:48px">
+              <div style="display:flex;gap:28px;align-items:center"><svg class="gl" viewBox="0 0 100 100" style="width:48px;height:48px;color:var(--azul)"><use href="#g"/></svg>Percepção</div>
+              <div style="display:flex;gap:28px;align-items:center"><svg class="gl" viewBox="0 0 100 100" style="width:48px;height:48px;color:var(--azul)"><use href="#g"/></svg>Clareza</div>
+              <div style="display:flex;gap:28px;align-items:center"><svg class="gl" viewBox="0 0 100 100" style="width:48px;height:48px;color:var(--azul)"><use href="#g"/></svg>Identidade</div></div></div></div>
+            <div class="cap">Como marcador de lista</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px"><div class="cv bgA" style="zoom:.087">
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:480px;top:400px;width:120px;height:120px;color:var(--branco)"><use href="#g"/></svg>
+            <img class="ab" src="logo/urania_v2_branco-quente.svg" alt="" style="left:216px;top:580px;width:648px"></div></div>
+            <div class="cap">Na mesma lâmina que o logo</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px"><div class="cv bgN" style="zoom:.087">
+            <div class="ab cg" style="left:96px;top:200px;width:736px;font-size:112px;line-height:1.07">Constância não é frequência.</div>
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:440px;top:700px;width:200px;height:200px;color:var(--azul)"><use href="#g"/></svg></div></div>
+            <div class="cap">No centro de lâmina com título</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px"><div class="cv bgA" style="zoom:.087">
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:780px;top:-120px;width:520px;height:520px;color:var(--ocre)"><use href="#g"/></svg></div></div>
+            <div class="cap">Cortado pela borda</div></div>
+          <div><div class="sc" style="width:94px;height:117.5px;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.087">
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:200px;top:300px;width:140px;height:140px;color:var(--azul)"><use href="#g"/></svg>
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:640px;top:600px;width:200px;height:200px;color:var(--ocre)"><use href="#g"/></svg>
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:300px;top:900px;width:100px;height:100px;color:var(--azul)"><use href="#g"/></svg></div></div>
+            <div class="cap">Repetido ou como textura</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>02 Glyph</span><span>Cor, frequência e movimento</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Raro na peça, raro na grade.</h2>
+      <table class="sp">
+        <tr><th>Contexto</th><th>Limite</th></tr>
+        <tr><td class="k">Peça</td><td>No máximo 1</td></tr>
+        <tr><td class="k">Grade do perfil</td><td>Em qualquer janela de 9 posts seguidos, no máximo 3 com glyph</td></tr>
+        <tr><td class="k">PDF</td><td>1 por documento (padrão: P1 na última página)</td></tr>
+        <tr><td class="k">Stories</td><td>1 por sequência; no máximo 1 sequência com glyph por dia</td></tr>
+        <tr><td class="k">Vídeo</td><td>No máximo 1 aparição</td></tr>
+      </table>
+      <div class="h3">Movimento</div>
+      <p class="sm">Entrada por opacidade, de 0 a 100% em 400 a 600 ms, sem mudar de escala. Saída em corte seco ou por opacidade, em 400 ms. Nunca girar, pulsar, cintilar, brilhar ou cruzar a tela como estrela cadente.</p>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+        <div><div class="tile" style="height:150px;background:var(--branco);border:.75pt solid var(--neutro)"><svg class="gl" viewBox="0 0 100 100" width="64" height="64" style="color:var(--azul)"><use href="#g"/></svg></div><div class="cap"><b>Branco quente:</b> azul. Ocre só como protagonista.</div></div>
+        <div><div class="tile" style="height:150px;background:var(--bege)"><svg class="gl" viewBox="0 0 100 100" width="64" height="64" style="color:var(--azul)"><use href="#g"/></svg></div><div class="cap"><b>Neutro quente:</b> azul. Ocre só como protagonista.</div></div>
+        <div><div class="tile" style="height:150px;background:var(--azul);gap:28px"><svg class="gl" viewBox="0 0 100 100" width="64" height="64" style="color:var(--branco)"><use href="#g"/></svg><svg class="gl" viewBox="0 0 100 100" width="64" height="64" style="color:var(--ocre)"><use href="#g"/></svg></div><div class="cap"><b>Azul:</b> branco quente (padrão) ou ocre.</div></div>
+      </div>
+      <div class="h3" style="margin-top:22px">Combinações proibidas</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:20px">
+        <ol class="n sm">
+          <li><span>Glyph e logo na mesma lâmina.</span></li>
+          <li><span>Glyph e ícones na mesma lâmina (ao lado de ícones, ele vira ícone).</span></li>
+          <li><span>Glyph dentro de círculo, selo, quadrado ou qualquer contêiner.</span></li>
+          <li><span>Glyph com retícula, mira, constelação, órbita ou linhas ligando pontos.</span></li>
+        </ol>
+        <ol class="n sm" start="5" style="counter-reset:n 4">
+          <li><span>Glyph no lugar de letra ou de pontuação.</span></li>
+          <li><span>Glyph em peça cujo tema seja inteligência artificial.</span></li>
+          <li><span>Contorno, sombra, brilho, degradê, textura ou transparência.</span></li>
+          <li><span>Dois ou mais glyphs na mesma peça, em sequência ou como padrão.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 03 COR ============ -->
+<section class="page azul op" id="c3">
+  <div class="num">03</div>
+  <div class="ot">Cor</div>
+  <div class="oi">Azul para a base, ocre para o detalhe. Seis cores oficiais, convertidas e medidas: cada uma com o lugar certo para aparecer e os lugares onde não pode estar.</div>
+</section>
+
+<section class="page" style="padding-bottom:56px">
+  <div class="rh"><span>03 Cor</span><span>Paleta oficial</span></div>
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;height:100%">
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--azul)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Azul profundo</div><table class="sp"><tr><td class="k">HEX</td><td>#1D1F26</td></tr><tr><td class="k">RGB</td><td>29 31 38</td></tr><tr><td class="k">CMYK</td><td>C100 M65 Y0 K90</td></tr><tr><td class="k">Pantone</td><td>532 C*</td></tr><tr><td class="k">Uso</td><td>Base: texto principal e fundos escuros</td></tr></table></div></div>
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--branco);outline:.75pt solid var(--neutro)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Branco quente</div><table class="sp"><tr><td class="k">HEX</td><td>#F7F6F3</td></tr><tr><td class="k">RGB</td><td>247 246 243</td></tr><tr><td class="k">CMYK</td><td>Sem tinta: o papel</td></tr><tr><td class="k">Pantone</td><td>Não usar tinta</td></tr><tr><td class="k">Uso</td><td>Fundo principal</td></tr></table></div></div>
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--bege)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Neutro quente</div><table class="sp"><tr><td class="k">HEX</td><td>#E8E2D6</td></tr><tr><td class="k">RGB</td><td>232 226 214</td></tr><tr><td class="k">CMYK</td><td>C5 M5 Y10 K5</td></tr><tr><td class="k">Pantone</td><td>9226 C*</td></tr><tr><td class="k">Uso</td><td>Fundo editorial, papel</td></tr></table></div></div>
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--cinza)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Cinza</div><table class="sp"><tr><td class="k">HEX</td><td>#444444</td></tr><tr><td class="k">RGB</td><td>68 68 68</td></tr><tr><td class="k">CMYK</td><td>K85</td></tr><tr><td class="k">Pantone</td><td>446 C*</td></tr><tr><td class="k">Uso</td><td>Texto secundário sobre claros</td></tr></table></div></div>
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--neutro)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Neutro</div><table class="sp"><tr><td class="k">HEX</td><td>#D9D9D6</td></tr><tr><td class="k">RGB</td><td>217 217 214</td></tr><tr><td class="k">CMYK</td><td>K20</td></tr><tr><td class="k">Pantone</td><td>Cool Gray 1 C</td></tr><tr><td class="k">Uso</td><td>Linhas e divisões. Nunca fundo</td></tr></table></div></div>
+    <div style="display:flex;flex-direction:column"><div style="flex:1;background:var(--ocre)"></div><div class="cap" style="height:150px"><div class="t2" style="margin:8px 0 6px">Ocre</div><table class="sp"><tr><td class="k">HEX</td><td>#C58A2B</td></tr><tr><td class="k">RGB</td><td>197 138 43</td></tr><tr><td class="k">CMYK</td><td>C0 M35 Y100 K20</td></tr><tr><td class="k">Pantone</td><td>3547 C*</td></tr><tr><td class="k">Uso</td><td>Acento: no máximo 1 elemento por lâmina</td></tr></table></div></div>
+  </div>
+  <div class="fo"><span>* Pantone é aproximação: validar com o guia físico e prova de cor</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>03 Cor</span><span>Proporção e uso</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">A proporção vale para o conjunto, não para cada lâmina.</h2>
+      <p>Uma lâmina pode ser inteiramente azul. O que precisa respeitar a proporção é a grade do perfil, o carrossel inteiro, o PDF inteiro.</p>
+      <div class="h3">Cores auxiliares (só telas)</div>
+      <table class="sp">
+        <tr><td class="k" style="width:96px">Cinza claro</td><td>#B9B7B0 · texto secundário sobre azul (substitui o cinza, que reprova ali)</td></tr>
+        <tr><td class="k">Linha escura</td><td>#33353D · fio sutil sobre azul</td></tr>
+        <tr><td class="k">Azul noite</td><td>#15161B · modo escuro em telas. Nunca em peças</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div style="display:flex;height:120px;outline:.75pt solid var(--neutro)">
+        <div style="flex:45;background:var(--branco)"></div><div style="flex:20;background:var(--bege)"></div><div style="flex:25;background:var(--azul)"></div><div style="flex:5;background:var(--cinza)"></div><div style="flex:5;background:var(--ocre)"></div>
+      </div>
+      <div style="display:flex;font-size:8.5px;margin-top:6px"><span style="flex:65">Claros (branco quente e neutro quente) · 60% a 70%</span><span style="flex:25">Azul · 20% a 30%</span><span style="flex:10">Cinza, neutro e ocre</span></div>
+      <div class="h3" style="margin-top:26px">Regras de uso</div>
+      <ol class="n sm">
+        <li><span>Ocre: no máximo 10% do conjunto (o ideal fica entre 5% e 10%) e no máximo 1 elemento ocre por lâmina.</span></li>
+        <li><span>Ocre como texto só sobre azul. Nunca texto sobre ocre.</span></li>
+        <li><span>Em qualquer janela de 9 posts: no máximo 3 com fundo azul e no máximo 3 com glyph.</span></li>
+        <li><span>Texto sempre com 100% de opacidade. Para clarear, troque o token de cor, nunca a transparência.</span></li>
+        <li><span>Sem degradês, sombras ou desfoques. Única sobreposição permitida: azul a 40% ou 60% sobre fotografia.</span></li>
+        <li><span>Cantos retos em tudo: peças, blocos de cor, fotos, amostras da paleta.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>03 Cor</span><span>Contraste</span></div>
+  <style>.chip{width:46px;height:28px;display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond";font-size:16px;outline:.5pt solid var(--neutro)}</style>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Medido, não estimado.</h2>
+      <p>Contraste calculado pela norma WCAG 2.1. Texto comum precisa de 4,5:1. Título grande (72 px ou mais no Instagram, 18 pt ou mais no A4) aceita 3:1.</p>
+      <div class="nota" style="margin-top:14px"><b>A correção mais importante:</b> ocre como texto reprova sobre qualquer fundo claro. Microinformação sobre fundo claro vai em azul ou cinza. O ocre fica para o glyph e o texto sobre azul.</div>
+    </div>
+    <div style="grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;column-gap:20px">
+      <table class="sp">
+        <tr><th></th><th>Combinação</th><th>Razão</th><th>Uso</th></tr>
+        <tr><td><div class="chip" style="background:var(--branco);color:var(--azul)">Aa</div></td><td>Azul sobre branco quente</td><td>15,23</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--azul);color:var(--branco)">Aa</div></td><td>Branco quente sobre azul</td><td>15,23</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--bege);color:var(--azul)">Aa</div></td><td>Azul sobre neutro quente</td><td>12,76</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--branco);color:var(--cinza)">Aa</div></td><td>Cinza sobre branco quente</td><td>9,01</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--bege);color:var(--cinza)">Aa</div></td><td>Cinza sobre neutro quente</td><td>7,55</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--azul);color:var(--cclaro)">Aa</div></td><td>Cinza claro sobre azul</td><td>8,20</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--azul);color:var(--ocre)">Aa</div></td><td>Ocre sobre azul</td><td>5,52</td><td>Texto</td></tr>
+        <tr><td><div class="chip" style="background:var(--ocre);color:var(--azul)">Aa</div></td><td>Azul sobre ocre (regra da marca)</td><td>5,52</td><td>Não usar</td></tr>
+      </table>
+      <table class="sp">
+        <tr><th></th><th>Combinação</th><th>Razão</th><th>Uso</th></tr>
+        <tr><td><div class="chip" style="background:var(--branco);color:var(--ocre)">Aa</div></td><td>Ocre sobre branco quente</td><td>2,76</td><td>Só gráfico</td></tr>
+        <tr><td><div class="chip" style="background:var(--bege);color:var(--ocre)">Aa</div></td><td>Ocre sobre neutro quente</td><td>2,31</td><td>Só gráfico</td></tr>
+        <tr><td><div class="chip" style="background:var(--neutro);color:var(--ocre)">Aa</div></td><td>Ocre sobre neutro</td><td>2,11</td><td>Evitar</td></tr>
+        <tr><td><div class="chip" style="background:var(--ocre);color:var(--branco)">Aa</div></td><td>Branco quente sobre ocre</td><td>2,76</td><td>Só gráfico</td></tr>
+        <tr><td><div class="chip" style="background:var(--ocre);color:#fff">Aa</div></td><td>Branco puro sobre ocre</td><td>2,98</td><td>Proibido</td></tr>
+        <tr><td><div class="chip" style="background:var(--azul);color:var(--cinza)">Aa</div></td><td>Cinza sobre azul</td><td>1,69</td><td>Proibido</td></tr>
+        <tr><td><div class="chip" style="background:var(--bege);color:var(--neutro)">Aa</div></td><td>Fio neutro sobre neutro quente</td><td>1,10</td><td>Proibido</td></tr>
+        <tr><td><div class="chip" style="background:var(--branco);color:var(--neutro)">Aa</div></td><td>Neutro sobre branco quente</td><td>1,31</td><td>Só fios</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>03 Cor</span><span>Impressão</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Na gráfica, a cor vem do papel e da prova.</h2>
+      <p>As conversões automáticas erram muito nas cores escuras: o azul pela fórmula direta sairia como outra cor. Os valores CMYK deste manual foram otimizados por simulação de impressão e ficaram a uma diferença quase imperceptível do original.</p>
+      <p class="mut">Ponto de partida calculado, não valor final. As gráficas brasileiras costumam usar o perfil FOGRA39: confirmar com a gráfica e pedir prova de cor impressa.</p>
+    </div>
+    <div style="grid-column:6/span 7">
+      <table class="sp">
+        <tr><th>Cor</th><th>CMYK recomendado</th><th>Pantone (aprox.)</th><th>Observação</th></tr>
+        <tr><td class="k">Azul profundo</td><td>C100 M65 Y0 K90</td><td>532 C</td><td>Para texto abaixo de 14 pt, usar K100 (evita erro de registro entre tintas)</td></tr>
+        <tr><td class="k">Ocre</td><td>C0 M35 Y100 K20</td><td>3547 C (clássica: 131 C)</td><td>Alternativa: C10 M40 Y100 K10</td></tr>
+        <tr><td class="k">Cinza</td><td>K85</td><td>446 C</td><td>Só preto: ideal para texto</td></tr>
+        <tr><td class="k">Branco quente</td><td>Sem tinta</td><td>Nenhum se aproxima</td><td>Papel branco natural ou off-white neutro. Evitar papel muito amarelado</td></tr>
+        <tr><td class="k">Neutro</td><td>K20</td><td>Cool Gray 1 C</td><td>Fios finos imprimem limpos</td></tr>
+        <tr><td class="k">Neutro quente</td><td>C5 M5 Y10 K5</td><td>9226 C</td><td>Para fundo inteiro, preferir papel nesse tom</td></tr>
+      </table>
+      <div class="h3" style="margin-top:20px">Tipografia impressa</div>
+      <ul class="r sm">
+        <li>Texto claro sobre azul: Cormorant com no mínimo 14 pt; Manrope com no mínimo 9 pt, de preferência Medium (inclusive microinformação).</li>
+        <li>Fio mínimo de 0,25 pt escuro sobre claro; 0,5 pt claro sobre azul.</li>
+        <li>PDF para gráfica: sangria de 3 mm, marcas de corte e perfil CMYK.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 04 TIPOGRAFIA ============ -->
+<section class="page azul op" id="c4">
+  <div class="num">04</div>
+  <div class="ot">Tipografia</div>
+  <div class="oi">Uma serifada para a expressão, uma sem serifa para o sistema. A Playfair Display existe só dentro do logo. As três estão disponíveis no Canva gratuitamente.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>04 Tipografia</span><span>Famílias</span></div>
+  <div style="display:grid;grid-template-columns:3fr 5fr 4fr;gap:28px;height:100%">
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:'Playfair Display';font-size:118px;line-height:1">Aa</div>
+      <div class="t2" style="margin-top:18px">Playfair Display</div>
+      <p class="sm"><b>Só no logotipo.</b> Entra nas peças como arquivo, nunca como texto digitado. Nunca em títulos, nunca no nome da Estéfany.</p>
+      <p class="sm mut">Peso: Regular (o monograma usa Medium abaixo de 48 px).</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:'Cormorant Garamond';font-size:118px;line-height:1">Aa <i>Aa</i></div>
+      <div class="t2" style="margin-top:18px">Cormorant Garamond · expressão</div>
+      <p class="sm">Títulos editoriais, citações, nomes de séries, numeração grande e valores. É a voz autoral da marca.</p>
+      <div style="font-family:'Cormorant Garamond';font-size:22px;line-height:1.3;margin:6px 0 10px">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>áàâãéêíóôõúç 0123456789</div>
+      <p class="sm mut">Pesos: Regular, Medium (sobre fotografia), Itálico. Nunca em caixa alta. Nunca abaixo de 48 px no Instagram. Nunca em texto corrido.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div style="font-family:Manrope;font-size:118px;line-height:1;letter-spacing:-.02em">Aa</div>
+      <div class="t2" style="margin-top:18px">Manrope · sistema</div>
+      <p class="sm">Textos, legendas, títulos funcionais, tabelas, microinformações e a tagline.</p>
+      <div style="font-size:13px;line-height:1.6;margin:6px 0 10px"><span>Regular 400</span><br><span style="font-weight:500">Medium 500</span><br><span style="font-weight:600">SemiBold 600</span><br><span class="mi" style="font-size:9px">Microinformação · Medium · caixa alta</span></div>
+      <p class="sm mut">Nunca Bold (700). Destaque dentro do texto em SemiBold.</p>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>04 Tipografia</span><span>Escala do Instagram</span></div>
+  <div class="g">
+    <div class="s3">
+      <h2 class="t">Escala para o canvas de 1080 px.</h2>
+      <p class="sm">Valores para digitar no Canva. As amostras ao lado estão em 30% do tamanho real.</p>
+      <ol class="n sm" style="margin-top:10px">
+        <li><span>Corpo mínimo seguro: 32 px. O padrão é 40 px.</span></li>
+        <li><span>No máximo 3 tamanhos de texto por lâmina, sem contar a microinformação.</span></li>
+        <li><span>Texto grande, para efeito de contraste, é 72 px ou mais.</span></li>
+        <li><span>Exportar peças com texto em PNG: o JPG serrilha letras finas.</span></li>
+      </ol>
+    </div>
+    <div style="grid-column:4/span 9">
+      <table class="sp">
+        <tr><th style="width:38%">Amostra a 30%</th><th>Estilo</th><th>Fonte e peso</th><th>Tamanho</th><th>Entrelinha</th><th>Espaçamento no Canva</th></tr>
+        <tr><td><span style="font-family:'Cormorant Garamond';font-size:33.6px;line-height:1.07">Título de capa</span></td><td class="k">Título de capa</td><td>Cormorant Regular</td><td>112 px (96 a 128)</td><td>1,07</td><td>-10</td></tr>
+        <tr><td><span style="font-family:'Cormorant Garamond';font-size:21.6px">Título interno</span></td><td class="k">Título interno</td><td>Cormorant Regular</td><td>72 px (64 a 80)</td><td>1,11</td><td>-5</td></tr>
+        <tr><td><span style="font-family:'Cormorant Garamond';font-style:italic;font-size:19.2px">Citação em itálico</span></td><td class="k">Citação</td><td>Cormorant Itálico</td><td>64 px (56 a 80)</td><td>1,25</td><td>0</td></tr>
+        <tr><td><span style="font-weight:600;font-size:9.6px;letter-spacing:.04em;text-transform:uppercase">Título funcional</span></td><td class="k">Título funcional</td><td>Manrope SemiBold, caixa alta</td><td>32 px</td><td>1,25</td><td>40</td></tr>
+        <tr><td><span style="font-size:12px">Corpo de texto das lâminas</span></td><td class="k">Corpo</td><td>Manrope Regular</td><td>40 px (32 a 44)</td><td>1,4</td><td>0</td></tr>
+        <tr><td><span style="font-size:8.4px">Legenda e texto de apoio</span></td><td class="k">Legenda</td><td>Manrope Regular</td><td>28 px</td><td>1,43</td><td>10</td></tr>
+        <tr><td><span class="mi" style="font-size:7.2px">Entrelinhas · 04</span></td><td class="k">Microinformação</td><td>Manrope Medium, caixa alta</td><td>24 px</td><td>1,33</td><td>160</td></tr>
+        <tr><td><span style="font-family:'Cormorant Garamond';font-size:72px;line-height:.9">07</span></td><td class="k">Numeração grande</td><td>Cormorant Regular</td><td>240 px (192 a 320)</td><td>1,0</td><td>-20</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>04 Tipografia</span><span>Escala dos documentos</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Escala para PDFs em A4.</h2>
+      <p>Em pontos, o padrão gráfico. No Canva, digite o valor da coluna ao lado (pt × 1,333).</p>
+      <div class="h3">Regras que valem em tudo</div>
+      <ul class="r sm">
+        <li>Alinhamento à esquerda, exceto composições centralizadas (logo em capas, glyph protagonista, story institucional, destaques). Nunca justificado, sem hifenização.</li>
+        <li>Cormorant nunca em caixa alta e nunca em corpo de texto.</li>
+        <li>Manrope nunca em Bold. Destaque em SemiBold.</li>
+        <li>A caixa alta mantém os acentos: OBSERVAÇÃO, CAPÍTULO, URÂNIA.</li>
+        <li>Números com dois dígitos na numeração editorial: 01, 02.</li>
+      </ul>
+    </div>
+    <div style="grid-column:6/span 7">
+      <table class="sp">
+        <tr><th>Estilo</th><th>Fonte e peso</th><th>Tamanho</th><th>No Canva</th><th>Entrelinha</th></tr>
+        <tr><td class="k">Abertura de capítulo</td><td>Cormorant Regular</td><td>96 pt</td><td>128</td><td>1,0</td></tr>
+        <tr><td class="k">H1</td><td>Cormorant Regular</td><td>36 pt</td><td>48</td><td>1,1</td></tr>
+        <tr><td class="k">H2</td><td>Cormorant Regular</td><td>24 pt</td><td>32</td><td>1,2</td></tr>
+        <tr><td class="k">H3</td><td>Manrope SemiBold</td><td>12 pt</td><td>16</td><td>1,33</td></tr>
+        <tr><td class="k">Corpo</td><td>Manrope Regular</td><td>10 pt</td><td>13,3</td><td>1,5</td></tr>
+        <tr><td class="k">Citação</td><td>Cormorant Itálico</td><td>18 pt</td><td>24</td><td>1,33</td></tr>
+        <tr><td class="k">Nota</td><td>Manrope Regular, cinza</td><td>8 pt</td><td>10,7</td><td>1,4</td></tr>
+        <tr><td class="k">Microinformação</td><td>Manrope Medium, caixa alta, +16%</td><td>7,5 pt</td><td>10</td><td>1,33</td></tr>
+        <tr><td class="k">Número de página</td><td>Manrope Medium</td><td>7,5 pt</td><td>10</td><td></td></tr>
+      </table>
+      <div class="nota" style="margin-top:16px"><b>Microinformação em Manrope.</b> A versão anterior do sistema previa uma fonte monoespaçada para as microinformações. Ela não existe no Canva gratuito, e a Manrope Medium em caixa alta cumpre a mesma função com uma família a menos.</div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 05 GRADE E FORMATOS ============ -->
+<section class="page azul op" id="c5">
+  <div class="num">05</div>
+  <div class="ot">Grade e formatos</div>
+  <div class="oi">Cada lâmina é uma página de revista: cabeçalho, corpo e fólio. Margem de 96 px, seis colunas, espaçamentos só da escala 8, 16, 24, 40, 64 e 96.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>05 Grade e formatos</span><span>Feed e carrossel</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">1080 × 1350, margem de 96 px.</h2>
+      <table class="sp">
+        <tr><td class="k" style="width:110px">Área útil</td><td>x 96 a 984 · y 96 a 1254</td></tr>
+        <tr><td class="k">Colunas</td><td>6 de 128 px, calha de 24 px. Início em x 96, 248, 400, 552, 704, 856</td></tr>
+        <tr><td class="k">Cabeçalho</td><td>Série e número em x 96, y 96. Paginação "02 / 08" alinhada em x 984</td></tr>
+        <tr><td class="k">Título de capa</td><td>Última linha com base em y 1150: as capas formam um horizonte constante na grade</td></tr>
+        <tr><td class="k">Rodapé</td><td>URÂNIA em x 96, base em y 1254</td></tr>
+        <tr><td class="k">Grade do perfil</td><td>Exibe em 3:4 e corta cerca de 34 px de cada lateral. A margem de 96 px protege tudo</td></tr>
+      </table>
+      <div class="h3">Ritmo vertical</div>
+      <p class="sm">Microinformação até o título: 64 px. Título até o texto: 40 px. Entre parágrafos: 24 px. Acima e abaixo de cada fio: 40 px. Pelo menos 35% da área útil vazia.</p>
+    </div>
+    <div style="grid-column:6/span 7;display:flex;gap:28px">
+      <div class="sc" style="width:432px;height:540px;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.4">
+        <div class="ab" style="left:34px;top:0;width:1012px;height:1350px;outline:3px dashed var(--neutro)"></div>
+        <div class="ab" style="left:96px;top:96px;width:888px;height:1158px;outline:2px solid var(--ocre)"></div>
+        <div class="ab" style="left:96px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab" style="left:248px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab" style="left:400px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab" style="left:552px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab" style="left:704px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab" style="left:856px;top:96px;width:128px;height:1158px;background:rgba(197,138,43,.10)"></div>
+        <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Entrelinhas · 04</div>
+        <div class="ab mx" style="right:96px;top:96px;color:var(--cinza)">02 / 08</div>
+        <div class="ab cg" style="left:96px;bottom:200px;width:736px;font-size:112px;line-height:1.07">O que a sua marca diz sem perceber</div>
+        <div class="ab" style="left:96px;top:1150px;width:888px;border-top:3px dashed var(--ocre)"></div>
+        <div class="ab mx" style="left:96px;top:1222px">Urânia</div>
+      </div></div>
+      <div style="padding-top:8px;font-size:8.5px;line-height:1.5;width:150px">
+        <div class="dl" style="position:static;white-space:normal;margin-bottom:10px"><span style="display:inline-block;width:18px;border-top:1.5px solid var(--ocre);vertical-align:middle;margin-right:6px"></span>Área útil</div>
+        <div class="dl" style="position:static;white-space:normal;margin-bottom:10px"><span style="display:inline-block;width:18px;height:9px;background:rgba(197,138,43,.18);vertical-align:middle;margin-right:6px"></span>6 colunas</div>
+        <div class="dl" style="position:static;white-space:normal;margin-bottom:10px"><span style="display:inline-block;width:18px;border-top:1.5px dashed var(--ocre);vertical-align:middle;margin-right:6px"></span>Base do título em y 1150</div>
+        <div class="dl" style="position:static;white-space:normal"><span style="display:inline-block;width:18px;border-top:1.5px dashed var(--neutro);vertical-align:middle;margin-right:6px"></span>Recorte 3:4 da grade</div>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>05 Grade e formatos</span><span>Stories e capa de Reels</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">A interface cobre o topo e a base.</h2>
+      <div class="h3">Story 1080 × 1920</div>
+      <p class="sm">Área útil de x 96 a 984 e de y 272 a 1536. O topo (272 px) e a base (384 px) ficam sob a interface do Instagram. Figurinhas de enquete, pergunta e link na faixa de y 1100 a 1480, nunca sobre o título.</p>
+      <div class="h3">Capa de Reels 1080 × 1920</div>
+      <p class="sm">A capa aparece cortada em 3:4 na grade do perfil, 4:5 no feed e 1:1 em compartilhamentos. A zona de y 480 a 1440 aparece inteira em todos os recortes: título e microinformação moram ali. Título com até 5 palavras, sempre na mesma posição.</p>
+      <div class="h3">Texto dentro do vídeo</div>
+      <p class="sm">Entre x 96 e 920 e entre y 272 e 1248: a lateral direita e a base ficam com os botões.</p>
+    </div>
+    <div style="grid-column:6/span 7;display:flex;gap:32px;align-items:flex-start">
+      <div>
+        <div class="sc" style="width:270px;height:480px;outline:.75pt solid var(--neutro)"><div class="cv story bgA" style="zoom:.25">
+          <div class="ab" style="left:0;top:0;width:1080px;height:272px;background:repeating-linear-gradient(135deg,rgba(247,246,243,.12) 0 4px,transparent 4px 24px)"></div>
+          <div class="ab" style="left:0;top:1536px;width:1080px;height:384px;background:repeating-linear-gradient(135deg,rgba(247,246,243,.12) 0 4px,transparent 4px 24px)"></div>
+          <div class="ab" style="left:96px;top:272px;width:888px;height:1264px;outline:3px solid var(--ocre)"></div>
+          <div class="ab" style="left:96px;top:1100px;width:888px;height:380px;outline:3px dashed var(--ocre)"></div>
+          <div class="ab mx" style="left:96px;top:272px;color:var(--ocre)">Observação</div>
+          <div class="ab cg" style="left:96px;top:400px;width:736px;font-size:72px;line-height:1.15">Quando foi a última vez que um detalhe mudou como você enxerga algo?</div>
+          <div class="ab" style="left:240px;top:1210px;width:600px;height:160px;background:var(--branco);color:var(--cinza);display:flex;align-items:center;justify-content:center;font-size:30px">figurinha de pergunta</div>
+        </div></div>
+        <div class="cap" style="width:270px">Story: hachurado é interface; tracejado, faixa das figurinhas.</div>
+      </div>
+      <div>
+        <div class="sc" style="width:270px;height:480px;outline:.75pt solid var(--neutro)"><div class="cv story bgB" style="zoom:.25">
+          <div class="ab" style="left:0;top:240px;width:1080px;height:1440px;outline:3px dashed var(--neutro)"></div>
+          <div class="ab" style="left:0;top:420px;width:1080px;height:1080px;outline:3px dashed var(--cinza)"></div>
+          <div class="ab" style="left:96px;top:480px;width:888px;height:960px;outline:3px solid var(--ocre)"></div>
+          <div class="ab mx" style="left:96px;top:480px;color:var(--cinza)">Ponto de Vista · 02</div>
+          <div class="ab cg" style="left:96px;top:840px;width:888px;font-size:112px;line-height:1.07">Constância não é frequência</div>
+        </div></div>
+        <div class="cap" style="width:270px">Capa de Reels: em ocre, a zona segura; tracejados, os recortes 3:4 e 1:1.</div>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>05 Grade e formatos</span><span>Perfil, destaques e acabamento</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">O círculo corta, a marca não.</h2>
+      <p class="sm"><b>Foto de perfil:</b> 1080 × 1080 px, exibida com cerca de 110 px. Tudo o que importa fica dentro do círculo central de 720 px. Retrato P&amp;B da Estéfany, rosto ocupando de 55% a 65% do diâmetro. Teste: vista com 64 px, o rosto continua reconhecível. Nunca logo, glyph ou texto.</p>
+      <p class="sm"><b>Capas de destaque:</b> fundo azul igual em todas, numeral em Manrope Regular de 200 px em branco quente, centralizado. É a exceção à numeração em Cormorant: na Manrope, todos os algarismos têm a mesma altura e as capas ficam alinhadas. O nome do destaque é escrito no Instagram, nunca dentro da imagem.</p>
+      <div class="nota" style="margin-top:10px">Numeração no lugar do glyph: cinco estrelas iguais lado a lado, logo abaixo da bio, repetiriam o glyph no lugar mais visível do perfil.</div>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div style="display:flex;gap:18px;align-items:flex-end">
+        <div style="text-align:center">
+          <div style="width:150px;height:150px;position:relative;background:#cfcac0">
+            <div style="position:absolute;inset:0;border-radius:50%;background:#8f8b84"></div>
+            <div style="position:absolute;left:25px;top:25px;width:100px;height:100px;border-radius:50%;outline:1px dashed var(--ocre)"></div>
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--branco);font-size:8px">retrato P&amp;B</div>
+          </div>
+          <div class="cap">Perfil e círculo de 720 px</div>
+        </div>
+        <div style="display:flex;gap:12px;margin-left:18px">
+          <div style="text-align:center"><div style="width:64px;height:64px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:21px;outline:2px solid var(--neutro);outline-offset:3px">01</div><div class="cap">Urânia</div></div>
+          <div style="text-align:center"><div style="width:64px;height:64px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:21px;outline:2px solid var(--neutro);outline-offset:3px">02</div><div class="cap">Método</div></div>
+          <div style="text-align:center"><div style="width:64px;height:64px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:21px;outline:2px solid var(--neutro);outline-offset:3px">03</div><div class="cap">Jornadas</div></div>
+          <div style="text-align:center"><div style="width:64px;height:64px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:21px;outline:2px solid var(--neutro);outline-offset:3px">04</div><div class="cap">Arquivo</div></div>
+          <div style="text-align:center"><div style="width:64px;height:64px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:21px;outline:2px solid var(--neutro);outline-offset:3px">05</div><div class="cap">Retornos</div></div>
+        </div>
+      </div>
+      <p class="sm mut" style="margin-top:6px">Retornos entra depois dos três primeiros depoimentos reais.</p>
+      <div class="h3" style="margin-top:22px">Linhas, cantos e opacidade</div>
+      <table class="sp">
+        <tr><th>Item</th><th>Instagram</th><th>PDF</th><th>Regra</th></tr>
+        <tr><td class="k">Fio padrão</td><td>2 px</td><td>0,75 pt</td><td>1 px some na compressão do Instagram</td></tr>
+        <tr><td class="k">Fio de ênfase</td><td>4 px</td><td>1,5 pt</td><td>Barra de citação, uma por peça</td></tr>
+        <tr><td class="k">Cor do fio</td><td colspan="2">Neutro sobre branco quente; cinza sobre neutro quente; #33353D sobre azul</td><td>Estrutural em azul</td></tr>
+        <tr><td class="k">Cantos</td><td colspan="2">0 em tudo</td><td>Exceções do suporte: círculo do perfil e dos destaques</td></tr>
+        <tr><td class="k">Opacidade</td><td colspan="2">100% em texto, logo, glyph e fios</td><td>Só azul a 40% ou 60% sobre foto</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>05 Grade e formatos</span><span>Modelos de página</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">Quatro modelos fazem quase todas as lâminas.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut" style="padding-top:6px">Coordenadas para o feed. Os mesmos modelos se adaptam a stories (zona segura de y 272 a 1536) e a PDF (grade A4).</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-self:end">
+      <div>
+        <div class="sc" style="width:100%;aspect-ratio:4/5"><div class="cv bgA" style="zoom:.22">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Entrelinhas · 04</div>
+          <div class="ab cg" style="left:96px;bottom:200px;width:736px;font-size:112px;line-height:1.07">O que a sua marca diz sem perceber</div>
+          <div class="ab mx" style="left:96px;top:1222px;color:var(--cclaro)">Urânia</div>
+          <i class="ab" data-lucide="arrow-right" style="right:96px;top:1210px;width:44px;height:44px;color:var(--branco)"></i>
+        </div></div>
+        <div class="h3">01 · Capa de Capítulo</div>
+        <p class="sm">Abre carrosséis. Título Cormorant 112 px nas colunas 1 a 5, base em y 1150. A metade de cima é respiro. Sem glyph, sem logo.</p>
+      </div>
+      <div>
+        <div class="sc" style="width:100%;aspect-ratio:4/5;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.22">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Ponto de Vista · 06</div>
+          <div class="ab" style="left:248px;top:480px;width:128px;height:2px;background:var(--azul)"></div>
+          <div class="ab cg" style="left:248px;top:522px;width:736px;font-style:italic;font-size:64px;line-height:1.25">Frequência ajuda. Mas só funciona quando existe direção por trás.</div>
+          <div class="ab mx" style="left:248px;top:880px;color:var(--cinza)">Nota · Estéfany Reis</div>
+          <div class="ab mx" style="left:96px;top:1222px">Urânia</div>
+        </div></div>
+        <div class="h3">02 · Citação</div>
+        <p class="sm">Coluna 1 vazia: é a assimetria que dá o ar editorial. Fio de uma coluna, citação Cormorant Itálico 64 px, até 30 palavras.</p>
+      </div>
+      <div>
+        <div class="sc" style="width:100%;aspect-ratio:4/5;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.22">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Princípios · 05</div>
+          <div class="ab mx" style="right:96px;top:96px;color:var(--cinza)">03 / 07</div>
+          <div class="ab cg" style="left:96px;top:200px;width:888px;font-size:72px;line-height:1.11">Três perguntas antes de publicar</div>
+          <div class="ab" style="left:96px;top:440px;width:888px">
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">01</span><span style="font-size:40px;line-height:1.4">O que eu quero que a pessoa perceba?</span></div>
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">02</span><span style="font-size:40px;line-height:1.4">Isso tem a cara da minha marca?</span></div>
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro);border-bottom:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">03</span><span style="font-size:40px;line-height:1.4">Por que agora?</span></div>
+          </div>
+        </div></div>
+        <div class="h3">03 · Lista</div>
+        <p class="sm">Numeração pendurada na coluna 1, texto Manrope 40 px nas colunas 2 a 6, até 4 itens e 40 palavras por lâmina. Variante Texto: título interno e um parágrafo, sem números.</p>
+      </div>
+      <div>
+        <div class="sc" style="width:100%;aspect-ratio:4/5"><div class="cv bgN" style="zoom:.22">
+          <div class="ab foto" style="left:96px;top:96px;width:888px;height:888px;font-size:26px">fotografia autoral 1:1 · 888 × 888</div>
+          <div class="ab mx" style="left:96px;top:1010px;color:var(--cinza)">Objeto de Observação · 07</div>
+          <div class="ab mx" style="right:96px;top:1010px">Urânia</div>
+          <div class="ab cg" style="left:96px;top:1080px;width:736px;font-style:italic;font-size:56px;line-height:1.25">Detalhe é a prova de que alguém prestou atenção.</div>
+        </div></div>
+        <div class="h3">04 · Objeto de Observação</div>
+        <p class="sm">A foto cria um segundo sentido. A linha abaixo funciona como ficha de museu. Variante sangrada para Arquivo de Percepções, sem texto na imagem.</p>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>05 Grade e formatos</span><span>Séries e microinformação</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Cada série tem fundo e modelo definidos.</h2>
+      <p>Dentro de um carrossel, um único fundo, ou dois em padrão fixo: capa e fechamento em um, miolo em outro.</p>
+      <div class="h3">Microinformação</div>
+      <table class="sp">
+        <tr><td class="k" style="width:86px">Fonte</td><td>Manrope Medium, 24 px no canvas, caixa alta, espaçamento 160</td></tr>
+        <tr><td class="k">Cor</td><td>Cinza ou azul sobre claros. Ocre, branco quente ou cinza claro sobre azul</td></tr>
+        <tr><td class="k">Vocabulário</td><td>SÉRIE · NN, CAPÍTULO NN, ARQUIVO NN, VOL. NN, JORNADA NN, OBJETO DE OBSERVAÇÃO · NN, OBSERVAÇÃO, NOTA, REFERÊNCIA, PROCESSO</td></tr>
+        <tr><td class="k">Formato</td><td>Dois dígitos; ponto médio com espaço dos dois lados</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:6/span 7">
+      <table class="sp">
+        <tr><th>Série</th><th>Modelo principal</th><th>Fundo</th><th>Formato</th></tr>
+        <tr><td class="k">Entrelinhas</td><td>Capa de Capítulo + Lista</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--azul);vertical-align:-1px;margin-right:6px"></span>Azul na capa e no fechamento; branco quente no miolo</td><td>Carrossel</td></tr>
+        <tr><td class="k">Ponto de Vista</td><td>Citação; capa de Reels</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--branco);outline:.5pt solid var(--neutro);vertical-align:-1px;margin-right:6px"></span>Branco quente</td><td>Post único e Reels</td></tr>
+        <tr><td class="k">Em Construção</td><td>Objeto de Observação</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--bege);vertical-align:-1px;margin-right:6px"></span>Neutro quente</td><td>Stories e carrossel</td></tr>
+        <tr><td class="k">Lentes</td><td>Capa de Capítulo + Objeto de Observação</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--bege);vertical-align:-1px;margin-right:6px"></span>Neutro quente</td><td>Carrossel</td></tr>
+        <tr><td class="k">Princípios</td><td>Capa de Capítulo + Lista</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--branco);outline:.5pt solid var(--neutro);vertical-align:-1px;margin-right:6px"></span>Branco quente</td><td>Carrossel</td></tr>
+        <tr><td class="k">Permanências</td><td>Citação</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--azul);vertical-align:-1px;margin-right:6px"></span>Azul</td><td>Post único</td></tr>
+        <tr><td class="k">Observações</td><td>Story Observação</td><td><span style="display:inline-block;width:10px;height:10px;background:var(--azul);vertical-align:-1px;margin-right:6px"></span>Azul</td><td>Stories</td></tr>
+        <tr><td class="k">Arquivo de Percepções</td><td>Objeto de Observação sangrado</td><td>Fotografia</td><td>Post único</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 06 IMAGEM ============ -->
+<section class="page azul op" id="c6">
+  <div class="num">06</div>
+  <div class="ot">Imagem</div>
+  <div class="oi">A fotografia não ilustra o texto: cria um segundo sentido junto a ele. Uma cereja pode representar atenção, detalhe, escolha. São os Objetos de Observação.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>06 Imagem</span><span>Captura</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Um objeto, luz de janela e muito espaço vazio.</h2>
+      <p>Objetos do cotidiano viram pontos de partida para reflexões: café (pausa, processo), espelho (percepção), livro (repertório), cadeira vazia (espera), museu (memória), cereja (detalhe).</p>
+      <div style="position:relative;width:216px;height:270px;margin-top:16px;background:var(--bege)">
+        <div style="position:absolute;left:72px;top:0;bottom:0;border-left:1px dashed var(--neutro)"></div>
+        <div style="position:absolute;left:144px;top:0;bottom:0;border-left:1px dashed var(--neutro)"></div>
+        <div style="position:absolute;top:90px;left:0;right:0;border-top:1px dashed var(--neutro)"></div>
+        <div style="position:absolute;top:180px;left:0;right:0;border-top:1px dashed var(--neutro)"></div>
+        <div style="position:absolute;left:126px;top:162px;width:36px;height:36px;border-radius:50%;background:var(--azul)"></div>
+        <div style="position:absolute;left:12px;top:14px;width:110px;height:120px;outline:1px solid var(--ocre)"></div>
+        <div class="dl" style="left:18px;top:20px;white-space:normal;width:100px">zona calma: onde o texto entra</div>
+        <div class="dl" style="left:108px;top:204px">objeto num terço</div>
+      </div>
+      <p class="sm mut" style="margin-top:8px">O objeto ocupa de 10% a 30% do quadro. Pelo menos 60% de área calma.</p>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:20px">
+        <ol class="n sm">
+          <li><span><b>Luz</b> natural, lateral, de janela. Até as 10h ou depois das 15h30. Nunca flash, nunca duas temperaturas misturadas.</span></li>
+          <li><span><b>Fundo</b> liso e neutro: parede, madeira, papel, linho. Sem marcas de terceiros, embalagens ou fios.</span></li>
+          <li><span><b>Elenco:</b> um protagonista e no máximo dois objetos de apoio. No máximo um ponto de cor forte.</span></li>
+          <li><span><b>Espaço negativo:</b> objeto entre 10% e 30% do quadro.</span></li>
+          <li><span><b>Posição:</b> fora do centro, num dos terços. O lado vazio fica onde o texto vai entrar.</span></li>
+          <li><span><b>Ângulo:</b> na altura do objeto ou zenital exato (90°). Evitar os 45° de cardápio.</span></li>
+        </ol>
+        <ol class="n sm" style="counter-reset:n 6">
+          <li><span><b>Lente</b> 1x ou 2x do celular. Nunca 0,5x, que distorce.</span></li>
+          <li><span><b>Exposição:</b> tocar no objeto e baixar de -0,3 a -0,7 até os claros não estourarem.</span></li>
+          <li><span><b>Arquivo:</b> RAW quando possível; senão, qualidade máxima. Sem filtros e sem o estilo "Vívido".</span></li>
+          <li><span><b>Variações:</b> três por objeto (plano aberto, médio e detalhe).</span></li>
+          <li><span><b>Retratos da Estéfany:</b> P&amp;B, luz lateral, fundo liso, timer ou outra pessoa fotografando. Nunca selfie de espelho.</span></li>
+          <li><span><b>Terceiros:</b> pessoas, trabalhos de clientes e obras só com autorização.</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>06 Imagem</span><span>Tratamento e corte</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Levemente quente, levemente dessaturada.</h2>
+      <p>Valores para o Lightroom Mobile (gratuito), a partir de uma foto com exposição corrigida. Salve como predefinições "Urânia Cor" e "Urânia P&amp;B" e aplique igual em todas.</p>
+      <div class="h3">Teste do papel</div>
+      <p class="sm">Uma folha branca na foto deve ficar em tom creme-claro. Azulada: aumentar a temperatura. Amarela: diminuir.</p>
+      <div style="display:flex;gap:8px;margin-top:6px">
+        <div style="flex:1"><div style="height:44px;background:#EEE9DF;outline:.5pt solid var(--neutro)"></div><div class="cap">#EEE9DF</div></div>
+        <div style="flex:1"><div style="height:44px;background:#F4F0E8;outline:.5pt solid var(--neutro)"></div><div class="cap">#F4F0E8</div></div>
+        <div style="flex:1"><div style="height:44px;background:#E9EEF2;outline:.5pt solid var(--neutro)"></div><div class="cap">Azulada: errado</div></div>
+        <div style="flex:1"><div style="height:44px;background:#F3E6C4;outline:.5pt solid var(--neutro)"></div><div class="cap">Amarela: errado</div></div>
+      </div>
+    </div>
+    <div style="grid-column:6/span 4">
+      <table class="sp">
+        <tr><th>Ajuste (cor)</th><th>Valor</th></tr>
+        <tr><td class="k">Temperatura</td><td>+3 a +8 (5400 a 5900 K em RAW)</td></tr>
+        <tr><td class="k">Contraste</td><td>-10 a +5</td></tr>
+        <tr><td class="k">Realces</td><td>-20 a -40</td></tr>
+        <tr><td class="k">Sombras</td><td>-10 a +10</td></tr>
+        <tr><td class="k">Brancos / Pretos</td><td>-5 a -15 / +5 a +15</td></tr>
+        <tr><td class="k">Vibratilidade</td><td>-5 a -10</td></tr>
+        <tr><td class="k">Saturação</td><td>-15 a -25</td></tr>
+        <tr><td class="k">Mistura de cores</td><td>Laranja e amarelo -10; azul -20; verde -30 (saturação)</td></tr>
+        <tr><td class="k">Textura / Claridade</td><td>0 a +5 / -5 a 0</td></tr>
+        <tr><td class="k">Granulação</td><td>Quantidade 10 a 20, tamanho 20 a 30</td></tr>
+        <tr><td class="k">Vinheta</td><td>0 a -5</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:10/span 3">
+      <table class="sp">
+        <tr><th>Ajuste (P&amp;B)</th><th>Valor</th></tr>
+        <tr><td class="k">Contraste</td><td>+10 a +20</td></tr>
+        <tr><td class="k">Realces</td><td>-10 a -20</td></tr>
+        <tr><td class="k">Pretos</td><td>+5 a +10</td></tr>
+        <tr><td class="k">Mistura P&amp;B</td><td>Laranja +10, azul -10</td></tr>
+        <tr><td class="k">Granulação</td><td>15 a 25</td></tr>
+        <tr><td class="k">Tonalização</td><td>Nenhuma</td></tr>
+      </table>
+      <div class="h3">Cortes</div>
+      <table class="sp">
+        <tr><td class="k">Feed</td><td>4:5 · 1080 × 1350</td></tr>
+        <tr><td class="k">Ficha</td><td>1:1 · 888 × 888</td></tr>
+        <tr><td class="k">Stories</td><td>9:16 · 1080 × 1920</td></tr>
+        <tr><td class="k">PDF</td><td>3:2 · 666 × 444</td></tr>
+        <tr><td class="k">Perfil</td><td>1:1 · 1080 × 1080</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>06 Imagem</span><span>Texto sobre foto e ícones</span></div>
+  <div class="g">
+    <div class="s5">
+      <h2 class="t">Texto só sobre zona calma.</h2>
+      <ol class="n sm">
+        <li><span>Permitido na capa de Reels, no story sobre foto e na Capa de Capítulo com foto. Nos demais casos, o texto fica fora da foto (modelo Objeto de Observação, variante Ficha).</span></li>
+        <li><span>A zona calma onde o texto entra ocupa pelo menos 30% da imagem. O texto nunca cruza objeto, rosto ou horizonte.</span></li>
+        <li><span>Contraste mínimo de 4,5:1 no ponto mais desfavorável sob o texto. Sem contraste: azul a 40% ou 60% sobre a foto inteira, ou texto fora da foto.</span></li>
+        <li><span>Branco quente sobre zonas escuras, azul sobre zonas claras. Ocre nunca sobre foto.</span></li>
+        <li><span>Mínimos: Cormorant Medium 64 px, Manrope 32 px, microinformação Medium 24 px. Até 12 palavras.</span></li>
+        <li><span>Nunca caixa, tarja, sombra ou contorno. Única exceção: legenda de fala em vídeo, Manrope Medium 40 a 44 px sobre faixa de azul a 60%.</span></li>
+      </ol>
+    </div>
+    <div style="grid-column:7/span 6">
+      <div class="h3" style="margin-top:0">Ícones: Lucide, em linha, conjunto fixo de 12</div>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:10px 0 14px">
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="eye" style="width:26px;height:26px"></i><div class="cap">eye</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="search" style="width:26px;height:26px"></i><div class="cap">search</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="telescope" style="width:26px;height:26px"></i><div class="cap">telescope</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="compass" style="width:26px;height:26px"></i><div class="cap">compass</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="layers" style="width:26px;height:26px"></i><div class="cap">layers</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="pen-line" style="width:26px;height:26px"></i><div class="cap">pen-line</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="bookmark" style="width:26px;height:26px"></i><div class="cap">bookmark</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="message-circle" style="width:26px;height:26px"></i><div class="cap">message-circle</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="calendar" style="width:26px;height:26px"></i><div class="cap">calendar</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="arrow-right" style="width:26px;height:26px"></i><div class="cap">arrow-right</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="plus" style="width:26px;height:26px"></i><div class="cap">plus</div></div>
+        <div class="box" style="text-align:center;padding:12px 4px"><i data-lucide="check" style="width:26px;height:26px"></i><div class="cap">check</div></div>
+      </div>
+      <table class="sp">
+        <tr><td class="k" style="width:90px">Tamanho</td><td>40 a 48 px no canvas, traço de 3 px (entre 1/16 e 1/12 do ícone)</td></tr>
+        <tr><td class="k">Cor</td><td>A mesma do texto ao lado. Sempre em linha, nunca preenchido</td></tr>
+        <tr><td class="k">Quantidade</td><td>No máximo 2 por lâmina. Nunca como marcador de lista, nunca junto do glyph</td></tr>
+        <tr><td class="k">Funções</td><td>arrow-right: próximo passo · bookmark: salvar · message-circle: conversar · calendar: agenda · check: incluso · plus: adicional · os demais: etapas do método e serviços</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 07 VOZ APLICADA ============ -->
+<section class="page azul op" id="c7">
+  <div class="num">07</div>
+  <div class="ot">Voz aplicada</div>
+  <div class="oi">Inteligente sem ser pedante, sensível sem ser excessivamente poética, humana sem perder autoridade. Aqui, a voz vira regra de escrita, canal por canal.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Quem fala e como soa</span></div>
+  <style>
+    .bar{position:relative;height:22px;margin:4px 0 2px;background:linear-gradient(90deg,var(--neutro) 0 100%) center/100% 1.5px no-repeat}
+    .bar .rg{position:absolute;top:7px;height:8px;background:var(--bege);outline:.75pt solid var(--neutro)}
+    .bar .pt{position:absolute;top:4px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--azul)}
+    .bar .lim{position:absolute;top:2px;height:18px;border-left:1.5px solid var(--ocre)}
+  </style>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Eu faço, a Urânia é.</h2>
+      <p><b>No Instagram, na DM e no WhatsApp, quem fala é a Estéfany, em primeira pessoa:</b> "eu observo", "eu recomendo". A Urânia aparece em terceira pessoa para nomear o estúdio, o método, as jornadas e as políticas.</p>
+      <p>"A gente" e "nós" só no sentido de Estéfany junto com o cliente. Nunca o "nós" institucional: "nossa equipe", "nós da Urânia".</p>
+      <p class="mut">O perfil é pessoal e, hoje, a Urânia é a Estéfany. Um "nós" soaria como agência disfarçada, exatamente o que a marca diz não ser.</p>
+      <div class="h3">Três arquétipos, três papéis</div>
+      <table class="sp">
+        <tr><td class="k" style="width:68px">Sábio 50%</td><td>O que se diz: afirma com clareza e explica o porquê</td></tr>
+        <tr><td class="k">Criador 30%</td><td>Como se diz: repertório, imagem inesperada, objeto que vira ideia</td></tr>
+        <tr><td class="k">Cuidador 20%</td><td>Como se trata: escuta e recomenda o caminho menor quando é o certo</td></tr>
+      </table>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div class="h3" style="margin-top:0">Mapa de voz (1 a 10)</div>
+      <p class="sm mut">Ponto: posição base. Faixa: variação entre canais. Traço ocre: limite que nunca muda.</p>
+      <div style="margin-top:12px">
+        <div style="display:flex;justify-content:space-between;font-size:9px"><span>Formal</span><span>Informal</span></div>
+        <div class="bar"><div class="rg" style="left:22.2%;width:44.4%"></div><div class="lim" style="left:66.7%"></div><div class="pt" style="left:44.4%"></div></div>
+        <p class="sm mut">Base 5. Proposta 3 a 4; stories e WhatsApp até 7. Nunca acima de 7: conversa, mas não fala em gíria.</p>
+      </div>
+      <div style="margin-top:10px">
+        <div style="display:flex;justify-content:space-between;font-size:9px"><span>Sério</span><span>Bem-humorado</span></div>
+        <div class="bar"><div class="rg" style="left:0;width:55.6%"></div><div class="lim" style="left:55.6%"></div><div class="pt" style="left:33.3%"></div></div>
+        <p class="sm mut">Base 4. Ironia leve e observação do absurdo cotidiano, sim. Piada pela piada, não. Teto 6.</p>
+      </div>
+      <div style="margin-top:10px">
+        <div style="display:flex;justify-content:space-between;font-size:9px"><span>Técnico</span><span>Acessível</span></div>
+        <div class="bar"><div class="lim" style="left:44.4%"></div><div class="rg" style="left:44.4%;width:44.4%"></div><div class="pt" style="left:66.7%"></div></div>
+        <p class="sm mut">Base 7. Termo técnico sempre acompanhado de tradução. Nunca abaixo de 5.</p>
+      </div>
+      <div style="margin-top:10px">
+        <div style="display:flex;justify-content:space-between;font-size:9px"><span>Contido</span><span>Entusiasmado</span></div>
+        <div class="bar"><div class="rg" style="left:11.1%;width:33.3%"></div><div class="lim" style="left:55.6%"></div><div class="pt" style="left:22.2%"></div></div>
+        <p class="sm mut">Base 3. No dia a dia, até 5. O teto é 6, usado só para celebrar algo real do cliente.</p>
+      </div>
+      <div class="nota" style="margin-top:14px"><b>Como soa a base:</b> "Gostei muito de conhecer a sua marca. Tem coisa boa ali esperando para ser dita." Não: "AMEI demais, vai ficar INCRÍVEL!!!"</div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Regras de escrita</span></div>
+  <div class="g">
+    <div class="s3">
+      <h2 class="t">Regras objetivas, para não depender de inspiração.</h2>
+      <p class="sm mut">Teste final de qualquer texto: depois de ler, a pessoa consegue dizer em uma frase o que mudou na forma de olhar para alguma coisa?</p>
+    </div>
+    <div style="grid-column:5/span 8;display:grid;grid-template-columns:1fr 1fr;column-gap:24px">
+      <table class="sp">
+        <tr><td class="k" style="width:84px">Leitor</td><td>Sempre "você", no singular. Nunca "gente", "galera", "meninas", "amores". Evitar marcar gênero de quem lê.</td></tr>
+        <tr><td class="k">Frase</td><td>Média de 15 a 20 palavras, nenhuma acima de 30. Uma curta para afirmar, uma média para explicar.</td></tr>
+        <tr><td class="k">Parágrafo</td><td>No Instagram, até 3 linhas na tela do celular. Uma ideia por parágrafo.</td></tr>
+        <tr><td class="k">Perguntas</td><td>No máximo 2 por legenda, e só o que a pessoa consegue responder. Nunca pergunta retórica de venda.</td></tr>
+        <tr><td class="k">Opinião</td><td>Pode e deve, sempre com um porquê ou um exemplo. Sem "na minha humilde opinião".</td></tr>
+        <tr><td class="k">Emojis</td><td>Nenhum no feed, nos Reels, na bio, no e-mail ou na proposta. Setas (↓ →) e ponto médio não são emojis. No WhatsApp, regra do espelho: só se a pessoa usar, no máximo um.</td></tr>
+        <tr><td class="k">Proibidos sempre</td><td>Foguete, fogo, dinheiro, gráfico subindo, estrelinhas de brilho (competem com o glyph) e sequências de emojis.</td></tr>
+      </table>
+      <table class="sp">
+        <tr><td class="k" style="width:84px">Hashtags</td><td>Nenhuma. O nome da série, no fim da legenda, faz o papel de etiqueta.</td></tr>
+        <tr><td class="k">Pontuação</td><td>Travessão nunca. Exclamação zero no feed e na proposta; no máximo uma nos demais canais. Dois pontos são o sinal preferido da marca.</td></tr>
+        <tr><td class="k">Caixa alta</td><td>Só nas microinformações e nos títulos funcionais das peças. Nunca para gritar. Nunca letras "estilizadas" de sites.</td></tr>
+        <tr><td class="k">Inglês</td><td>Se existe palavra em português de uso corrente, use. Percepção, retorno, conversa, narrativa, prazo, bastidores.</td></tr>
+        <tr><td class="k">Números</td><td>Algarismos para dados: R$ 297, 90 minutos, até 7 dias úteis. Nunca "apenas" ou "só" antes do preço.</td></tr>
+        <tr><td class="k">Referências</td><td>Uma por legenda, com autor e obra. A referência é lente, não enfeite: sempre feche a ponte com comunicação de marca.</td></tr>
+        <tr><td class="k">Ética</td><td>Nunca expor marca pequena em exemplo negativo. Depoimento só real e autorizado. Escassez só verdadeira. Nenhuma promessa de números.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Glossário</span></div>
+  <div class="g">
+    <div class="s5">
+      <h2 class="t">Palavras da marca.</h2>
+      <table class="sp">
+        <tr><td class="k" style="width:86px">Observar</td><td>Olhar com atenção antes de concluir</td></tr>
+        <tr><td class="k">Direção</td><td>Escolher caminhos e prioridades. É decisão, não "estratégia" genérica</td></tr>
+        <tr><td class="k">Presença</td><td>Ser reconhecível e contínua. Não é volume de publicação</td></tr>
+        <tr><td class="k">Percepção</td><td>O que fica em quem vê, nem sempre o que a marca quis dizer</td></tr>
+        <tr><td class="k">Intenção</td><td>O motivo de uma comunicação existir</td></tr>
+        <tr><td class="k">Repertório</td><td>Tudo o que alimenta o olhar: cultura, vivência, cotidiano</td></tr>
+        <tr><td class="k">Critério</td><td>A régua que permite escolher com consistência</td></tr>
+        <tr><td class="k">Permanência</td><td>O que não depende do momento nem da tendência</td></tr>
+        <tr><td class="k">Detalhe</td><td>A prova de que alguém prestou atenção</td></tr>
+        <tr><td class="k">Jornada</td><td>Nome dos serviços. Pressupõe processo, não pacote</td></tr>
+        <tr><td class="k">Caminho</td><td>Substitui "fórmula". Há mais de um, e se escolhe</td></tr>
+      </table>
+      <div class="h3">Frases-assinatura (no máximo uma por peça)</div>
+      <p class="sm" style="font-family:'Cormorant Garamond';font-size:14px;line-height:1.45;font-style:italic">A comunicação começa muito antes da primeira palavra. · Olhar antes de concluir. · Observação entende. Direção escolhe. Presença materializa. · Direção decide. Design materializa. · Presença contínua com direção.</p>
+    </div>
+    <div style="grid-column:7/span 6">
+      <h2 class="t">Palavras a evitar.</h2>
+      <table class="sp">
+        <tr><th>Evitar</th><th>Usar no lugar</th></tr>
+        <tr><td>hack, truque, segredo, fórmula</td><td>caminho, critério, princípio, método</td></tr>
+        <tr><td>viralizar, bombar, explodir</td><td>ser lembrada, alcançar quem importa</td></tr>
+        <tr><td>dica, conteúdo de valor</td><td>observação, princípio, conteúdo com intenção</td></tr>
+        <tr><td>gatilho mental</td><td>argumento, razão, motivo</td></tr>
+        <tr><td>engajar (como objetivo)</td><td>conversar, criar vínculo, ter resposta</td></tr>
+        <tr><td>pacote, combo, X posts + X Reels</td><td>jornada, acompanhamento, presença contínua com direção</td></tr>
+        <tr><td>agência</td><td>estúdio de direção e comunicação</td></tr>
+        <tr><td>soluções, potencializar, alavancar</td><td>o verbo concreto: organizar, decidir, mostrar</td></tr>
+        <tr><td>premium, exclusivo (sobre si)</td><td>mostrar o critério, o processo, o detalhe</td></tr>
+        <tr><td>barato, promoção, desconto</td><td>valor de abertura, condição de abertura</td></tr>
+        <tr><td>incrível, top, perfeito</td><td>o adjetivo específico: claro, coerente, reconhecível</td></tr>
+        <tr><td>bora, partiu, sextou, arrasou</td><td>convite direto e calmo</td></tr>
+        <tr><td>seguidores (no CTA)</td><td>quem acompanha, quem lê</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Legendas</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">A legenda segue o próprio método.</h2>
+      <ol class="n sm">
+        <li><span><b>Observação</b> abre (até 125 caracteres, o que aparece antes do "mais"): um fato, uma cena, um objeto. Nunca "Oi, gente" ou "Hoje eu vim falar sobre".</span></li>
+        <li><span><b>Direção</b> desenvolve, em 2 a 4 parágrafos curtos: o que aquilo revela e a ponte com comunicação de marca.</span></li>
+        <li><span><b>Presença</b> fecha: a frase que a pessoa salvaria e, depois dela, uma pergunta real, um convite leve ou nada.</span></li>
+        <li><span><b>Assinatura da série</b> na última linha, sempre igual dentro da série.</span></li>
+      </ol>
+      <p class="sm mut" style="margin-top:8px">De 300 a 1.200 caracteres (Arquivo de Percepções, até 200). CTA de serviço no máximo 1 a cada 4 publicações.</p>
+    </div>
+    <div style="grid-column:6/span 4">
+      <div class="box" style="padding:16px 18px;font-size:9.6px;line-height:1.55">
+        <div class="mi mut" style="margin-bottom:8px">Exemplo · Entrelinhas</div>
+        <p>Uma marca escreveu "atendimento próximo" na bio. Mandei mensagem numa terça. A resposta chegou na sexta, automática.</p>
+        <p>Ninguém mentiu ali. Mas a comunicação disse duas coisas ao mesmo tempo, e a segunda falou mais alto.</p>
+        <p>Quando eu olho para uma marca, presto atenção nisso: não só no que ela afirma, mas no que ela demonstra sem perceber.</p>
+        <p>O tempo de resposta. O tom da mensagem. O silêncio depois de uma pergunta.</p>
+        <p>Tudo isso também comunica. E, quase sempre, é a parte em que as pessoas mais acreditam.</p>
+        <p>Se alguém olhasse só para o que a sua marca faz, e não para o que ela diz, que frase escreveria sobre ela?</p>
+        <p class="mut" style="margin:0">Entrelinhas · o que uma comunicação diz sem perceber</p>
+      </div>
+    </div>
+    <div style="grid-column:10/span 3">
+      <div class="h3" style="margin-top:0">Assinaturas das séries</div>
+      <table class="sp" style="font-size:8.4px">
+        <tr><td class="k">Entrelinhas</td><td>o que uma comunicação diz sem perceber</td></tr>
+        <tr><td class="k">Ponto de Vista</td><td>reflexões e posicionamentos</td></tr>
+        <tr><td class="k">Em Construção</td><td>bastidores e processos</td></tr>
+        <tr><td class="k">Lentes</td><td>o que a cultura ensina sobre comunicação</td></tr>
+        <tr><td class="k">Princípios</td><td>estratégia explicada com clareza</td></tr>
+        <tr><td class="k">Permanências</td><td>ideias que não dependem do momento</td></tr>
+        <tr><td class="k">Observações</td><td>pequenas percepções do cotidiano</td></tr>
+        <tr><td class="k">Arquivo de Percepções</td><td>número da peça</td></tr>
+      </table>
+      <p class="sm mut" style="margin-top:8px">As legendas-modelo das oito séries estão no arquivo de identidade verbal que acompanha este manual.</p>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Chamadas e bio</span></div>
+  <div class="g">
+    <div class="s5">
+      <h2 class="t">Convites calmos, nunca pressão.</h2>
+      <table class="sp">
+        <tr><th>Chamada aprovada</th><th>Canal</th></tr>
+        <tr><td>Salve para reler na próxima vez que estiver diante de um rascunho.</td><td>Feed</td></tr>
+        <tr><td>Conte nos comentários: [pergunta específica].</td><td>Feed</td></tr>
+        <tr><td>Envie para alguém que está repensando a própria marca.</td><td>Feed</td></tr>
+        <tr><td>Se quiser olhar com calma para a sua comunicação, a Observação está no link da bio.</td><td>Feed e stories</td></tr>
+        <tr><td>Responda "Observação" por mensagem e eu explico como funciona.</td><td>Stories e feed</td></tr>
+        <tr><td>As jornadas, com valores e prazos, estão no destaque Jornadas.</td><td>Feed e stories</td></tr>
+        <tr><td>Se fizer sentido para você, me chama por mensagem. Sem pressa.</td><td>Stories e DM</td></tr>
+        <tr><td>Para [mês], há [1] vaga na Presença. Se fizer sentido, conversamos.</td><td>Stories, só se for verdade</td></tr>
+      </table>
+      <p class="sm mut" style="margin-top:10px"><b>Proibidas:</b> "Corre que vai acabar!", "Garanta já a sua vaga", "Comenta EU QUERO", "Marque 3 amigos", "Me segue para mais dicas", "Só hoje", "Vagas limitadas" sem número real.</p>
+    </div>
+    <div style="grid-column:7/span 6">
+      <h2 class="t">Bio do @steffreis.</h2>
+      <p class="sm">Nome no perfil: <b>Estéfany Reis · Urânia</b>. O @ continua @steffreis.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px">
+        <div class="box"><div class="mi mut" style="margin-bottom:6px">Fase de virada · 123 caracteres</div><div style="font-size:10.5px;line-height:1.5">Vou mostrando como sou e vou sendo como posso.<br>Urânia: direção e comunicação de marcas.<br>Onde marcas encontram significado ↓</div></div>
+        <div class="box"><div class="mi mut" style="margin-bottom:6px">Depois dos seis primeiros posts · 125 caracteres</div><div style="font-size:10.5px;line-height:1.5">Direção de comunicação · Urânia<br>Observo antes de comunicar.<br>Para marcas que cresceram e não se reconhecem mais no que dizem ↓</div></div>
+      </div>
+      <p class="sm mut" style="margin-top:10px">A primeira versão preserva a frase que já é dela e avisa a mudança sem ruptura. Depois dos seis primeiros posts da virada, migrar para a segunda.</p>
+      <div class="h3">Destaques</div>
+      <table class="sp">
+        <tr><td class="k" style="width:76px">01 Urânia</td><td>"Urânia é um estúdio de direção e comunicação de marcas. Eu observo antes de comunicar."</td></tr>
+        <tr><td class="k">02 Método</td><td>"Observação entende. Direção escolhe. Presença materializa."</td></tr>
+        <tr><td class="k">03 Jornadas</td><td>O que é cada jornada, prazos, valores e como começar.</td></tr>
+        <tr><td class="k">04 Arquivo</td><td>"O que mereceu ser observado."</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>07 Voz aplicada</span><span>Atendimento</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">O preço é dado direto. O caminho menor também, quando é o certo.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut sm" style="padding-top:6px">Responder em até 1 dia útil. Áudio só se a pessoa mandar áudio primeiro. No máximo 2 mensagens de acompanhamento depois de uma proposta. Os demais modelos (acompanhamento, boas-vindas, e-mail de proposta) estão no arquivo de identidade verbal.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-self:start;margin-top:8px">
+      <div class="box" style="font-size:9.4px;line-height:1.55"><div class="mi mut" style="margin-bottom:8px">Primeira resposta</div>
+        <p>Oi, [nome]. Que bom receber a sua mensagem.</p>
+        <p>Aqui é a Estéfany, da Urânia. Para eu entender por onde faz sentido começar, me conta em poucas linhas: qual é a sua marca e o que tem incomodado na comunicação hoje?</p>
+        <p style="margin:0">Pode responder do seu jeito, em texto ou em áudio.</p></div>
+      <div class="box" style="font-size:9.4px;line-height:1.55"><div class="mi mut" style="margin-bottom:8px">"Quanto custa?"</div>
+        <p>Oi, [nome]. Claro. A Urânia trabalha em jornadas, e o caminho depende de onde a sua marca está agora:</p>
+        <p><b>Observação:</b> sessão de 90 minutos e material de prioridades em até 7 dias úteis. R$ 297.<br><b>Direção:</b> posicionamento, tom de voz, linha editorial e direção visual, em até 15 dias úteis. R$ 1.497.<br><b>Presença:</b> direção contínua, contrato inicial de 3 meses. A partir de R$ 2.000 por mês.</p>
+        <p style="margin:0">Se você me contar como está a sua marca hoje, eu digo com sinceridade qual caminho faz mais sentido agora. Às vezes, é o menor deles.</p></div>
+      <div class="box" style="font-size:9.4px;line-height:1.55"><div class="mi mut" style="margin-bottom:8px">Para quem pede "só uns posts"</div>
+        <p>Entendo, [nome], e obrigada pela clareza. Vou ser sincera também.</p>
+        <p>Eu não trabalho com produção avulsa de posts. Não é preciosismo: post sem direção costuma resolver a semana, mas não a comunicação.</p>
+        <p>Se você quer começar pequeno, a Observação é o caminho: em 90 minutos a gente entende o que está acontecendo, e você sai com prioridades claras. O valor é R$ 297.</p>
+        <p style="margin:0">Se agora você precisa mesmo só de execução, posso indicar alguém de confiança.</p></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 08 APLICAÇÕES ============ -->
+<section class="page azul op" id="c8">
+  <div class="num">08</div>
+  <div class="ot">Aplicações</div>
+  <div class="oi">O sistema montado nas peças reais da Urânia: perfil, carrossel, stories, Reels, PDF, WhatsApp e e-mail.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>08 Aplicações</span><span>Perfil do Instagram</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">O perfil pessoal como palco da marca.</h2>
+      <p>O @steffreis continua sendo dela. A marca entra pela bio, pelos destaques e por um sistema que aparece em pelo menos 3 de cada 9 posts, sem apagar o passado.</p>
+      <table class="sp" style="margin-top:10px">
+        <tr><td class="k" style="width:82px">Foto</td><td>Retrato P&amp;B da Estéfany. Nunca logo, monograma ou glyph</td></tr>
+        <tr><td class="k">Nome</td><td>Estéfany Reis · Urânia</td></tr>
+        <tr><td class="k">Destaques</td><td>Numerais 01 a 05 sobre azul, iguais em formato</td></tr>
+        <tr><td class="k">Grade</td><td>Em 9 posts: no máximo 3 azuis, no máximo 3 com glyph, fotos sempre tratadas</td></tr>
+      </table>
+      <div class="h3">Os seis primeiros posts da virada</div>
+      <ol class="n sm">
+        <li><span>Quem é a Estéfany e por que ela observa antes de falar.</span></li>
+        <li><span>O que é a Urânia, e o que ela não é.</span></li>
+        <li><span>O método: Observação, Direção, Presença.</span></li>
+        <li><span>A primeira Entrelinhas.</span></li>
+        <li><span>Um Objeto de Observação.</span></li>
+        <li><span>As jornadas e as vagas de abertura.</span></li>
+      </ol>
+    </div>
+    <div style="grid-column:6/span 7;display:flex;flex-direction:column;align-items:center">
+      <div style="width:330px;height:600px;border:8px solid var(--azul);border-radius:36px;background:#fff;overflow:hidden;padding:26px 0 0;position:relative">
+        <div style="padding:0 16px;display:flex;gap:16px;align-items:center">
+          <div style="width:72px;height:72px;border-radius:50%;background:#8f8b84;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:7px">retrato P&amp;B</div>
+          <div style="display:flex;gap:16px;font-size:9px;text-align:center"><div><b>52</b><br>posts</div><div><b>1.475</b><br>seguidores</div><div><b>1.300</b><br>seguindo</div></div>
+        </div>
+        <div style="padding:10px 16px 0;font-size:9.5px;line-height:1.45"><b>Estéfany Reis · Urânia</b><br>Vou mostrando como sou e vou sendo como posso.<br>Urânia: direção e comunicação de marcas.<br>Onde marcas encontram significado ↓</div>
+        <div style="display:flex;gap:10px;padding:14px 16px 12px">
+          <div style="text-align:center;font-size:7.5px"><div style="width:46px;height:46px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:15px;outline:1.5px solid var(--neutro);outline-offset:2px">01</div>Urânia</div>
+          <div style="text-align:center;font-size:7.5px"><div style="width:46px;height:46px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:15px;outline:1.5px solid var(--neutro);outline-offset:2px">02</div>Método</div>
+          <div style="text-align:center;font-size:7.5px"><div style="width:46px;height:46px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:15px;outline:1.5px solid var(--neutro);outline-offset:2px">03</div>Jornadas</div>
+          <div style="text-align:center;font-size:7.5px"><div style="width:46px;height:46px;border-radius:50%;background:var(--azul);color:var(--branco);display:flex;align-items:center;justify-content:center;font-size:15px;outline:1.5px solid var(--neutro);outline-offset:2px">04</div>Arquivo</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
+          <div class="sc" style="width:100%;height:112px"><div class="cv bgA" style="zoom:.1;margin-left:-34px">
+            <div class="ab mx" style="left:130px;top:96px;color:var(--ocre)">Entrelinhas · 04</div>
+            <div class="ab cg" style="left:130px;bottom:200px;width:736px;font-size:112px;line-height:1.07">O que a sua marca diz sem perceber</div></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv foto" style="zoom:.1;font-size:40px">objeto</div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv bgB" style="zoom:.1">
+            <div class="ab" style="left:248px;top:480px;width:128px;height:2px;background:var(--azul)"></div>
+            <div class="ab cg" style="left:248px;top:522px;width:736px;font-style:italic;font-size:64px;line-height:1.25">Frequência ajuda. Mas só funciona quando existe direção por trás.</div></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv bgN" style="zoom:.1">
+            <div class="ab cg" style="left:130px;bottom:200px;width:736px;font-size:112px;line-height:1.07">Três perguntas antes de publicar</div></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv" style="zoom:.1;background:#7d7a73"></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv bgA" style="zoom:.1">
+            <svg class="ab gl" viewBox="0 0 100 100" style="left:460px;top:540px;width:160px;height:160px;color:var(--branco)"><use href="#g"/></svg></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv bgB" style="zoom:.1">
+            <div class="ab cg" style="left:130px;bottom:200px;width:736px;font-size:112px;line-height:1.07">Constância não é frequência</div></div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv foto" style="zoom:.1;font-size:40px">objeto</div></div>
+          <div class="sc" style="width:100%;height:112px"><div class="cv" style="zoom:.1;background:#a7a39b"></div></div>
+        </div>
+      </div>
+      <div class="cap mut" style="margin-top:8px">Posts pessoais tratados (em cinza) convivem com as peças do sistema.</div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>08 Aplicações</span><span>Carrossel</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">De seis a oito lâminas, uma série, no máximo dois fundos.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut sm" style="padding-top:6px">Capa no modelo Capa de Capítulo. Miolo com Lista, Citação ou Objeto de Observação, paginação "02 / 08" a partir da segunda lâmina. Fechamento editorial com o glyph protagonista; fechamento institucional com a V2, sem glyph.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-self:end">
+      <div><div class="sc" style="width:100%;aspect-ratio:4/5"><div class="cv bgA" style="zoom:.225">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Entrelinhas · 04</div>
+          <div class="ab cg" style="left:96px;bottom:200px;width:736px;font-size:112px;line-height:1.07">O que a sua marca diz sem perceber</div>
+          <div class="ab mx" style="left:96px;top:1222px;color:var(--cclaro)">Urânia</div>
+          <i class="ab" data-lucide="arrow-right" style="right:96px;top:1210px;width:44px;height:44px;color:var(--branco)"></i></div></div>
+        <div class="cap"><b>01 Capa</b> · azul, título com base em y 1150</div></div>
+      <div><div class="sc" style="width:100%;aspect-ratio:4/5;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.225">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Entrelinhas · 04</div>
+          <div class="ab mx" style="right:96px;top:96px;color:var(--cinza)">02 / 08</div>
+          <div class="ab cg" style="left:96px;top:200px;width:736px;font-size:72px;line-height:1.11">Uma bio promete. A resposta demora três dias.</div>
+          <div class="ab" style="left:96px;top:480px;width:736px;font-size:40px;line-height:1.4">Ninguém mentiu ali. Mas a comunicação disse duas coisas ao mesmo tempo, e a segunda falou mais alto.</div></div></div>
+        <div class="cap"><b>02 Miolo</b> · modelo Lista, variante Texto</div></div>
+      <div><div class="sc" style="width:100%;aspect-ratio:4/5;outline:.75pt solid var(--neutro)"><div class="cv bgB" style="zoom:.225">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--cinza)">Entrelinhas · 04</div>
+          <div class="ab mx" style="right:96px;top:96px;color:var(--cinza)">05 / 08</div>
+          <div class="ab cg" style="left:96px;top:200px;width:888px;font-size:72px;line-height:1.11">O que também comunica</div>
+          <div class="ab" style="left:96px;top:360px;width:888px">
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">01</span><span style="font-size:40px;line-height:1.4">O tempo de resposta</span></div>
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">02</span><span style="font-size:40px;line-height:1.4">O tom da mensagem</span></div>
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">03</span><span style="font-size:40px;line-height:1.4">A foto escolhida para o perfil</span></div>
+            <div style="display:grid;grid-template-columns:152px 1fr;padding:40px 0;border-top:2px solid var(--neutro);border-bottom:2px solid var(--neutro)"><span class="cg" style="font-size:64px;line-height:1">04</span><span style="font-size:40px;line-height:1.4">O silêncio depois de uma pergunta</span></div></div></div></div>
+        <div class="cap"><b>05 Miolo</b> · modelo Lista</div></div>
+      <div><div class="sc" style="width:100%;aspect-ratio:4/5"><div class="cv bgA" style="zoom:.225">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Entrelinhas · 04</div>
+          <div class="ab mx" style="right:96px;top:96px;color:var(--cclaro)">08 / 08</div>
+          <svg class="ab gl" viewBox="0 0 100 100" style="left:460px;top:540px;width:160px;height:160px;color:var(--branco)"><use href="#g"/></svg>
+          <div class="ab cg" style="left:172px;top:764px;width:736px;text-align:center;font-size:56px;line-height:1.2">Tudo também comunica. E é a parte em que as pessoas mais acreditam.</div>
+          <div class="ab" style="left:172px;top:1010px;width:736px;text-align:center;font-size:32px;color:var(--cclaro)">Envie para alguém que está repensando a própria marca.</div></div></div>
+        <div class="cap"><b>08 Fechamento</b> · glyph protagonista, mesmo fundo da capa</div></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>08 Aplicações</span><span>Stories e Reels</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">Três modelos de story, uma capa de Reels.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut sm" style="padding-top:6px">Sequências de 3 a 7 stories: o primeiro diz o assunto, o último fecha. Fontes nativas do Instagram só para menção, link, enquete e pergunta. Até 30 palavras por story.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-self:end">
+      <div><div class="sc" style="width:216px;height:384px"><div class="cv story bgA" style="zoom:.2">
+          <div class="ab mx" style="left:96px;top:272px;color:var(--ocre)">Observação</div>
+          <div class="ab cg" style="left:96px;top:400px;width:736px;font-size:72px;line-height:1.15">Quando foi a última vez que um pequeno detalhe mudou a forma como você enxergava alguma coisa?</div>
+          <div class="ab" style="left:240px;top:1210px;width:600px;height:160px;background:var(--branco);color:var(--cinza);display:flex;align-items:center;justify-content:center;font-size:32px">Me conta aqui</div></div></div>
+        <div class="cap"><b>Observação</b> · azul, pergunta e figurinha</div></div>
+      <div><div class="sc" style="width:216px;height:384px"><div class="cv story bgN" style="zoom:.2">
+          <div class="ab mx" style="left:96px;top:272px;color:var(--azul)">Em Construção</div>
+          <svg class="ab gl" viewBox="0 0 100 100" style="left:420px;top:784px;width:240px;height:240px;color:var(--azul)"><use href="#g"/></svg>
+          <div class="ab" style="left:96px;top:1380px;width:736px;font-size:40px;line-height:1.4">Bastidores de uma Direção: hoje é dia de linguagem.</div></div></div>
+        <div class="cap"><b>Em Construção</b> · neutro quente, glyph central</div></div>
+      <div><div class="sc" style="width:216px;height:384px"><div class="cv story bgA" style="zoom:.2">
+          <img class="ab" src="logo/urania_v2_branco-quente.svg" alt="" style="left:206px;top:487px;width:668px">
+          <div class="ab cg" style="left:96px;top:880px;width:888px;text-align:center;font-size:72px;line-height:1.15">Vagas da Presença para novembro</div>
+          <div class="ab" style="left:96px;top:1090px;width:888px;text-align:center;font-size:40px;line-height:1.4;color:var(--cclaro)">Trabalho com no máximo 3 marcas ao mesmo tempo. Há 1 vaga.</div>
+          <div class="ab" style="left:340px;top:1300px;width:400px;height:110px;background:var(--branco);color:var(--azul);display:flex;align-items:center;justify-content:center;font-size:30px">link</div></div></div>
+        <div class="cap"><b>Institucional</b> · azul, V2 centralizada</div></div>
+      <div><div class="sc" style="width:216px;height:384px;outline:.75pt solid var(--neutro)"><div class="cv story bgB" style="zoom:.2">
+          <div class="ab mx" style="left:96px;top:480px;color:var(--cinza)">Ponto de Vista · 02</div>
+          <div class="ab cg" style="left:96px;top:840px;width:888px;font-size:112px;line-height:1.07">Constância não é frequência</div></div></div>
+        <div class="cap"><b>Capa de Reels</b> · título na zona de y 480 a 1440</div></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>08 Aplicações</span><span>PDF e proposta</span></div>
+  <div class="g" style="grid-template-rows:auto 1fr">
+    <div class="s5"><h2 class="t">O PDF é o momento da decisão de compra.</h2></div>
+    <div style="grid-column:7/span 6"><p class="mut sm" style="padding-top:6px">A4 retrato. Logo só na capa. Páginas internas em branco quente, com rodapé URÂNIA e número de página. Azul em no máximo 25% das páginas. Glyph uma vez, na última página.</p></div>
+    <div class="full" style="display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:28px;align-self:end">
+      <div><div class="sc" style="width:301.7px;height:426.7px"><div class="cv a4 bgN" style="zoom:.38">
+          <img class="ab" src="logo/urania_v1_azul.svg" alt="" style="left:155px;top:345px;width:484px">
+          <div class="ab mx" style="left:0;width:794px;top:640px;text-align:center;font-size:13px;color:var(--cinza)">Proposta · Ateliê Exemplo · Outubro de 2026</div>
+          <div class="ab" style="left:0;width:794px;bottom:56px;text-align:center;font-size:13.3px;line-height:1.5"><b>Estéfany Reis</b><br><span style="color:var(--cinza);font-size:10.7px">Direção de comunicação · Urânia</span></div></div></div>
+        <div class="cap"><b>Capa</b> · V1 centralizada a 42% da altura</div></div>
+      <div><div class="sc" style="width:301.7px;height:426.7px;outline:.75pt solid var(--neutro)"><div class="cv a4 bgB" style="zoom:.38">
+          <div class="ab mx" style="left:64px;top:96px;font-size:13px;color:var(--cinza)">Capítulo 02 · Direção</div>
+          <div class="ab cg" style="left:64px;top:150px;width:500px;font-size:48px;line-height:1.1">O caminho que eu recomendo</div>
+          <div class="ab" style="left:64px;top:280px;width:495px;font-size:13.3px;line-height:1.5">A marca cresceu, mas ainda se apresenta como no começo. A Direção organiza quem ela é, como fala e o que mostra, para que cada publicação tenha um motivo para existir.<br><br>Inclui imersão, posicionamento, tom de voz, linha editorial, pilares de conteúdo e direção visual, com apresentação e período de ajustes.</div>
+          <div class="ab" style="left:64px;top:560px;width:666px;border-top:1.5pt solid var(--azul);border-bottom:1.5pt solid var(--azul);padding:18px 0;display:flex;justify-content:space-between;align-items:baseline"><span class="mx" style="font-size:13px">Prazo de até 15 dias úteis</span><span class="cg" style="font-size:44px">R$ 1.497</span></div>
+          <div class="ab" style="left:64px;right:64px;bottom:56px;border-top:1px solid var(--neutro);padding-top:16px;display:flex;justify-content:space-between" ><span class="mx" style="font-size:13px">Urânia</span><span class="mx" style="font-size:13px">07</span></div></div></div>
+        <div class="cap"><b>Página interna</b> · bloco de preço entre dois fios azuis</div></div>
+      <div><div class="sc" style="width:301.7px;height:426.7px"><div class="cv a4 bgN" style="zoom:.38">
+          <svg class="ab gl" viewBox="0 0 100 100" style="left:64px;top:470px;width:32px;height:32px;color:var(--azul)"><use href="#g"/></svg>
+          <div class="ab cg" style="left:64px;top:526px;width:560px;font-size:32px;line-height:1.25">Quando foi a última vez que um pequeno detalhe mudou completamente a forma como você enxergava alguma coisa?</div>
+          <div class="ab" style="left:64px;top:720px;font-size:13.3px;line-height:1.5"><b>Estéfany Reis</b><br><span style="color:var(--cinza);font-size:10.7px">Direção de comunicação · Urânia<br>@steffreis</span></div></div></div>
+        <div class="cap"><b>Encerramento</b> · glyph de encerramento e contato</div></div>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>08 Aplicações</span><span>WhatsApp e e-mail</span></div>
+  <div class="g">
+    <div class="s5">
+      <h2 class="t">Os canais de fechamento.</h2>
+      <div class="h3">WhatsApp Business</div>
+      <table class="sp">
+        <tr><td class="k" style="width:86px">Foto</td><td>O mesmo retrato P&amp;B do Instagram</td></tr>
+        <tr><td class="k">Nome</td><td>Estéfany Reis · Urânia</td></tr>
+        <tr><td class="k">Recado</td><td>"Direção de comunicação para marcas. Observo antes de comunicar."</td></tr>
+        <tr><td class="k">Catálogo</td><td>Um item por jornada, 1080 × 1080, fundo azul. Preço nunca na imagem, só no campo de texto</td></tr>
+        <tr><td class="k">Arquivos</td><td>PDFs nos modelos deste manual; imagens em 1080 × 1350</td></tr>
+      </table>
+      <div style="display:flex;gap:12px;margin-top:14px">
+        <div class="sc" style="width:130px;height:130px"><div class="cv sq bgA" style="zoom:.12037">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Jornada 01 · Porta de entrada</div>
+          <div class="ab cg" style="left:96px;top:740px;font-size:112px;line-height:1">Observação</div>
+          <div class="ab mx" style="left:96px;top:952px;color:var(--cclaro)">Urânia</div></div></div>
+        <div class="sc" style="width:130px;height:130px"><div class="cv sq bgA" style="zoom:.12037">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Jornada 02 · Serviço principal</div>
+          <div class="ab cg" style="left:96px;top:740px;font-size:112px;line-height:1">Direção</div>
+          <div class="ab mx" style="left:96px;top:952px;color:var(--cclaro)">Urânia</div></div></div>
+        <div class="sc" style="width:130px;height:130px"><div class="cv sq bgA" style="zoom:.12037">
+          <div class="ab mx" style="left:96px;top:96px;color:var(--ocre)">Jornada 03 · Contínua</div>
+          <div class="ab cg" style="left:96px;top:740px;font-size:112px;line-height:1">Presença</div>
+          <div class="ab mx" style="left:96px;top:952px;color:var(--cclaro)">Urânia</div></div></div>
+      </div>
+    </div>
+    <div style="grid-column:7/span 6">
+      <div class="h3" style="margin-top:0">Assinatura de e-mail</div>
+      <div class="box" style="padding:22px 24px;background:#fff">
+        <div style="font-size:12px;line-height:1.6;margin-bottom:14px">Com atenção,</div>
+        <div style="font-weight:600;font-size:14px;line-height:1.4">Estéfany Reis</div>
+        <div style="font-size:12px;color:var(--cinza);line-height:1.5">Direção de comunicação · Urânia<br>@steffreis · WhatsApp [número]</div>
+        <img src="logo/urania_v2_email_360x168.png" alt="Urânia" style="width:180px;display:block;margin:12px 0 0 -26px">
+      </div>
+      <table class="sp" style="margin-top:12px">
+        <tr><td class="k" style="width:86px">Texto</td><td>Em texto real, não em imagem. Fonte declarada como "Manrope, Arial, sans-serif"</td></tr>
+        <tr><td class="k">Logo</td><td>V2 azul em PNG com fundo branco quente (arquivo do kit, exibido com 180 × 84 px): legível também no modo escuro</td></tr>
+        <tr><td class="k">Saudação</td><td>"Oi, [nome]," ou "Olá, [nome],". Nunca "Prezado(a)"</td></tr>
+        <tr><td class="k">Despedida</td><td>"Com atenção," ou "Um abraço,". Nunca "Att." ou "Bjs"</td></tr>
+        <tr><td class="k">Não leva</td><td>Glyph, tagline, banners, frase motivacional, ícones coloridos de redes</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ 09 PRODUÇÃO ============ -->
+<section class="page azul op" id="c9">
+  <div class="num">09</div>
+  <div class="ot">Produção e arquivos</div>
+  <div class="oi">Onde ficam os arquivos, como configurar o Canva e o que conferir antes de publicar qualquer peça. As regras para a gráfica estão no capítulo 03.</div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>09 Produção e arquivos</span><span>Kit de arquivos-mestre</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Nenhuma peça nasce de um logo copiado de outra peça.</h2>
+      <p>Todos os arquivos saem da construção do capítulo 01 e ficam na pasta <b>logo</b> que acompanha este manual. No Canva, entram no Brand Kit em Logotipos e na pasta "00 Marca".</p>
+      <table class="sp" style="margin-top:12px">
+        <tr><td class="k" style="width:60px">SVG</td><td>Mestre, em curvas. Canva e designers</td></tr>
+        <tr><td class="k">PDF</td><td>Vetorial. Gráfica</td></tr>
+        <tr><td class="k">PNG</td><td>Fundo transparente, em 1x e 2x. Uso rápido</td></tr>
+        <tr><td class="k">ICO</td><td>Favicon com 16, 32 e 48 px</td></tr>
+      </table>
+      <p class="sm mut" style="margin-top:10px">Nomes de arquivo sem acento e sem espaço. É nome técnico: em todo texto visível a grafia continua Urânia.</p>
+    </div>
+    <div style="grid-column:6/span 7">
+      <table class="sp">
+        <tr><th>Arquivo</th><th>Cores</th><th>Formatos</th></tr>
+        <tr><td class="k">urania_v1_[cor]</td><td>azul, branco-quente, preto, branco</td><td>SVG, PDF, PNG 1x e 2x</td></tr>
+        <tr><td class="k">urania_v2_[cor]</td><td>azul, branco-quente, preto, branco</td><td>SVG, PDF, PNG 1x e 2x</td></tr>
+        <tr><td class="k">urania_v2_email_360x168</td><td>azul sobre branco quente</td><td>PNG (exibir em 180 × 84)</td></tr>
+        <tr><td class="k">urania_v3_monograma_[cor]</td><td>azul (U claro), branco-quente (U azul)</td><td>SVG, PDF, PNG 1080, 512 e 180</td></tr>
+        <tr><td class="k">favicon</td><td>azul</td><td>ICO 16, 32 e 48</td></tr>
+        <tr><td class="k">urania_glyph_[cor]</td><td>azul, branco-quente, ocre</td><td>SVG, PDF, PNG</td></tr>
+      </table>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:20px">
+        <div class="tile" style="height:74px;background:var(--branco);border:.75pt solid var(--neutro)"><img src="logo/urania_v1_azul.svg" alt="" style="width:120px"></div>
+        <div class="tile" style="height:74px;background:var(--azul)"><img src="logo/urania_v1_branco-quente.svg" alt="" style="width:120px"></div>
+        <div class="tile" style="height:74px;background:var(--bege)"><img src="logo/urania_v2_azul.svg" alt="" style="width:110px"></div>
+        <div class="tile" style="height:74px;background:var(--azul)"><img src="logo/urania_v2_branco-quente.svg" alt="" style="width:110px"></div>
+        <div class="tile" style="height:74px;background:var(--branco);border:.75pt solid var(--neutro);gap:8px"><img src="logo/urania_v3_monograma_azul_180.png" alt="" style="width:44px"><img src="logo/urania_v3_monograma_branco-quente_180.png" alt="" style="width:44px;outline:.5pt solid var(--neutro)"></div>
+        <div class="tile" style="height:74px;background:var(--azul);gap:10px"><svg class="gl" viewBox="0 0 100 100" width="34" height="34" style="color:var(--branco)"><use href="#g"/></svg><svg class="gl" viewBox="0 0 100 100" width="34" height="34" style="color:var(--ocre)"><use href="#g"/></svg></div>
+      </div>
+      <p class="sm mut" style="margin-top:12px">O kit completo (logotipo, monograma, glyph e os tokens de design em JSON) pode ser baixado na página inicial deste material.</p>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>09 Produção e arquivos</span><span>Canva</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">O Brand Kit faz o trabalho de lembrar.</h2>
+      <p>Brand Kit completo e upload de fontes exigem Canva Pro. As três fontes da marca são nativas do Canva.</p>
+      <div class="h3">Paleta "Urânia | Oficial"</div>
+      <div style="display:flex;gap:6px">
+        <div style="flex:1;height:30px;background:var(--azul)"></div><div style="flex:1;height:30px;background:var(--branco);outline:.5pt solid var(--neutro)"></div><div style="flex:1;height:30px;background:var(--bege)"></div><div style="flex:1;height:30px;background:var(--cinza)"></div><div style="flex:1;height:30px;background:var(--neutro)"></div><div style="flex:1;height:30px;background:var(--ocre)"></div>
+      </div>
+      <p class="sm mut" style="margin-top:6px">Nessa ordem: importância na marca. O ocre por último lembra a raridade. Paleta de apoio digital: #15161B, #B9B7B0, #33353D.</p>
+      <div class="h3">Pastas</div>
+      <p class="sm" style="line-height:1.7">Urânia / 00 Marca · 01 Instagram (Templates, Carrosséis, Stories, Capas de Reels, Destaques e perfil) · 02 Documentos (Templates, Propostas, Entregas) · 03 Fotos autorais · 99 Arquivo (uma pasta por mês)</p>
+      <div class="h3">Verificação de 2 minutos</div>
+      <p class="sm">Na conta da Estéfany, buscar cada fonte na aba Texto e conferir se aparecem Manrope Medium e SemiBold e Cormorant Garamond Medium e Itálico. Se faltar algum peso, enviar os arquivos estáticos da fonte.</p>
+    </div>
+    <div style="grid-column:6/span 7">
+      <div class="h3" style="margin-top:0">Estilos de texto do Brand Kit (Instagram)</div>
+      <table class="sp">
+        <tr><th>Estilo no Canva</th><th>Uso</th><th>Fonte</th><th>Tamanho · entrelinha · espaçamento</th></tr>
+        <tr><td class="k">Título</td><td>Título de capa</td><td>Cormorant Garamond Regular</td><td>112 · 1,07 · -10</td></tr>
+        <tr><td class="k">Subtítulo</td><td>Linha de apoio</td><td>Cormorant Garamond Itálico</td><td>48 · 1,25 · 0</td></tr>
+        <tr><td class="k">Cabeçalho</td><td>Título interno</td><td>Cormorant Garamond Regular</td><td>72 · 1,11 · -5</td></tr>
+        <tr><td class="k">Subcabeçalho</td><td>Título funcional</td><td>Manrope SemiBold, caixa alta</td><td>32 · 1,25 · 40</td></tr>
+        <tr><td class="k">Cabeçalho de seção</td><td>Microinformação</td><td>Manrope Medium, caixa alta</td><td>24 · 1,33 · 160</td></tr>
+        <tr><td class="k">Corpo</td><td>Texto</td><td>Manrope Regular</td><td>40 · 1,4 · 0</td></tr>
+        <tr><td class="k">Citação</td><td>Citação</td><td>Cormorant Garamond Itálico</td><td>64 · 1,25 · 0</td></tr>
+        <tr><td class="k">Legenda</td><td>Apoio, nota</td><td>Manrope Regular</td><td>28 · 1,43 · 10</td></tr>
+      </table>
+      <div class="h3">Nomes de templates</div>
+      <p class="sm" style="line-height:1.7">Padrão <b>URA_CANAL_FORMATO_variação</b>: URA_IG_CARROSSEL_capa · URA_IG_CARROSSEL_interno-lista · URA_IG_CARROSSEL_encerramento · URA_IG_STORY_observacao · URA_IG_STORY_bastidores · URA_IG_REELS_capa · URA_IG_DESTAQUE_capa · URA_DOC_A4_proposta · URA_DOC_A4_entrega. Peças publicadas: <b>AAAA-MM-DD_formato_tema</b>. Nos templates, travar margens, guias e microinformação fixa com o cadeado do Canva.</p>
+      <div class="h3">Guias de layout</div>
+      <p class="sm">Feed e story: 6 colunas de 128 px, espaçamento 24, margem 96. No story, guias horizontais em y 272 e y 1536; na capa de Reels, em y 480 e y 1440.</p>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<section class="page">
+  <div class="rh"><span>09 Produção e arquivos</span><span>Antes de publicar</span></div>
+  <div class="g">
+    <div class="s4">
+      <h2 class="t">Doze perguntas. Um "não" bloqueia a publicação.</h2>
+      <p>Vale para toda peça: post, story, PDF, e-mail. Leva menos de um minuto e evita quase todos os erros descritos neste manual.</p>
+      <div class="h3">Exportação</div>
+      <p class="sm">Tamanho exato do canvas. PNG para peças com texto, JPG para fotos, sempre sRGB. PDF padrão para envio digital; PDF para impressão com 3 mm de sangria e marcas de corte para a gráfica.</p>
+    </div>
+    <div style="grid-column:6/span 7;display:grid;grid-template-columns:1fr 1fr;column-gap:24px">
+      <ul class="r chk sm">
+        <li><span><b>Grafia:</b> Urânia com acento em todo texto; URANIA sem acento só no logo. Ortografia e acentuação revisadas. Nenhum travessão.</span></li>
+        <li><span><b>Logo:</b> inserido do Brand Kit, versão certa para o tamanho, área de proteção livre, uma cor, só em peça institucional.</span></li>
+        <li><span><b>Glyph:</b> no máximo um; só encerramento ou protagonista; nunca em canto, ao lado de palavra, sobre foto ou com o logo.</span></li>
+        <li><span><b>Tipografia:</b> só Cormorant Garamond e Manrope. Sem Bold. Cormorant nunca em caixa alta nem abaixo de 48 px no Instagram.</span></li>
+        <li><span><b>Cor:</b> no máximo 1 elemento ocre por lâmina; ocre como texto só sobre azul; nenhum texto sobre ocre; cinza nunca sobre azul.</span></li>
+        <li><span><b>Grade:</b> margens de 96 px no Instagram e 64 px no A4; nada essencial fora da zona segura.</span></li>
+      </ul>
+      <ul class="r chk sm">
+        <li><span><b>Espaço:</b> limite de palavras respeitado, no máximo 3 tamanhos de texto (fora a microinformação), pelo menos 35% da área útil vazia.</span></li>
+        <li><span><b>Microinformação:</b> série e número corretos, dois dígitos, acentos mantidos na caixa alta.</span></li>
+        <li><span><b>Fotografia:</b> predefinição Urânia aplicada, teste do papel feito, texto só sobre zona calma.</span></li>
+        <li><span><b>Miniatura:</b> vista a 25% ou na grade do celular, a capa continua legível e conversa com as vizinhas.</span></li>
+        <li><span><b>Texto:</b> tom e chamada conforme o capítulo 07; chamada de serviço no máximo 1 a cada 4 posts.</span></li>
+        <li><span><b>Exportação:</b> tamanho exato, formato certo, nome de arquivo no padrão.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fo"><span>Urânia · Manual de marca</span><span></span></div>
+</section>
+
+<!-- ============ CONTRACAPA ============ -->
+<section class="page bege" style="padding:0">
+  <div style="position:absolute;left:56px;top:300px;width:520px">
+    <svg class="gl" viewBox="0 0 100 100" width="34" height="34" style="color:var(--azul);display:block;margin-bottom:24px"><use href="#g"/></svg>
+    <div style="font-family:'Cormorant Garamond';font-size:36px;line-height:1.15">Olhar antes de concluir.</div>
+  </div>
+  <div style="position:absolute;left:56px;bottom:44px;font-size:9px;line-height:1.6">
+    <b>Urânia · Manual de marca</b> · Versão 1.0 · Outubro de 2026<br>
+    <span class="mut">Estéfany Reis · Direção de comunicação</span>
+  </div>
+  <div style="position:absolute;right:56px;bottom:44px;font-size:9px;line-height:1.6;text-align:right" class="mut">
+    Desenvolvido por Fabricio Kaempf | Estrategista Digital<br>@fabriciokaempf
+  </div>
+</section>
+
+<script>
+  const pages=[...document.querySelectorAll('.page')];
+  const pad=n=>String(n).padStart(2,'0');
+  pages.forEach((p,i)=>{const f=p.querySelector('.fo span:last-child'); if(f) f.textContent=pad(i+1)});
+  document.querySelectorAll('[data-ref]').forEach(e=>{e.textContent=pad(pages.indexOf(document.getElementById(e.dataset.ref))+1)});
+  if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.75}});
+</script>
+<style>@media screen and (max-width:1146px){body{zoom:var(--z,1)}}</style>
+<script>
+  (function(){
+    function caber(){document.documentElement.style.setProperty('--z',((window.innerWidth-16)/1123).toFixed(4))}
+    window.addEventListener('resize',caber); caber();
+  })();
+</script>
+</body>
+</html>

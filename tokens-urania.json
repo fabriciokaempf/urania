@@ -1,0 +1,696 @@
+{
+  "$description": "Design tokens Urânia v1.0 (outubro de 2026). Instagram em px sobre canvas de 1080 px; A4 em pt; Canva A4 = pt x 1,333. Ocre como texto somente sobre azul profundo.",
+  "color": {
+    "$type": "color",
+    "azul": {
+      "profundo": {
+        "$value": "#1D1F26",
+        "$description": "Base. Texto principal e fundos escuros. CMYK C100 M65 Y0 K90; Pantone 532 C (aprox.)."
+      },
+      "noite": {
+        "$value": "#15161B",
+        "$description": "Auxiliar digital: fundo de modo escuro em telas."
+      }
+    },
+    "ocre": {
+      "base": {
+        "$value": "#C58A2B",
+        "$description": "Acento, máximo 5 a 10% da peça. Texto somente sobre azul profundo. CMYK C0 M35 Y100 K20; Pantone 3547 C (aprox.)."
+      }
+    },
+    "cinza": {
+      "base": {
+        "$value": "#444444",
+        "$description": "Texto secundário sobre fundos claros. CMYK K85; Pantone 446 C (aprox.)."
+      },
+      "claro": {
+        "$value": "#B9B7B0",
+        "$description": "Auxiliar: texto secundário sobre azul profundo."
+      }
+    },
+    "branco": {
+      "quente": {
+        "$value": "#F7F6F3",
+        "$description": "Fundo principal. No impresso, usar o próprio papel."
+      }
+    },
+    "neutro": {
+      "base": {
+        "$value": "#D9D9D6",
+        "$description": "Linhas e divisões. CMYK K20; Pantone Cool Gray 1 C."
+      },
+      "quente": {
+        "$value": "#E8E2D6",
+        "$description": "Fundo editorial (papel). CMYK C5 M5 Y10 K5; Pantone 9226 C (aprox.)."
+      }
+    },
+    "linha": {
+      "escura": {
+        "$value": "#33353D",
+        "$description": "Auxiliar: fio sutil sobre azul profundo."
+      }
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "fundo": {
+      "principal": {
+        "$value": "{color.branco.quente}"
+      },
+      "editorial": {
+        "$value": "{color.neutro.quente}"
+      },
+      "escuro": {
+        "$value": "{color.azul.profundo}"
+      }
+    },
+    "texto": {
+      "principal": {
+        "$value": "{color.azul.profundo}"
+      },
+      "secundario": {
+        "$value": "{color.cinza.base}"
+      },
+      "inverso": {
+        "$value": "{color.branco.quente}"
+      },
+      "secundario-inverso": {
+        "$value": "{color.cinza.claro}"
+      },
+      "micro-sobre-claro": {
+        "$value": "{color.azul.profundo}"
+      },
+      "micro-sobre-escuro": {
+        "$value": "{color.ocre.base}"
+      }
+    },
+    "acento": {
+      "$value": "{color.ocre.base}"
+    },
+    "linha": {
+      "sutil": {
+        "$value": "{color.neutro.base}"
+      },
+      "estrutural": {
+        "$value": "{color.azul.profundo}"
+      },
+      "sobre-neutro-quente": {
+        "$value": "{color.cinza.base}"
+      },
+      "sobre-escuro": {
+        "$value": "{color.linha.escura}"
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "logo": {
+        "$value": "Playfair Display",
+        "$description": "Somente no logotipo URANIA, aplicado como arquivo."
+      },
+      "expressiva": {
+        "$value": [
+          "Cormorant Garamond",
+          "Georgia",
+          "serif"
+        ]
+      },
+      "sistema": {
+        "$value": [
+          "Manrope",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ]
+      },
+      "micro": {
+        "$value": [
+          "Manrope",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ],
+        "$description": "Microinformação em Manrope Medium, caixa alta, espaçamento 0,16em."
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": {
+        "$value": 400
+      },
+      "medium": {
+        "$value": 500
+      },
+      "semibold": {
+        "$value": 600
+      }
+    }
+  },
+  "typography": {
+    "$type": "typography",
+    "instagram": {
+      "titulo-capa": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "112px",
+          "lineHeight": 1.07,
+          "letterSpacing": "-0.01em"
+        },
+        "$extensions": {
+          "urania": {
+            "faixa": "96 a 128px",
+            "canva": {
+              "tamanho": 112,
+              "entrelinha": 1.07,
+              "espacamento": -10
+            }
+          }
+        }
+      },
+      "titulo-interno": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "72px",
+          "lineHeight": 1.11,
+          "letterSpacing": "-0.005em"
+        },
+        "$extensions": {
+          "urania": {
+            "faixa": "64 a 80px",
+            "canva": {
+              "tamanho": 72,
+              "entrelinha": 1.11,
+              "espacamento": -5
+            }
+          }
+        }
+      },
+      "titulo-funcional": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "32px",
+          "lineHeight": 1.25,
+          "letterSpacing": "0.04em"
+        },
+        "$extensions": {
+          "urania": {
+            "textTransform": "uppercase",
+            "canva": {
+              "tamanho": 32,
+              "entrelinha": 1.25,
+              "espacamento": 40
+            }
+          }
+        }
+      },
+      "corpo": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "40px",
+          "lineHeight": 1.4,
+          "letterSpacing": "0em"
+        },
+        "$extensions": {
+          "urania": {
+            "minimo": "32px",
+            "canva": {
+              "tamanho": 40,
+              "entrelinha": 1.4,
+              "espacamento": 0
+            }
+          }
+        }
+      },
+      "legenda": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "28px",
+          "lineHeight": 1.43,
+          "letterSpacing": "0.01em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 28,
+              "entrelinha": 1.43,
+              "espacamento": 10
+            }
+          }
+        }
+      },
+      "micro": {
+        "$value": {
+          "fontFamily": "{font.family.micro}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "24px",
+          "lineHeight": 1.33,
+          "letterSpacing": "0.16em"
+        },
+        "$extensions": {
+          "urania": {
+            "textTransform": "uppercase",
+            "minimo": "24px",
+            "canva": {
+              "tamanho": 24,
+              "entrelinha": 1.33,
+              "espacamento": 160
+            }
+          }
+        }
+      },
+      "citacao": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "64px",
+          "lineHeight": 1.25,
+          "letterSpacing": "0em"
+        },
+        "$extensions": {
+          "urania": {
+            "fontStyle": "italic",
+            "canva": {
+              "tamanho": 64,
+              "entrelinha": 1.25,
+              "espacamento": 0
+            }
+          }
+        }
+      },
+      "numeracao": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "240px",
+          "lineHeight": 1.0,
+          "letterSpacing": "-0.02em"
+        },
+        "$extensions": {
+          "urania": {
+            "faixa": "192 a 320px",
+            "canva": {
+              "tamanho": 240,
+              "entrelinha": 1.0,
+              "espacamento": -20
+            }
+          }
+        }
+      }
+    },
+    "a4": {
+      "abertura": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "96pt",
+          "lineHeight": 1.0,
+          "letterSpacing": "-0.02em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 128,
+              "entrelinha": 1.0,
+              "espacamento": -20
+            }
+          }
+        }
+      },
+      "h1": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "36pt",
+          "lineHeight": 1.1,
+          "letterSpacing": "-0.01em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 48,
+              "entrelinha": 1.1,
+              "espacamento": -10
+            }
+          }
+        }
+      },
+      "h2": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "24pt",
+          "lineHeight": 1.2,
+          "letterSpacing": "-0.005em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 32,
+              "entrelinha": 1.2,
+              "espacamento": -5
+            }
+          }
+        }
+      },
+      "h3": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.semibold}",
+          "fontSize": "12pt",
+          "lineHeight": 1.33,
+          "letterSpacing": "0em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 16,
+              "entrelinha": 1.33,
+              "espacamento": 0
+            }
+          }
+        }
+      },
+      "corpo": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "10pt",
+          "lineHeight": 1.5,
+          "letterSpacing": "0em"
+        },
+        "$extensions": {
+          "urania": {
+            "canva": {
+              "tamanho": 13.3,
+              "entrelinha": 1.5,
+              "espacamento": 0
+            }
+          }
+        }
+      },
+      "nota": {
+        "$value": {
+          "fontFamily": "{font.family.sistema}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "8pt",
+          "lineHeight": 1.4,
+          "letterSpacing": "0.01em"
+        },
+        "$extensions": {
+          "urania": {
+            "cor": "{color.cinza.base}",
+            "canva": {
+              "tamanho": 10.7,
+              "entrelinha": 1.4,
+              "espacamento": 10
+            }
+          }
+        }
+      },
+      "micro": {
+        "$value": {
+          "fontFamily": "{font.family.micro}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "7.5pt",
+          "lineHeight": 1.33,
+          "letterSpacing": "0.16em"
+        },
+        "$extensions": {
+          "urania": {
+            "textTransform": "uppercase",
+            "canva": {
+              "tamanho": 10,
+              "entrelinha": 1.33,
+              "espacamento": 160
+            }
+          }
+        }
+      },
+      "citacao": {
+        "$value": {
+          "fontFamily": "{font.family.expressiva}",
+          "fontWeight": "{font.weight.regular}",
+          "fontSize": "18pt",
+          "lineHeight": 1.33,
+          "letterSpacing": "0em"
+        },
+        "$extensions": {
+          "urania": {
+            "fontStyle": "italic",
+            "canva": {
+              "tamanho": 24,
+              "entrelinha": 1.33,
+              "espacamento": 0
+            }
+          }
+        }
+      },
+      "pagina": {
+        "$value": {
+          "fontFamily": "{font.family.micro}",
+          "fontWeight": "{font.weight.medium}",
+          "fontSize": "7.5pt",
+          "lineHeight": 1.0,
+          "letterSpacing": "0.16em"
+        },
+        "$extensions": {
+          "urania": {
+            "formato": "07 / 24",
+            "canva": {
+              "tamanho": 10,
+              "entrelinha": 1.0,
+              "espacamento": 160
+            }
+          }
+        }
+      }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "base": {
+      "$value": "8px"
+    },
+    "xs": {
+      "$value": "8px"
+    },
+    "s": {
+      "$value": "16px"
+    },
+    "m": {
+      "$value": "24px"
+    },
+    "l": {
+      "$value": "40px"
+    },
+    "xl": {
+      "$value": "64px"
+    },
+    "2xl": {
+      "$value": "96px"
+    },
+    "baseline-tipo": {
+      "$value": "4px"
+    }
+  },
+  "layout": {
+    "instagram": {
+      "feed": {
+        "largura": {
+          "$type": "dimension",
+          "$value": "1080px"
+        },
+        "altura": {
+          "$type": "dimension",
+          "$value": "1350px"
+        },
+        "margem": {
+          "$type": "dimension",
+          "$value": "{space.2xl}"
+        },
+        "margem-minima": {
+          "$type": "dimension",
+          "$value": "{space.xl}"
+        },
+        "colunas": {
+          "$type": "number",
+          "$value": 12
+        },
+        "coluna": {
+          "$type": "dimension",
+          "$value": "52px"
+        },
+        "gutter": {
+          "$type": "dimension",
+          "$value": "{space.m}"
+        },
+        "glyph-marcador": {
+          "$type": "dimension",
+          "$value": "32px"
+        }
+      },
+      "story": {
+        "largura": {
+          "$type": "dimension",
+          "$value": "1080px"
+        },
+        "altura": {
+          "$type": "dimension",
+          "$value": "1920px"
+        },
+        "zona-segura-topo": {
+          "$type": "dimension",
+          "$value": "272px"
+        },
+        "zona-segura-base": {
+          "$type": "dimension",
+          "$value": "384px"
+        },
+        "lateral-minima": {
+          "$type": "dimension",
+          "$value": "64px"
+        },
+        "margem": {
+          "$type": "dimension",
+          "$value": "{space.2xl}"
+        }
+      },
+      "reels-capa": {
+        "zona-segura-y-inicio": {
+          "$type": "dimension",
+          "$value": "480px"
+        },
+        "zona-segura-y-fim": {
+          "$type": "dimension",
+          "$value": "1440px"
+        },
+        "interface-topo": {
+          "$type": "dimension",
+          "$value": "272px"
+        },
+        "interface-base": {
+          "$type": "dimension",
+          "$value": "672px"
+        },
+        "texto-x-maximo": {
+          "$type": "dimension",
+          "$value": "920px"
+        }
+      },
+      "perfil": {
+        "arquivo": {
+          "$type": "dimension",
+          "$value": "1080px"
+        },
+        "circulo-seguro": {
+          "$type": "dimension",
+          "$value": "720px"
+        }
+      },
+      "destaque": {
+        "circulo-seguro": {
+          "$type": "dimension",
+          "$value": "720px"
+        },
+        "glyph": {
+          "$type": "dimension",
+          "$value": "320px"
+        }
+      }
+    },
+    "a4": {
+      "margem-lateral": {
+        "$type": "dimension",
+        "$value": "48pt",
+        "$description": "64 no Canva; 16,9 mm"
+      },
+      "margem-vertical": {
+        "$type": "dimension",
+        "$value": "72pt",
+        "$description": "96 no Canva; 25,4 mm"
+      },
+      "colunas": {
+        "$type": "number",
+        "$value": 12
+      },
+      "gutter": {
+        "$type": "dimension",
+        "$value": "12pt",
+        "$description": "16 no Canva"
+      },
+      "sangria": {
+        "$type": "dimension",
+        "$value": "3mm"
+      }
+    }
+  },
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "instagram-padrao": {
+        "$value": "2px"
+      },
+      "instagram-enfase": {
+        "$value": "4px"
+      },
+      "a4-padrao": {
+        "$value": "0.75pt",
+        "$description": "Espessura 1 no Canva"
+      },
+      "a4-enfase": {
+        "$value": "1.5pt",
+        "$description": "Espessura 2 no Canva"
+      },
+      "a4-barra-citacao": {
+        "$value": "2.25pt",
+        "$description": "Espessura 3 no Canva"
+      },
+      "impressao-minimo-positivo": {
+        "$value": "0.25pt"
+      },
+      "impressao-minimo-negativo": {
+        "$value": "0.5pt"
+      },
+      "tela-padrao": {
+        "$value": "1px"
+      },
+      "tela-enfase": {
+        "$value": "3px"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "none": {
+        "$value": "0px",
+        "$description": "Padrão em todas as peças editoriais."
+      },
+      "ui": {
+        "$value": "8px",
+        "$description": "Reservado para futura interface digital. Nunca em peças editoriais."
+      }
+    }
+  },
+  "opacity": {
+    "$type": "number",
+    "texto": {
+      "$value": 1
+    },
+    "glyph": {
+      "$value": 1
+    },
+    "overlay-leve": {
+      "$value": 0.4,
+      "$description": "Azul profundo sobre fotografia."
+    },
+    "overlay-forte": {
+      "$value": 0.6,
+      "$description": "Azul profundo sobre fotografia."
+    }
+  }
+}
