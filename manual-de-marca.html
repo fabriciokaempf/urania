@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="logo/favicon.ico">
 <meta name="description" content="Como aplicar a marca Urânia: logotipo, glyph, cor, tipografia, grade, imagem, voz e aplicações, com medidas para o Canva e para a gráfica.">
@@ -109,6 +110,7 @@ svg.gl{fill:currentColor}
 .nota{background:var(--bege);padding:10px 12px;font-size:9px;line-height:1.5}
 .chk li{display:grid;grid-template-columns:16px 1fr;gap:6px}
 .chk li::before{content:"";width:9px;height:9px;border:.75pt solid var(--azul);margin-top:2px}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 </style>
 </head>
 <body>
@@ -1756,6 +1758,99 @@ svg.gl{fill:currentColor}
   </div>
 </section>
 
+<style>
+/* ===== LEITURA NO CELULAR EM PÉ (só na tela; impressão e telas largas não mudam) ===== */
+@media screen and (max-width:700px){
+  html,body{background:var(--branco)}
+  body{font-size:14px;line-height:1.55}
+  .page{width:auto;height:auto;margin:0;padding:72px 20px 84px;overflow:visible;border-bottom:1px solid var(--neutro)}
+  .rh,.fo{left:20px;right:20px;font-size:9px}
+  .rh{top:28px}
+  .fo{bottom:30px}
+  .g{display:block;height:auto}
+  .g>*{margin-bottom:28px;max-width:100%}
+  .g>*:last-child{margin-bottom:0}
+  .t{font-size:30px;line-height:1.1}
+  .t2{font-size:22px}
+  p,.lead{font-size:14.5px;max-width:none}
+  .sm,.cap,.nota{font-size:12.5px;line-height:1.5}
+  .mi{font-size:9.5px}
+  .h3{font-size:13.5px;margin-top:22px}
+  .dl{font-size:9px}
+  table.sp{font-size:12.5px}
+  table.sp th{font-size:9px}
+  ol.n li{grid-template-columns:30px 1fr}
+  ol.n li::before{font-size:17px}
+
+  /* grades internas viram uma coluna; mosaicos de miniaturas ficam em 2 ou 3 */
+  [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr) !important;gap:24px !important;height:auto !important}
+  [style*="repeat(5,1fr)"],[style*="repeat(6,1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px !important}
+  [style*="repeat(4,1fr);gap:10px"]{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:10px !important}
+  [style*="repeat(3,1fr);gap:2px"]{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:2px !important}
+  [style*="grid-column"]{grid-column:auto !important}
+  [style*="align-self:end"]{align-self:auto !important}
+  [style*="display:flex"]{flex-wrap:wrap}
+  [style^="flex:1;background"]{min-height:120px}
+  [style*="font-size:22px;line-height:1.3"]{font-size:17px !important}
+
+  /* maquetes no tamanho real do conteúdo */
+  .sc{width:fit-content !important;height:auto !important;aspect-ratio:auto !important;max-width:100%}
+  .sc>.cv{position:relative !important}
+  .cv[style*="zoom:.4"]{zoom:.3 !important}
+
+  /* diagrama de construção do logo */
+  [style*="scale(1.22)"]{position:relative !important;top:0 !important;transform:none !important;zoom:.52}
+  [style*="left:10px;bottom:0;right:0"]{position:static !important;margin-top:20px}
+
+  /* aberturas de capítulo em fluxo */
+  .page.op{padding:56px 20px 64px;min-height:440px}
+  .op .num,.op .ot,.op .oi{position:static;width:auto}
+  .op .num{font-size:150px}
+  .op .ot{font-size:46px;margin-top:48px}
+  .op .oi{font-size:14px;margin-top:20px}
+
+  /* capa e contracapa */
+  .page[style*="padding:0"]{height:600px;border-bottom:0}
+  .page[style*="padding:0"] img.logo{width:290px !important;left:calc(50% - 145px) !important;top:170px !important}
+  .page[style*="padding:0"] .mi{top:360px !important;padding:0 20px;line-height:1.8}
+  [style*="width:520px"]{width:auto !important;left:20px !important;right:20px;top:180px !important}
+  [style*="left:56px;bottom:44px"]{left:20px !important;bottom:110px !important}
+  [style*="right:56px;bottom:44px"]{left:20px;right:20px !important;text-align:left !important}
+
+  /* ajustes da revisão no celular */
+  .t{line-height:1.2}
+  table.sp td{text-wrap:pretty}
+  td:empty{display:none}
+  [style*="scale(1.22)"] .dim,[style*="scale(1.22)"] .dl{display:none}
+  [style*="height:150px"]{height:auto !important}
+  [style*="width:240px;height:240px;margin-top:60px"]{margin:0 0 48px !important}
+  [style*="display:flex;font-size:8.5px"]{flex-direction:column;font-size:12px !important}
+  [style*="1fr 1fr;column-gap:20px"]{gap:0 !important}
+  ol.n[style*="counter-reset:n 4"] li:first-child{border-top:0}
+  [style*="font-size:72px;line-height:.9"]{line-height:1.15 !important;display:block}
+  [style*="justify-content:space-between;font-size:9px"]{font-size:12px !important}
+  table.sp[style*="font-size:8.4px"]{font-size:12.5px !important}
+  img[src*="email_360"]{margin-left:0 !important}
+
+  /* tabelas largas viram fichas, com o nome de cada campo */
+  table.stk,table.stk tbody,table.stk tr,table.stk td{display:block}
+  table.stk tr:first-child{display:none}
+  table.stk tr{padding:10px 0;border-bottom:.75pt solid var(--neutro)}
+  table.stk td{border:0;padding:2px 0}
+  table.stk td[data-label]::before{content:attr(data-label);display:block;font-weight:500;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--cinza)}
+}
+</style>
+<script>
+  /* rótulos das tabelas com 3 ou mais colunas, usados na leitura em pé */
+  document.querySelectorAll('table.sp').forEach(function(t){
+    var cab=t.querySelector('tr'); if(!cab) return;
+    var ths=[].slice.call(cab.querySelectorAll('th')); if(ths.length<3) return;
+    t.classList.add('stk');
+    [].slice.call(t.querySelectorAll('tr')).slice(1).forEach(function(tr){
+      [].slice.call(tr.querySelectorAll('td')).forEach(function(td,i){ if(ths[i] && ths[i].textContent.trim()) td.setAttribute('data-label',ths[i].textContent.trim()); });
+    });
+  });
+</script>
 <script>
   const pages=[...document.querySelectorAll('.page')];
   const pad=n=>String(n).padStart(2,'0');
@@ -1763,7 +1858,7 @@ svg.gl{fill:currentColor}
   document.querySelectorAll('[data-ref]').forEach(e=>{e.textContent=pad(pages.indexOf(document.getElementById(e.dataset.ref))+1)});
   if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.75}});
 </script>
-<style>@media screen and (max-width:1146px){body{zoom:var(--z,1)}}</style>
+<style>@media screen and (min-width:701px) and (max-width:1146px){body{zoom:var(--z,1)}}</style>
 <script>
   (function(){
     function caber(){var w=document.documentElement.clientWidth;document.documentElement.style.setProperty('--z',((w-16)/1123).toFixed(4))}
