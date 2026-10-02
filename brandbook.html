@@ -2,7 +2,18 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="logo/favicon.ico">
+<meta name="description" content="Essência, posicionamento, método, personalidade, voz e identidade visual da Urânia, estúdio de direção e comunicação de marcas de Estéfany Reis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brandbook Urânia">
+<meta property="og:description" content="Essência, posicionamento, método, personalidade, voz e identidade visual da Urânia, estúdio de direção e comunicação de marcas de Estéfany Reis.">
+<meta property="og:url" content="https://fabriciokaempf.github.io/urania/brandbook.html">
+<meta property="og:image" content="https://fabriciokaempf.github.io/urania/capa-compartilhamento.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brandbook Urânia</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
@@ -11,10 +22,6 @@
   --azul:#1D1F26; --ocre:#C58A2B; --cinza:#444444; --branco:#F7F6F3; --neutro:#D9D9D6; --bege:#E8E2D6;
   --bg:var(--branco); --fg:var(--azul); --muted:var(--cinza); --line:var(--neutro);
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){ --bg:#15161B; --fg:#F7F6F3; --muted:#B9B7B0; --line:#33353D; }
-}
-:root[data-theme="dark"]{ --bg:#15161B; --fg:#F7F6F3; --muted:#B9B7B0; --line:#33353D; }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font-family:Manrope,sans-serif;font-weight:400;line-height:1.6;font-size:16px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
@@ -52,6 +59,7 @@ th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vert
 th{font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 td.p{font-family:"Cormorant Garamond",serif;font-size:22px;white-space:nowrap}
 .tbl{overflow-x:auto}
+@media (max-width:600px){.tbl table,.tbl tbody,.tbl tr,.tbl td{display:block}.tbl tr:first-child{display:none}.tbl tr{padding:14px 0;border-bottom:1px solid var(--line)}.tbl td{border:0;padding:3px 0}td.p{white-space:normal}.tbl td[data-label]::before{content:attr(data-label);display:block;font-family:Manrope,sans-serif;font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}}
 /* do e dont */
 .yes{border-left:3px solid var(--ocre);padding-left:16px}
 .no{border-left:3px solid var(--line);padding-left:16px;color:var(--muted);text-decoration:line-through}
@@ -359,14 +367,14 @@ footer{padding:64px 0;text-align:center;font-size:13px;color:var(--muted);border
   <h3>Séries editoriais</h3>
   <div class="tbl"><table>
     <tr><th>Série</th><th>O que é</th><th>Pilar</th><th>Formato</th></tr>
-    <tr><td>Entrelinhas</td><td>O que uma comunicação diz sem perceber</td><td>Percepção</td><td>Carrossel</td></tr>
-    <tr><td>Ponto de Vista</td><td>Reflexões e posicionamentos</td><td>Identidade</td><td>Post estático / Reels falado</td></tr>
-    <tr><td>Em Construção</td><td>Bastidores e processos</td><td>Processo</td><td>Stories / carrossel</td></tr>
-    <tr><td>Lentes</td><td>Cinema, música, arquitetura, livros, fotografia</td><td>Observação</td><td>Carrossel</td></tr>
-    <tr><td>Princípios</td><td>Conteúdo estratégico e educativo</td><td>Clareza</td><td>Carrossel</td></tr>
-    <tr><td>Permanências</td><td>Ideias atemporais</td><td>Permanência</td><td>Post estático</td></tr>
-    <tr><td>Observações</td><td>Pequenas percepções do cotidiano</td><td>Observação</td><td>Stories</td></tr>
-    <tr><td>Arquivo de Percepções</td><td>Visuais livres, autorais, contemplativos</td><td>Observação</td><td>Foto</td></tr>
+    <tr><td data-label="Série">Entrelinhas</td><td data-label="O que é">O que uma comunicação diz sem perceber</td><td data-label="Pilar">Percepção</td><td data-label="Formato">Carrossel</td></tr>
+    <tr><td data-label="Série">Ponto de Vista</td><td data-label="O que é">Reflexões e posicionamentos</td><td data-label="Pilar">Identidade</td><td data-label="Formato">Post estático / Reels falado</td></tr>
+    <tr><td data-label="Série">Em Construção</td><td data-label="O que é">Bastidores e processos</td><td data-label="Pilar">Processo</td><td data-label="Formato">Stories / carrossel</td></tr>
+    <tr><td data-label="Série">Lentes</td><td data-label="O que é">Cinema, música, arquitetura, livros, fotografia</td><td data-label="Pilar">Observação</td><td data-label="Formato">Carrossel</td></tr>
+    <tr><td data-label="Série">Princípios</td><td data-label="O que é">Conteúdo estratégico e educativo</td><td data-label="Pilar">Clareza</td><td data-label="Formato">Carrossel</td></tr>
+    <tr><td data-label="Série">Permanências</td><td data-label="O que é">Ideias atemporais</td><td data-label="Pilar">Permanência</td><td data-label="Formato">Post estático</td></tr>
+    <tr><td data-label="Série">Observações</td><td data-label="O que é">Pequenas percepções do cotidiano</td><td data-label="Pilar">Observação</td><td data-label="Formato">Stories</td></tr>
+    <tr><td data-label="Série">Arquivo de Percepções</td><td data-label="O que é">Visuais livres, autorais, contemplativos</td><td data-label="Pilar">Observação</td><td data-label="Formato">Foto</td></tr>
   </table></div>
   <p class="quote" style="font-size:24px;margin-top:40px">A Urânia não precisa transformar sua vida em conteúdo. Pode transformar seu olhar sobre a vida em repertório.</p>
 </section>
@@ -409,10 +417,10 @@ footer{padding:64px 0;text-align:center;font-size:13px;color:var(--muted);border
   <p>A proposta nunca é apresentada como "X posts + X Reels". A lógica é: <b>Observação</b> (entendimento) → <b>Direção</b> (clareza) → <b>Presença</b> (consistência) → <b>Projetos Especiais</b> (quando necessário).</p>
   <div class="tbl"><table>
     <tr><th>Jornada</th><th>O que é</th><th>Prazo</th><th>Investimento</th></tr>
-    <tr><td><b>Observação</b><br><span class="muted">porta de entrada</span></td><td>Questionário, sessão de 90 min, diagnóstico, prioridades e material estratégico personalizado.</td><td>até 7 dias úteis</td><td class="p">R$ 297</td></tr>
-    <tr><td><b>Direção</b><br><span class="muted">serviço principal</span></td><td>Imersão, pesquisa, posicionamento, essência, arquétipos, tom de voz, linha editorial, pilares, direção visual. Não inclui logo.</td><td>até 15 dias úteis</td><td class="p">R$ 1.497</td></tr>
-    <tr><td><b>Presença</b><br><span class="muted">direção contínua</span></td><td>Planejamento, estratégia editorial, direção criativa, produção, análise e ajustes. Contrato inicial de 3 meses. Máximo de 3 clientes.</td><td>mensal</td><td class="p">R$ 2.000/mês</td></tr>
-    <tr><td><b>Projetos Especiais</b></td><td>Identidade visual, naming, brandbook, campanhas, direção criativa, apresentações.</td><td>sob projeto</td><td class="p">sob orçamento</td></tr>
+    <tr><td data-label="Jornada"><b>Observação</b><br><span class="muted">porta de entrada</span></td><td data-label="O que é">Questionário, sessão de 90 min, diagnóstico, prioridades e material estratégico personalizado.</td><td data-label="Prazo">até 7 dias úteis</td><td data-label="Investimento" class="p">R$ 297</td></tr>
+    <tr><td data-label="Jornada"><b>Direção</b><br><span class="muted">serviço principal</span></td><td data-label="O que é">Imersão, pesquisa, posicionamento, essência, arquétipos, tom de voz, linha editorial, pilares, direção visual. Não inclui logo.</td><td data-label="Prazo">até 15 dias úteis</td><td data-label="Investimento" class="p">R$ 1.497</td></tr>
+    <tr><td data-label="Jornada"><b>Presença</b><br><span class="muted">direção contínua</span></td><td data-label="O que é">Planejamento, estratégia editorial, direção criativa, produção, análise e ajustes. Contrato inicial de 3 meses. Máximo de 3 clientes.</td><td data-label="Prazo">mensal</td><td data-label="Investimento" class="p">R$ 2.000/mês</td></tr>
+    <tr><td data-label="Jornada"><b>Projetos Especiais</b></td><td data-label="O que é">Identidade visual, naming, brandbook, campanhas, direção criativa, apresentações.</td><td data-label="Prazo">sob projeto</td><td data-label="Investimento" class="p">sob orçamento</td></tr>
   </table></div>
 </section>
 
